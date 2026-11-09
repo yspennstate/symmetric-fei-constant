@@ -1,0 +1,16 @@
+n= 1  max H/I=0.000000  attained by AND/OR: False  B bound (1+C_N)/ln2=0.0000
+n= 2  max H/I=2.000000  attained by AND/OR: True  B bound (1+C_N)/ln2=2.4003
+n= 3  max H/I=2.955890  attained by AND/OR: True  B bound (1+C_N)/ln2=2.7283
+n= 4  max H/I=3.402476  attained by AND/OR: True  B bound (1+C_N)/ln2=2.8840
+n= 5  max H/I=3.623740  attained by AND/OR: True  B bound (1+C_N)/ln2=2.9710
+n= 6  max H/I=3.739764  attained by AND/OR: True  B bound (1+C_N)/ln2=3.0253
+n= 7  max H/I=3.804357  attained by AND/OR: True  B bound (1+C_N)/ln2=3.0624
+n= 8  max H/I=3.842783  attained by AND/OR: True  B bound (1+C_N)/ln2=3.0895
+n= 9  max H/I=3.867333  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1104
+n=10  max H/I=3.884178  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1273
+n=11  max H/I=3.896512  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1414
+n=12  max H/I=3.906045  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1535
+n=13  max H/I=3.913729  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1640
+n=14  max H/I=3.920121  attained by AND/OR: True  B bound (1+C_N)/ln2=3.1734
+largest L/I=2.517551 (bound 2.748092); largest B/I=1.745249; largest H/I=3.920121 (bound 6.190787)
+all bounds PASS
