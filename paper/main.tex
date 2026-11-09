@@ -39,7 +39,7 @@
 \usepackage{xurl}
 \begin{document}
 \begin{abstract}
-We prove that every symmetric Boolean function $f$ satisfies $\HH[f]\le K\,\I[f]$ with $K=12-\frac92\log_23=4.8677\ldots$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. The proof is an induction on one coordinate. We show that restricting a coordinate of a symmetric function costs at most $K$ times the influence of that coordinate in Fourier entropy, in every dimension; this is sharp for the restriction step, with equality for OR on three variables. The main tool is an estimate for the derivative of a symmetric function: its noise stability is at most $e^{-v}I_0(v)$ times its squared norm, where $v$ is the variance of the noise. Together with a bound for the zero-level coefficient that is kept on the same probability law as the other levels, it reduces the restriction step in each dimension below $10^4$ to finitely many linear inequalities, which we verify in outward-rounded interval arithmetic, and it gives an explicit analytic bound from $10^4$ on. Dimensions up to $15$ are checked exhaustively in exact arithmetic. Without any computer verification, the same estimate gives $\HH[f]\le6.191\,\I[f]$. The AND and OR functions show that the optimal constant is at least $4$.
+We prove that every symmetric Boolean function $f$ satisfies $\HH[f]\le c\,\I[f]$ with $c=931487/200000=4.657435$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. We bound the entropy lost under a random coordinate restriction and average the bounds over the successive dimensions. The sharp one-step constant is $K=12-\frac92\log_23=4.8677\ldots$, attained by OR on three variables; retaining the dimension in the restriction argument gives a smaller entropy--influence constant. A noise-stability estimate for symmetric derivatives reduces the finite range to scalar inequalities. We certify them by outward-rounded interval arithmetic, use an exhaustive block-restriction census through dimension $20$, and close the infinite range with a decreasing analytic bound. A sharper estimate for the shift of the entropy kernel improves the finite certificates. Without computer verification, the same noise-stability estimate gives $\HH[f]\le6.191\,\I[f]$. AND and OR show that the optimal constant is at least $4$.
 \end{abstract}
 \maketitle
 
@@ -57,15 +57,15 @@ A function is \emph{symmetric} if $f(x)$ depends only on the Hamming weight $|x|
 \begin{mainthm}\label{thm:main}
 Every symmetric Boolean function $f$ satisfies
 \[
- \HH[f]\le K\,\I[f],\qquad K=12-\frac92\log_23=4.8676687467\ldots
+ \HH[f]\le c\,\I[f],\qquad c=\frac{931487}{200000}=4.657435<4.6575.
 \]
 \end{mainthm}
 
-The proof is by induction on the number of variables. For a coordinate $i$ let $f_{i\to\pm1}$ be the two restrictions, $\I_i[f]$ the influence of $i$, and
+For a coordinate $i$ let $f_{i\to\pm1}$ be the two restrictions, $\I_i[f]$ the influence of $i$, and
 \[
  \Delta_i[f]=\HH[f]-\tfrac12\bigl(\HH[f_{i\to1}]+\HH[f_{i\to-1}]\bigr).
 \]
-Restrictions of a symmetric function are symmetric, so if $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$, then $\HH\le K\I$ for every symmetric $f$ (Lemma~\ref{lem:induction}). For $\mathrm{OR}_3$ one has $\Delta_1/\I_1=12-\frac92\log_23$, so no smaller constant can come out of this induction. We prove that this value is the worst case in every dimension.
+If $U_d$ bounds $\Delta_1/\I_1$ for symmetric functions in dimension $d$, then revealing coordinates one at a time gives $\HH[f]\le n^{-1}(\sum_{d=1}^nU_d)\I[f]$ (Lemma~\ref{lem:averaging}). A single uniform bound cannot be smaller than $K=12-\frac92\log_23$, because $\mathrm{OR}_3$ has $\Delta_1/\I_1=K$. Averaging over dimensions charges this obstruction only at dimension three. We obtain a stronger base by restricting several coordinates together through dimension $20$, then add the dimension-specific one-step bounds. This seeded average proves Theorem~\ref{thm:main}.
 
 \begin{mainthm}\label{thm:restriction}
 \begin{enumerate}[label=\textup{(\roman*)}]
@@ -81,7 +81,7 @@ where the supremum is over nonconstant symmetric $f$ on $n$ variables and
 \end{enumerate}
 \end{mainthm}
 
-Part~(i) is computer-assisted. For $n\le15$ we check every symmetric function in exact arithmetic. For $16\le n\le9999$ the proof reduces, in each dimension or in each of five blocks of dimensions, to a finite list of one-variable inequalities with rational multipliers, which we verify in outward-rounded interval arithmetic. For $n\ge10^4$ the bound is an explicit expression in $n$, decreasing in $n$ and below $4.86617$ at $n=10^4$. The certified bounds are listed in Section~\ref{sec:computations}; away from small $n$ they are well below $K$.
+Part~(i) is computer-assisted. We check dimensions up to $15$ exhaustively. We verify the scalar inequalities separately in dimensions $16$ through $255$ and on $23$ blocks covering dimensions $256$ through $8{,}388{,}608$. The analytic estimate of Proposition~\ref{prop:large}, with parameter $a=1/30$, bounds every later one-step ratio by $4.654017$. Section~\ref{sec:computations} gives the certificates and the seeded ledger. Its largest upper bound is less than $4.657435$, at dimension $449$; this is a maximum of bounds, not a claimed value of $\HH/\I$.
 
 Both parts rest on a noise-stability estimate for derivatives, which is of independent interest. Write $T_\lambda$ for the noise operator, $\Stab_\lambda[g]=\langle g,T_\lambda g\rangle=\sum_S\lambda^{|S|}\wh g(S)^2$, and $I_0$ for the modified Bessel function of order zero.
 
@@ -114,7 +114,7 @@ For the OR function on $n$ variables (and for AND),
 \[
  \frac{\HH[\mathrm{OR}_n]}{\I[\mathrm{OR}_n]}=4-\frac{4-2/\ln2}{n}+O(2^{-n}).
 \]
-Hence the optimal constant for symmetric functions lies in $[4,\,4.8677]$.
+Hence the optimal constant for symmetric functions lies in $[4,\,4.657435]$.
 \end{mainthm}
 
 That OR approaches $4$ is classical; we include the exact expression because AND and OR are the maximizers among all symmetric functions in every dimension we computed (Section~\ref{sec:computations}).
@@ -182,6 +182,38 @@ Suppose $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$ on at most $m$ varia
 Restrictions of a symmetric function are symmetric. For $i\ne1$ the influence of $i$ is the average of its influences in the two restrictions of $x_1$, so $\I[f]=\I_1[f]+\frac12(\I[f_{1\to1}]+\I[f_{1\to-1}])$. Induct on $n$, starting from constants.
 \end{proof}
 
+\begin{lemma}[Averaging over dimensions]\label{lem:averaging}
+Suppose that $\Delta_1[g]\le U_d\I_1[g]$ for every symmetric Boolean function $g$ on $d$ variables. Then for every symmetric $f$ on $n\ge1$ variables,
+\[
+ \HH[f]\le\frac1n\sum_{d=1}^n U_d\,\I[f].
+\]
+More generally, if $\HH[g]\le C_m\I[g]$ in dimension $m$, then for $n\ge m$, $n\ge1$,
+\begin{equation}\label{eq:seeded}
+ \HH[f]\le\frac{mC_m+\sum_{d=m+1}^n U_d}{n}\,\I[f].
+\end{equation}
+Let $\Delta_{[k]}[f]$ be the entropy lost after fixing $k$ specified coordinates uniformly. If $\Delta_{[k]}[f]\le kB_{k,n}\I_1[f]$, one may choose the dimension bound
+\begin{equation}\label{eq:blockrecurrence}
+ C_n=\frac{kB_{k,n}+(n-k)C_{n-k}}{n}.
+\end{equation}
+One may minimize this choice over any available block sizes $k$.
+\end{lemma}
+
+\begin{proof}
+A restriction of a symmetric weight table is a contiguous subtable, so it remains symmetric in the free coordinates. If $i$ is free and $Z$ fixes any set of other coordinates uniformly, then
+\[
+ \E_Z\I_i[f_Z]
+ =\E_Z\P_{x_{\rm free}}[f_Z(x)\ne f_Z(x^{\oplus i})]
+ =\P_x[f(x)\ne f(x^{\oplus i})]=\I_i[f].
+\]
+This is conditional expectation of the indicator of a changing edge. It includes constant restrictions.
+
+Reveal the coordinates in a fixed order and let $F_d$ be the random function on the $d$ unrevealed coordinates. For the next coordinate $i_d$,
+\[
+ \HH[F_d]-\E[\HH[F_{d-1}]\mid F_d]\le U_d\I_{i_d}[F_d].
+\]
+On a branch with zero influence the symmetric function is constant, and both sides vanish. Taking expectations, influence preservation gives $\E\I_{i_d}[F_d]=\I_1[f]=\I[f]/n$. Summing over $d=1,\ldots,n$ telescopes to $\HH[f]$, since $F_0$ is constant. This proves the first assertion. For the second, stop at dimension $m$ and use $\E\HH[F_m]\le C_m\E\I[F_m]=mC_m\I[f]/n$. Finally, after fixing $k$ coordinates, $\E\I[f_Z]=(n-k)\I[f]/n$. Add the block entropy loss to $\E\HH[f_Z]\le C_{n-k}\E\I[f_Z]$ to obtain~\eqref{eq:blockrecurrence}. Constants, including dimension zero, have $\HH=\I=0$ and need no division. No sign assumption on the entropy losses is used.
+\end{proof}
+
 For symmetric $f$ on $n$ variables, the restrictions to $x_1=\pm1$ have coefficients $\wh f_s\pm\wh f_{s+1}$ on the $\binom Ns$ sets of size $s$ in the remaining coordinates, $N=n-1$. With $\varphi(u)=u\log_2(1/u)$ this gives the exact formulas
 \begin{equation}\label{eq:delta}
  \Delta_1=\sum_{s=0}^{N}\binom Ns\,\mathcal D(\wh f_s,\wh f_{s+1}),\qquad \I_1=\sum_{s=0}^N\binom Ns\wh f_{s+1}^{\,2},
@@ -241,16 +273,49 @@ using $m\ge\mu_0$ in the last step. Differentiating twice,
 and the tangent at $u$ has intercept $J_C(u)-uJ_C'(u)=d_C(u)$.
 \end{proof}
 
-\begin{lemma}\label{lem:shift}
-$\kappa$ is increasing on $[0,\frac12]$, $\kappa(\frac12)=2\ln2$, and $\kappa(x+d)-\kappa(x)\le d\bigl(6+4\ln(1/d)\bigr)$ whenever $0\le x\le x+d\le1$.
+\begin{lemma}[The shift estimate]\label{lem:shift}
+The function $\kappa$ is increasing on $[0,\frac12]$ and $\kappa(\frac12)=2\ln2$. For $0<x<1$, $x\ne\frac12$,
+\begin{equation}\label{eq:sharpderivative}
+ \kappa'(x)\le B(x):=2+2\ln\frac1{|1-2x|}.
+\end{equation}
+Consequently, whenever $0\le x\le x+d\le1$,
+\[
+ \kappa(x+d)-\kappa(x)\le d\bigl(4+2\ln(1/d)\bigr)
+ \le d\bigl(6+4\ln(1/d)\bigr).
+\]
 \end{lemma}
 
 \begin{proof}
-For $t\ge1$ expanding the entropy pair gives $h(t)=\ln t+3-\sum_{j\ge1}t^{-j}/[j(j+1)(2j+1)]$. For $0<x<\frac12$, with $r=x/(1-x)$, this gives $\kappa(x)=1+\sum_{j\ge1}r^j/[(j+1)(2j+1)]$, which increases; at $r=1$ the series sums to $2\ln2-1$. Since $j/[(j+1)(2j+1)]\le1/(2j)$ and $(1-x)^{-2}\le4$,
+For $t\ge1$, expansion of the entropy pair gives
 \[
- \kappa'(x)\le\frac{2}{r}\ln\frac1{1-r}\le2\Bigl[1+\ln\frac1{1-r}\Bigr]\le2+4\ln\frac1{|1-2x|}.
+ h(t)=\ln t+3-\sum_{j\ge1}\frac{t^{-j}}{j(j+1)(2j+1)}.
 \]
-For $x>\frac12$ put $t=(1-x)/x<1$ and use $h(t)=t\,h(1/t)$; then $\kappa=t(2-\ln t)-\sum_{j\ge1}t^{j+1}/[j(2j+1)]$ and $d\kappa/dt=1-\ln t-\sum_{j\ge1}(j+1)t^j/[j(2j+1)]$. Dropping the nonnegative $1-\ln t$, using $(j+1)/(2j+1)\le1$ and $|dt/dx|\le4$, we get $\kappa'(x)\le-4\ln(1-t)\le4\ln\frac1{2x-1}$. The function $\kappa$ is absolutely continuous on $[0,1]$, with integrable logarithmic singularities of $\kappa'$. On an interval of length $d$ the integral of $\ln(1/|1-2x|)$ is at most $d(1-\ln d)$, its value for the interval centred at $\frac12$. Integrating the upper bound for $\kappa'$ gives the claim.
+For $0<x<\frac12$, put $r=x/(1-x)$. Then
+\[
+ \kappa(x)=1+\sum_{j\ge1}\frac{r^j}{(j+1)(2j+1)},
+\]
+which increases; at $r=1$ the sum is $2\ln2-1$. Termwise differentiation on compact subintervals, $j/[(j+1)(2j+1)]\le1/(2j)$ and $(1-x)^{-2}\le4$ give
+\[
+ \kappa'(x)\le\frac{2[-\ln(1-r)]}{r}
+ \le2[1-\ln(1-r)]\le2-2\ln(1-2x).
+\]
+The middle inequality follows from $(1-r)[-\ln(1-r)]\le r$, by integrating $1/(1-t)\le1/(1-r)$ on $[0,r]$. The last uses $1-r=(1-2x)/(1-x)\ge1-2x$.
+
+For $x>\frac12$, put $t=(1-x)/x<1$. The identity $h(t)=t h(1/t)$ gives
+\[
+ \kappa=t(2-\ln t)-\sum_{j\ge1}\frac{t^{j+1}}{j(2j+1)},\qquad
+ \frac{d\kappa}{dt}=1-\ln t-\sum_{j\ge1}\frac{(j+1)t^j}{j(2j+1)}.
+\]
+Since $(j+1)/[j(2j+1)]=1/(2j)+1/[2j(2j+1)]$ and $\sum_{j\ge1}1/[2j(2j+1)]\le\frac12$, we have
+\[
+ \frac{d\kappa}{dt}\ge\tfrac12-\ln t+\tfrac12\ln(1-t)\ge\tfrac12\ln(1-t).
+\]
+Multiplying by $dt/dx=-x^{-2}$ reverses the inequality. Thus
+\[
+ \kappa'(x)\le-\frac{\ln(1-t)}{2x^2}
+ \le-2\ln(1-t)\le-2\ln(2x-1),
+\]
+which is stronger than~\eqref{eq:sharpderivative}. The explicit entropy formula, or these series at their endpoints, shows that $\kappa$ is absolutely continuous, with integrable logarithmic singularities in its derivative. On an interval of length $d$ the integral of $\ln(1/|1-2y|)$ is largest when the interval is centred at $1/2$, where it equals $d(1-\ln d)$. Integrating~\eqref{eq:sharpderivative} proves the stated shift bounds.
 \end{proof}
 
 \subsection{The finite range}
@@ -270,11 +335,32 @@ Then every nonconstant symmetric $f$ on $n$ variables satisfies
 Insert Lemma~\ref{lem:zero} into~\eqref{eq:tangent}, bound each coefficient of $\mu_s$ by the hypotheses, and use $\E_\mu s\ge N/2$ from~(b) and~\eqref{eq:noise}.
 \end{proof}
 
-Proposition~\ref{prop:dual} also certifies whole ranges of dimensions. Fix $L\le n\le U$ and use the hypotheses with $C=L-\frac16$, which only enlarges $J_C$, and with $\kappa(\frac1n)\le\kappa(\frac1L)$ by Lemma~\ref{lem:shift}. By Lemma~\ref{lem:shift} the shift $\kappa(\frac{s+1}n)-\kappa(\frac sn)$ is at most $M(L)=(6+4\ln L)/L$. Since $\Psi$ decreases and the right side of the second hypothesis decreases in $x=s/n$, it suffices to prove
+Proposition~\ref{prop:dual} also certifies whole ranges of dimensions. Fix $256\le L\le n\le U$ and use $C=L-\frac16$, which only enlarges $J_C$, and $\kappa(\frac1n)\le\kappa(\frac1L)$. We bound the entire concave function $J_C$ before taking its tangent; no monotonicity of the tangent slope or intercept separately is required.
+
+The sharper derivative estimate gives a separate shift bound on each rational cell $[l,r]$. Put $h_L=1/L$ and
 \[
- \Psi(l)+M(L)\le\alpha-\beta r+\textstyle\sum_jw_je^{-t_jr}
+ x_0=\min\{r,\max\{l,(1-h_L)/2\}\},\qquad
+ M_{[l,r]}=\mathcal G(x_0+h_L-\tfrac12)-\mathcal G(x_0-\tfrac12),
 \]
-on a covering of $[1/U,1]$ by intervals $[l,r]$. On the other side of the conclusion, $N/(2n)\ge(L-1)/(2L)$, and $v_n(t)$ increases in $n$ because $\frac{d}{dn}\bigl[(n-1)(1-e^{-a/n})\bigr]>1-(1+\frac an)e^{-a/n}>0$, so $\Phi(v_n(t_j))\le\Phi(v_L(t_j))$.
+where $\mathcal G(z)=4z-2z\ln(2|z|)$ for $z\ne0$, and $\mathcal G(0)=0$. Indeed $\mathcal G'(y-1/2)=B(y)$. For $x=s/n\in[l,r]$, Lemma~\ref{lem:shift} gives
+\[
+ \kappa(x+1/n)-\kappa(x)\le\int_x^{x+1/n}B(y)\,dy
+ \le\int_x^{x+h_L}B(y)\,dy\le M_{[l,r]}.
+\]
+In the second integral we extend $B(y)=2-2\ln|1-2y|$ as far as $1+h_L$ if needed. It is nonnegative there for $L\ge256$. No value of $\kappa$ outside $[0,1]$ is used. The integral over a fixed length $h_L$ increases until its starting point is $(1-h_L)/2$ and decreases afterwards: its derivative is $B(x+h_L)-B(x)$, whose sign follows by comparing the distances from $1/2$. This proves the formula for the maximum over a cell, including cells crossing $1/2$.
+
+Both $\Psi$ and $x\mapsto\alpha-\beta x+\sum_jw_je^{-t_jx}$ decrease. Therefore the zero test at $1/L$ and the cell inequalities
+\begin{equation}\label{eq:cell}
+ \Psi(l)+M_{[l,r]}\le\alpha-\beta r+\sum_jw_je^{-t_jr}
+\end{equation}
+on a rational covering of $[1/U,1]$ prove all the hypotheses. On the objective side, $N/(2n)\ge(L-1)/(2L)$ and $v_n(t)$ increases in $n$. To see the latter, set $z=2t/n$ and differentiate:
+\[
+ 4\frac{d}{dn}v_n(t)=1-(1+z)e^{-z}+\frac zn e^{-z}>0.
+\]
+Since $\Phi$ decreases, a certified block bound is
+\begin{equation}\label{eq:blockobjective}
+ U_{[L,U]}=\frac{\alpha+d_{L-1/6}(u)-\beta(L-1)/(2L)+\sum_jw_j\Phi(v_L(t_j))}{\ln2}.
+\end{equation}
 
 \subsection{High dimension}
 For the analytic range we use the pointwise majorant
@@ -289,16 +375,16 @@ It is verified by outward-rounded interval arithmetic on $11{,}900$ cells coveri
 These follow from $\Phi(v)=\frac2\pi\int_0^{\pi/2}e^{-2v\sin^2u}du$, $\sin u\ge2r_0u$ on $[0,\frac12]$ and $\sin u\ge r_0$ on $[\frac12,\frac\pi2]$, and $\Ei(z)\le e^{-z}/z$.
 
 \begin{proposition}\label{prop:large}
-For $n\ge200$ put $N=n-1$, $a=\frac15$, $b=\sqrt{2/(\pi N)}$, $c=\frac Nn\cdot\frac{1-e^{-2a}}{2a}$, $v_T=N(1-e^{-2a})/4$ and $A=-\frac12-\ln a+a$. Then every nonconstant symmetric $f$ on $n$ variables satisfies $(\ln2)\Delta_1/\I_1\le R(n)$, where
+Fix $0<a\le\frac15$. For $n\ge40/a$ put $N=n-1$, $b=\sqrt{2/(\pi N)}$, $c=\frac Nn\cdot\frac{1-e^{-2a}}{2a}$, $v_T=N(1-e^{-2a})/4$ and $A=-\frac12-\ln a+a$. Then every nonconstant symmetric $f$ on $n$ variables satisfies $(\ln2)\Delta_1/\I_1\le R_a(n)$, where
 \begin{multline*}
- R(n)=b\bigl[3+\ln(1+b^{-2})+2\ln2\bigr]+\frac{6+4\ln n}{n}+\frac{14}5+\frac{273}{100n}+\bar J\\
+ R_a(n)=b\bigl[3+\ln(1+b^{-2})+2\ln2\bigr]+\frac{6+4\ln n}{n}+\frac{14}5+\frac{273}{100n}+\bar J\\
  +\Phi(20c)\ln\frac1c+e^aA\Bigl[\frac{24}{23\sqrt{2\pi v_T}}+e^{-2r_0^2v_T}\Bigr]+\frac{89}{50}\Phi\bigl(v_n(20)\bigr).
 \end{multline*}
-Every term of $R$ is nonincreasing in $n\ge200$, and $R(10^4)/\ln2<4.866169$.
+Every term of $R_a$ is nonincreasing for $n\ge40/a$. In particular, $a=1/30$ is valid for $n\ge1200$, and $R_{1/30}(8{,}388{,}608)/\ln2<4.654016341712388$.
 \end{proposition}
 
 \begin{proof}
-By~(a) and~\eqref{eq:hbound} with $\wh f_0^{\,2}\le1$, $L_0\le m[3+\ln(1+m^{-2})]$, and $u\mapsto u[3+\ln(1+u^{-2})]$ increases. Also $\mu_0\le m$, $\kappa(\frac1n)\le\kappa(\frac12)=2\ln2$, and $b_N\le b$ (for even $N$ write $b_N=\frac2\pi\int_0^{\pi/2}\cos^Nu\,du$ and use $\cos u\le e^{-u^2/2}$; for odd $N$, $b_N=b_{N+1}$). So the zero-level terms of~\eqref{eq:tangent} are at most the first term of $R$, and by Lemma~\ref{lem:shift} the shifts contribute at most $(6+4\ln n)/n$.
+By~(a) and~\eqref{eq:hbound} with $\wh f_0^{\,2}\le1$, $L_0\le m[3+\ln(1+m^{-2})]$, and $u\mapsto u[3+\ln(1+u^{-2})]$ increases. Also $\mu_0\le m$, $\kappa(\frac1n)\le\kappa(\frac12)=2\ln2$, and $b_N\le b$ (for even $N$ write $b_N=\frac2\pi\int_0^{\pi/2}\cos^Nu\,du$ and use $\cos u\le e^{-u^2/2}$; for odd $N$, $b_N=b_{N+1}$). So the zero-level terms of~\eqref{eq:tangent} are at most the first term of $R_a$, and by Lemma~\ref{lem:shift} the shifts contribute at most $(6+4\ln n)/n$.
 
 For $s\ge1$ apply~\eqref{eq:majorant} at $x=s/n$. The linear part gives at most $\frac{553}{100}-\frac{273}{50}\E_\mu\frac sn\le\frac{14}5+\frac{273}{100n}$ by~(b), and the last part at most $\frac{89}{50}\Phi(v_n(20))$ by~\eqref{eq:noise}. For the $\Ei$ part let $P(t)=\sum_{s\ge1}\mu_se^{-ts/n}$, so that $\sum_{s\ge1}\mu_s\Ei(40s/n)=\int_{40}^\infty P(t)\frac{dt}t$ by Tonelli. Put $T=an\ge40$. For $40\le t\le T$, since $(1-e^{-2y})/(2y)$ decreases, $v_n(t)\ge ct/2$, and~\eqref{eq:noise} gives $P(t)\le\Phi(ct/2)$; hence
 \[
@@ -308,26 +394,41 @@ For $t\ge T$ and $s\ge1$, $e^{-ts/n}\le e^{-(t-T)/n}e^{-Ts/n}$, so $P(t)\le e^{-
 \[
  \int_T^\infty P(t)\frac{dt}t\le\Phi(v_T)\int_a^\infty e^{a-y}\frac{dy}y=e^a\Ei(a)\Phi(v_T)\le e^aA\,\Phi(v_T),
 \]
-using $\Ei(a)\le-\gamma-\ln a+a$ and $\gamma>H_6-\ln7>\frac12$. Bound $\Phi(v_T)$ by~\eqref{eq:Phibound}. Removing the zero level from $P$ is what keeps this integral finite.
+using $\Ei(a)\le-\gamma-\ln a+a$ and $\gamma>H_6-\ln7>\frac12$ (since $H_6=49/20$ and $\ln7<39/20$). Bound $\Phi(v_T)$ by~\eqref{eq:Phibound}. Removing the zero level from $P$ is what keeps this integral finite.
 
-For the monotonicity, the first term equals $\sqrt{2/\pi}\,[3+2\ln2+\ln(1+\pi N/2)]/\sqrt N$, whose derivative in $N$ is negative; $(6+4\ln n)/n$ decreases for $n\ge1$; $c$ increases in $n$ and stays in $(0,1)$; and $v_T$ and $v_n(20)$ increase in $n$ while $\Phi$ decreases. The value at $n=10^4$ is certified in interval arithmetic.
+For the monotonicity, the first term equals $\sqrt{2/\pi}\,[3+2\ln2+\ln(1+\pi N/2)]/\sqrt N$, whose derivative in $N$ is negative; $(6+4\ln n)/n$ decreases for $n\ge1$; $c$ increases in $n$ and stays in $(0,1)$; and $v_T$ and $v_n(20)$ increase in $n$ while $\Phi$ decreases. Here $A>0$ is fixed, and $c=(1-1/n)(1-e^{-2a})/(2a)$ increases within $(0,1)$. Thus $\Phi(20c)\ln(1/c)$ is a product of nonnegative decreasing factors. The analytic upper bound for $\Phi(v_T)$ in~\eqref{eq:Phibound} decreases as well. More explicitly, writing $z=\pi N/2$, twice the derivative of the zero-level term, multiplied by $N^{3/2}/\sqrt{2/\pi}$, is
+\[
+ \frac{2z}{1+z}-[3+2\ln2+\ln(1+z)]<0.
+\]
+The only lower threshold used in the integral split is $T=an\ge40$. The bound $\Ei(a)\le-\gamma-\ln a+a$ follows by integrating $(1-e^{-x})/x\le1$; hence the whole proof holds for every stated $a$. The value at $a=1/30$ and $n=8{,}388{,}608$ is certified in interval arithmetic.
 \end{proof}
 
 \subsection{Proofs of Theorems~\ref{thm:restriction} and~\ref{thm:main}}
 \begin{proof}[Proof of Theorem~\ref{thm:restriction}(i)]
 \emph{Dimensions $n\le15$.} The Fourier coefficients of a symmetric $f$ are integers divided by $2^n$, given by Krawtchouk transforms. For each of the $\sum_{n\le15}2^{n+1}=131{,}068$ symmetric functions we compute $\Delta_1$ and $\I_1$ from~\eqref{eq:delta}, with every logarithm enclosed between rational bounds from the series of $\operatorname{artanh}$ with an explicit remainder. Equality $\Delta_1=K\I_1$ holds for $n=3$ at OR, AND and their negations, where the value is an exact combination of $\log_22$ and $\log_23$; for every other function the upper enclosure of $\Delta_1/\I_1$ is below $K$.
 
-\emph{Dimensions $16\le n\le255$.} For each $n$ we apply Proposition~\ref{prop:dual} with $J=2$ and decimal rational parameters, checking all $n$ hypotheses in outward-rounded interval arithmetic at $45$ digits. These are $32{,}520$ inequalities in total.
+\emph{Dimensions $16\le n\le255$.} For each $n$ we apply Proposition~\ref{prop:dual} with $J=2$ and decimal rational parameters, checking all $n$ hypotheses in outward-rounded interval arithmetic at $65$ digits. These are $32{,}520$ inequalities in total.
 
-\emph{Dimensions $256\le n\le9999$.} We use the block form of Proposition~\ref{prop:dual} on $[256,320]$, $[320,500]$, $[500,1000]$, $[1000,2500]$ and $[2500,9999]$, with $J=4$, verifying the cell inequality on $1{,}244$ rational intervals in total.
+\emph{Dimensions $256\le n\le8{,}388{,}608$.} We use the block form of Proposition~\ref{prop:dual} and the cell inequalities~\eqref{eq:cell} on $23$ contiguous blocks, with $65{,}139$ rational covering cells. The full table appears in Section~\ref{sec:computations}.
 
-\emph{Dimensions $n\ge10^4$.} Proposition~\ref{prop:large}.
+\emph{Dimensions $n\ge8{,}388{,}608$.} Proposition~\ref{prop:large} with $a=1/30$.
 
 The bounds obtained are listed in Section~\ref{sec:computations}; each is below $K$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-Theorem~\ref{thm:restriction}(i) and Lemma~\ref{lem:induction}.
+For $n\le20$ we use the certified values $B_{k,n}$ for $2\le k\le\min(5,n)$ described in Section~\ref{sec:computations}. Starting from $C_0=C_1=0$, define $C_n$ as the minimum of the right sides of~\eqref{eq:blockrecurrence} over these $k$. This gives $C_n<4$ for $n\le20$ and $C_{20}<3.944265467369$.
+
+For $21\le n\le D:=8{,}388{,}608$, use the one-step bounds $U_d$ of Propositions~\ref{prop:dual} and~\ref{prop:large}, and put
+\[
+ S_{20}=20C_{20},\qquad S_n=S_{n-1}+U_n.
+\]
+Lemma~\ref{lem:averaging} gives $\HH[f]/\I[f]\le S_n/n$. The exact rational ledger in Section~\ref{sec:computations} verifies
+\[
+ \max_{20\le n\le D}\frac{S_n}{n}
+ =4.6574344717526121503843276538\ldots<c,
+\]
+with its maximum at $n=449$. This decimal denotes the recorded rational upper bound, not an extremal value of $\HH/\I$. For $d>D$, Proposition~\ref{prop:large} gives $U_d\le4.654016341712388<c$. If $S_n\le nc$ and $U_{n+1}\le c$, then $S_{n+1}\le(n+1)c$. This proves every remaining dimension. Constants have $\HH=\I=0$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:restriction}(ii)]
@@ -408,7 +509,8 @@ At a stationary point $h''=-h/(4w^2)<0$, so $h$ has no local minimum in $(0,\inf
 
 (iii) Integrating $I_1(X)=\frac1\pi\int_0^\pi e^{X\cos\theta}\cos\theta\,d\theta$ by parts and substituting $u=1-\cos\theta$,
 \begin{align*}
- G(X)&=\frac X\pi\int_0^\pi e^{-X(1-\cos\theta)}\sin^2\theta\,d\theta=\frac X\pi\int_0^2e^{-Xu}\sqrt{u(2-u)}\,du\\
+ G(X)&=\frac X\pi\int_0^\pi e^{-X(1-\cos\theta)}\sin^2\theta\,d\theta
+ =\frac X\pi\int_0^2e^{-Xu}\sqrt{u(2-u)}\,du\\
  &<\frac{\sqrt2X}{\pi}\int_0^\infty e^{-Xu}\sqrt u\,du=\frac1{\sqrt{2\pi X}}.\qedhere
 \end{align*}
 \end{proof}
@@ -465,7 +567,7 @@ For $n=1$ every Boolean function is constant or $\pm x_1$ and $\HH=0$. For $n\ge
 \end{proof}
 
 \begin{remark}
-The two parts are not tight together. For majority on $n=2m+1$ variables, $B/\I\to2/\ln2$, so the within-level constant cannot go below $2.885$; and $L/\I\le2.5176$ for every symmetric function with $n\le30$, attained by AND and OR at $n=6$ (Section~\ref{sec:computations}). Numerically $C_N$ increases to $\ln4$: $C_1=0.6638$, $C_2=0.8911$, $C_3=0.9991$, $C_{10^6}=1.3855$.
+The two parts are not tight together. For majority on $n=2m+1$ variables, $B/\I\to2/\ln2$, so the within-level constant cannot go below $2.885$; and $L/\I\le2.5176$ for every symmetric function with $n\le16$, attained by AND and OR at $n=6$ (Section~\ref{sec:computations}). Numerically $C_N$ increases to $\ln4$: $C_1=0.6638$, $C_2=0.8911$, $C_3=0.9991$, $C_{10^6}=1.3855$.
 \end{remark}
 
 The majority limit in the remark is proved as follows. Write $n=2m+1$. The derivative of majority is the indicator of the middle slice of the $2m$-cube, and its normalized spectral weights are
@@ -492,24 +594,76 @@ At $n=1024$ the ratio is $3.998911513751\ldots$.
 
 \section{Computations}\label{sec:computations}
 
-The certified upper bounds for $\Delta_1/\I_1$ in the proof of Theorem~\ref{thm:restriction}(i), in bits, rounded up:
+All entropy ratios below use bits. The one-step bounds $U_d$ bound $\Delta_1/\I_1$. In dimensions $n\le15$ exact enumeration gives $U_d\le K$, with equality only in dimension $3$. In dimensions $16\le n\le255$, Proposition~\ref{prop:dual} gives $U_d\le4.848905$, with the largest certified bound at $n=25$. The new block certificates give the following upper bounds, rounded upwards:
 \begin{center}
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}lrr@{}}
 \toprule
-dimensions & bound & method\\
+dimensions & one-step bound & cells\\
 \midrule
-$n\le15$ & $K=4.86767$, only at $n=3$ & exact enumeration\\
-$16\le n\le255$ & $4.848905$ (largest at $n=25$) & Proposition~\ref{prop:dual}, each $n$\\
-$256\le n\le320$ & $4.821277$ & block\\
-$320\le n\le500$ & $4.802134$ & block\\
-$500\le n\le1000$ & $4.770825$ & block\\
-$1000\le n\le2500$ & $4.735731$ & block\\
-$2500\le n\le9999$ & $4.711617$ & block\\
-$n\ge10^4$ & $4.866169$ & Proposition~\ref{prop:large}\\
+$256\le n\le 294$ & $4.691397764337803$ & $989$ \\
+$295\le n\le 339$ & $4.680231363778156$ & $1{,}316$ \\
+$340\le n\le 390$ & $4.669771627054690$ & $1{,}774$ \\
+$391\le n\le 449$ & $4.660834262012443$ & $1{,}598$ \\
+$450\le n\le 517$ & $4.653071439774263$ & $1{,}433$ \\
+$518\le n\le 595$ & $4.646337217003664$ & $1{,}323$ \\
+$596\le n\le 685$ & $4.640615237927098$ & $1{,}242$ \\
+$686\le n\le 788$ & $4.635610258129181$ & $1{,}354$ \\
+$789\le n\le 907$ & $4.631114929966981$ & $1{,}376$ \\
+$908\le n\le 1{,}044$ & $4.627616624048243$ & $1{,}311$ \\
+$1{,}045\le n\le 1{,}201$ & $4.625229653517468$ & $1{,}284$ \\
+$1{,}202\le n\le 1{,}382$ & $4.622146309801676$ & $2{,}648$ \\
+$1{,}383\le n\le 1{,}590$ & $4.618720507476198$ & $2{,}798$ \\
+$1{,}591\le n\le 1{,}829$ & $4.615719288500242$ & $2{,}558$ \\
+$1{,}830\le n\le 2{,}104$ & $4.613032839769942$ & $2{,}397$ \\
+$2{,}105\le n\le 2{,}420$ & $4.610575912037690$ & $2{,}299$ \\
+$2{,}421\le n\le 2{,}499$ & $4.607196989753158$ & $2{,}232$ \\
+$2{,}500\le n\le 9{,}999$ & $4.624103643056020$ & $2{,}294$ \\
+$10{,}000\le n\le 16{,}384$ & $4.597828415472139$ & $3{,}261$ \\
+$16{,}385\le n\le 65{,}535$ & $4.599485777517825$ & $4{,}450$ \\
+$65{,}536\le n\le 262{,}143$ & $4.592695956170183$ & $6{,}162$ \\
+$262{,}144\le n\le 1{,}048{,}575$ & $4.589502673515857$ & $8{,}511$ \\
+$1{,}048{,}576\le n\le 8{,}388{,}608$ & $4.588487126623142$ & $10{,}529$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-The multipliers were found numerically, rounded to decimal rationals, and then checked from scratch; the optimizer plays no part in the proof. An independent audit recomputes all $32{,}520$ coefficient inequalities and all block cells in decimal arithmetic at $75$ digits, and checks the identities used in Section~\ref{sec:restriction} on exact Walsh transforms of all symmetric functions with $n\le10$.
+The blocks are contiguous and have $65{,}139$ rational cells in total. At and above $D=8{,}388{,}608$, the analytic bound is $U_d\le4.654016341712388$. The multipliers and tangent points are exact decimal rationals. Each proposed block intercept is increased by $1/1000$ before certification. The optimizer supplies proposals only; its output is not a proof. We check the zero coefficient, the cell inequalities~\eqref{eq:cell}, exact coverage of $[1/U,1]$, and the objective~\eqref{eq:blockobjective} by outward intervals at $65$ decimal digits. For $\Phi(v)$ we use its positive Bessel series with a geometric remainder when $v\le100$, and the upper bound~\eqref{eq:Phibound} otherwise. A second implementation checks all $32{,}520$ finite coefficient inequalities and all cells at $90$ digits, using different entropy formulas and a different primitive for the shift integral.
+
+\subsection*{The finite block base}
+For $2\le k\le5$ and $k\le n\le20$, let $B_{k,n}$ be the largest value of $\Delta_{[k]}/(k\I_1)$ over nonconstant symmetric functions. We enumerate every weight table up to output complementation. If $A_s=2^n\wh f_s$ and $E_n=4^n\HH[f]$, then
+\[
+ E_n=2n4^n-2\sum_s\binom ns A_s^2\log_2|A_s|,
+\]
+with zero summands omitted. Fixing $k$ coordinates, $r$ of weight one, leaves the subtable $F(r),\ldots,F(r+n-k)$; write $E_{n-k,r}$ for its scaled entropy. Then
+\[
+ 4^n\Delta_{[k]}=E_n-2^k\sum_{r=0}^k\binom kr E_{n-k,r},\qquad
+ 4^nk\I_1=k2^{n+1}\sum_{w:F(w)\ne F(w+1)}\binom{n-1}w.
+\]
+Integer Krawtchouk transforms give the $A_s$. Parseval and the independent edge formula for influence are checked at every table. Rational logarithm enclosures come from
+\[
+ \ln u=2\sum_{j=0}^{29}\frac{z^{2j+1}}{2j+1}+R,\qquad
+ z=\frac{u-1}{u+1},\quad 1\le u<2,\quad
+ 0\le R\le\frac{9}{4\cdot61\cdot3^{61}}.
+\]
+Range reduction and outward integer rounding give fixed-point enclosures with denominator $2^{56}$. A second complete pass strictly excludes every nonmaximizer; exact prime-log expressions prove all surviving ties. A separate integer and $144$-bit logarithm audit checks every surviving maximum. The census covers $2{,}097{,}150$ tables up to complementation through dimension $20$, including constants, and supplies all $70$ pairs $(k,n)$. The recurrence~\eqref{eq:blockrecurrence} gives
+\[
+ C_{20}=\frac{92232807018024312555229592687247931457194510016451}
+ {23384026197294446691258957323460528314494920687616}
+ <3.944265467369.
+\]
+This is a certified upper bound. It is not identified with the exact maximum of $\HH/\I$ in dimension $20$.
+
+\subsection*{The averaged ledger}
+Seed the sum with $20C_{20}$ and add the $U_d$ for $21\le d\le D$. Exact rational addition gives
+\[
+ \begin{gathered}
+ \max_{20\le n\le D}\frac{20C_{20}+\sum_{d=21}^nU_d}{n}\\
+ =\frac{373080419884801803846596023166747790405659360503078208212549379}
+ {80104276753121998324396300035352914529481654272000000000000000}.
+ \end{gathered}
+\]
+This equals $4.6574344717526121503843276538\ldots$ and the maximum occurs at $n=449$. The claimed $c=931487/200000$ is an upward rounding. We also sum by segment lengths and recompute the binding value and cutoff interface with $85$-digit decimal arithmetic. On a segment with constant bound $U$, the ratio has the form $U+A/n$, so its maximum lies at an endpoint. This gives a further check of the finite maximum. At $D$ the ledger is below $4.588797$, and every later one-step bound is below $c$ by Proposition~\ref{prop:large}. The seed $20C_{20}$ is essential to the description of this computation: the displayed ledger is not the pure sum $\sum_{d=1}^nU_d$.
+
+The certificate scripts, rational multipliers, cells and ledger are included with the data. The computation guide gives the command for each statement and distinguishes the exhaustive certificates from numerical checks.
 
 Over all symmetric functions with $n\le16$ (exact integer Fourier coefficients, floating-point logarithms) the repository's check script finds:
 \begin{center}
@@ -524,7 +678,7 @@ $\Delta_1/\I_1$ & $4.86767$, at $\mathrm{OR}_3$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $K$ and $C_*$ at $40$ digits. These checks support but are not part of the proofs; the proofs use only the exact enumeration for $n\le15$, the interval certificates for Propositions~\ref{prop:dual} and~\ref{prop:large}, and the certificate for~\eqref{eq:majorant}.
+In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $K$ and $C_*$ at $40$ digits. These checks support but are not part of the proofs; the computer-assisted parts use the exact enumeration for $n\le15$, the block census through dimension $20$, the interval certificates for Propositions~\ref{prop:dual} and~\ref{prop:large}, the exact rational ledger, and the certificate for~\eqref{eq:majorant}.
 
 \section{Questions}
 
@@ -532,13 +686,27 @@ In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and 
 Is the optimal constant for symmetric functions equal to $4$?
 \end{question}
 
-The restriction step cannot give less than $K$, because of $\mathrm{OR}_3$. A smaller constant needs either a different induction or a direct argument.
+A single uniform restriction bound cannot be smaller than $K$, because of $\mathrm{OR}_3$. Lemma~\ref{lem:averaging} shows that this does not obstruct a smaller entropy--influence constant: one can retain the dimension-specific cost throughout the restriction chain.
+
+For general Boolean functions, $K$ does not bound the entropy loss at a suitable coordinate. In the $\{0,1\}$ convention, consider the majority of three disjoint AND pairs,
+\[
+ f=\operatorname{Maj}_3(x_1\wedge x_2,\ x_3\wedge x_4,\ x_5\wedge x_6).
+\]
+After converting the output to $\{-1,1\}$, every coordinate has
+\[
+ \frac{\Delta_i[f]}{\I_i[f]}=5.1948716233791414624\ldots>K.
+\]
+The OR of eight disjoint AND pairs on sixteen variables gives, at every coordinate,
+\[
+ \frac{\Delta_i[f]}{\I_i[f]}=6.0037460565590882514\ldots>6.
+\]
+Both functions are transitive on their coordinates. Exact integer Walsh transforms and rational logarithm enclosures certify the two inequalities in the data.
 
 \begin{question}
-Does every Boolean function $f$ have a coordinate $i$ with $\Delta_i[f]\le K\,\I_i[f]$?
+Is there an absolute constant $C$ such that every nonconstant Boolean function has a coordinate $i$ with $\I_i[f]>0$ and $\Delta_i[f]\le C\,\I_i[f]$?
 \end{question}
 
-A positive answer would prove the conjecture with constant $K$ by the same induction.
+A positive answer would prove the entropy--influence conjecture with constant $C$ by coordinate restriction and induction. The examples above show that such a $C$ must exceed $6$.
 
 \appendix
 \section{The scalar certificate for the majorant}\label{app:cert}
@@ -564,7 +732,7 @@ Both $\Psi$ and $U$ decrease: $h$ increases, and $U'(x)=-e^{-40x}/x-5.46-35.6\,e
 The value $\Phi(10)$ is enclosed using $I_0(10)=\sum_{k\ge0}25^k/(k!)^2$, with the terms through $k=60$ summed and the rest bounded by a geometric series of ratio at most $25/62^2$. The resulting bound is $C_*<4.636423665924$.
 
 \section*{Acknowledgements and funding}
-The final manuscript was audited by Claude Opus 5.5 (Anthropic), which checked the proofs, recomputed the numerical constants in high-precision arithmetic, and reran the finite computations in the repository.
+The final manuscript was audited by Claude Opus 5.5 (Anthropic) and by Codex agents (OpenAI), which checked the proofs, recomputed the numerical constants in high-precision arithmetic, and reran the finite computations in the repository.
 
 The research presented in this paper was supported by the European Research
 Council (ERC) under the European Union's Horizon Europe research and
@@ -585,7 +753,7 @@ in the funding declaration above.
 
 \begin{samepage}
 \section*{Declaration of generative AI and AI-assisted technologies}
-The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In November 2026, Claude Opus 5.5 (Anthropic) and a team of Codex agents running OpenAI's GPT-6.1, all connected to the Brain, retrieved the spectral-level entropy lemma and related methods from the author's earlier work through Math Brain, derived the noise-stability estimate and the split of the entropy into level and within-level parts, proved the Bessel-function inequalities and the asymptotic restriction estimate, found the bound for the zero-level coefficient that closes the restriction step in every dimension, wrote and ran the interval certificates and the exhaustive computation for small dimensions, and searched the literature. Separate agents refereed the proofs and recomputed the certificates with independently written code. Claude Opus 5.5 coordinated the agents, assembled the proofs, prepared the manuscript, and audited it, including the proofs, the numerical constants and the finite computations. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In November 2026, Claude Opus 5.5 (Anthropic) and a team of Codex agents running OpenAI's GPT-6.1, all connected to the Brain, retrieved the spectral-level entropy lemma and related methods from the author's earlier work through Math Brain, derived the noise-stability estimate and the split of the entropy into level and within-level parts, proved the Bessel-function inequalities and the asymptotic restriction estimate, found the bound for the zero-level coefficient that closes the restriction step in every dimension, derived the averaging argument over successive dimensions and the sharper shift estimate, wrote and ran the interval certificates and the exhaustive computation for small dimensions, and searched the literature. Separate agents checked the averaging argument, the sharper shift estimate and the changed analytic cutoff, and recomputed the certificates with independently written code. Claude Opus 5.5 coordinated the agents, assembled the proofs, prepared the manuscript, and audited it, including the proofs, the numerical constants and the finite computations. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 \par
 \end{samepage}
 
