@@ -1,8 +1,9 @@
 log2(4+e) = 2.748092...                                    PASS  2.7480923171550183933
 2 + 1/ln 2 = 3.442695...                                   PASS  3.4426950408889634074
-total constant 673/250 + 2 + 1/ln 2 = 6.134695041...       PASS  6.134695040888963407359924681
-Lemma 3.2: max F(p) on a grid of q = log2(1/p) in [1, 60] < 2.692 PASS  2.69172572952
-Lemma 3.2 end cases: 2.646 and 2.590                       PASS  2.6450835 2.5890638
+Theorem E constant log2(4+e) + 2 + 1/ln 2 < 6.191          PASS  6.1907873580439818007
+K = 12 - (9/2) log2 3 = 4.8676687467...                    PASS  4.867668746754797183458175
+kappa(1/2) = h'(1) = 2 ln 2                                PASS  1.3862943611198906188
+gamma < H_10 - ln(21/2) < 0.578                            PASS  0.577592996805
 C_N < ln 4 for N = 1..200 and up to 10^6 (quadrature)      PASS  max 1.385497 at N=1000000, ln 4 = 1.386294
 C_1, C_2, C_3 below the analytic bounds 1, 59/64, ln 4     PASS  0.6638 0.8911 0.9991
 C_N <= ln4 - (2-sqrt2)/sqrt(pi N) + 1/(2N), N >= 3         PASS  
@@ -11,7 +12,7 @@ e^-X I_1(X) < 1/sqrt(2 pi X) on [1e-6, 1e9]                PASS
 J(X) = X e^-X I_1(X) at X = 7                              PASS  
 each n = 2..16: max H/I equals the AND/OR value            PASS  
 all symmetric f, n <= 16: max H/I < 4, attained by AND/OR  PASS  max 3.930271404541 at n=16
-all symmetric f, n <= 16: L <= 2.692 I                     PASS  max L/I 2.517551
+all symmetric f, n <= 16: L <= log2(4+e) I                 PASS  max L/I 2.517551
 all symmetric f, n <= 16: B <= (2+1/ln2) I                 PASS  max B/I 1.809863
 restriction step: max Delta_1/I_1 = 12 - (9/2) log2 3 at n=3 PASS  max 4.8676687468 at n=3, OR_3 4.8676687468
 AND/OR closed form matches direct computation, n <= 16     PASS  

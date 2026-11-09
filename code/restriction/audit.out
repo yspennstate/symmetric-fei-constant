@@ -1,0 +1,28 @@
+{
+  "decimal_audit": {
+    "decimal_precision_digits": 75,
+    "coefficients_checked": 32520,
+    "block_cells_checked": 1244,
+    "min_coefficient_slack_nats": "1.01624052624387731255764849565615980954002369241946074998378493747E-9",
+    "max_midpoint_difference_bits": "1.67436468748516859289372308137E-45",
+    "largest_exact_dimension_bound_bits": "4.84890400156048687659353363248622894448368131057565448930610418102105129648",
+    "largest_exact_dimension_bound_dimension": 25
+  },
+  "integer_walsh_audit": {
+    "nonconstant_tables_modulo_output_negation": 2035,
+    "full_cube_walsh_checks": 246,
+    "maximum_pair_vs_direct_entropy_error_nats": 4.440892098500626e-15,
+    "maximum_zero_level_minus_tangent_nats": -0.03848360150302865
+  },
+  "assembly": {
+    "status": "all dimensions covered; sharp restriction constant certified subject to analytic proof review",
+    "analytic_cutoff": 16,
+    "combined_cutoff": 1,
+    "sharp_restriction_constant_bits": "[4.86766874675479718345817475223482571058083516538383522794911305456505774296, 4.86766874675479718345817475223482571058083516538383522794911305456505810519]",
+    "small_sign_tables": 131068,
+    "large_dimension_bound_bits": "[4.8661685492075473709261479694963328793418512242165044168755730573, 4.8661685492075473709261479694963328793418512242165044168757087191]"
+  },
+  "status": "passed",
+  "seconds": 21.72180520799884,
+  "peak_resident_bytes_macos": 23314432
+}

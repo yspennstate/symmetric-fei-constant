@@ -39,8 +39,7 @@
 \usepackage{xurl}
 \begin{document}
 \begin{abstract}
-We prove that every symmetric Boolean function $f$ satisfies
-$\HH[f]\le C_{\rm sym}\I[f]$ with $C_{\rm sym}=2.692+2+1/\ln 2<6.1347$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. The Fourier entropy of a symmetric function splits into the entropy of its level weights and a within-level term. The first is at most $2.692\,\I[f]$ for every Boolean function, by a sharpened spectral-level estimate whose last step is a one-variable inequality checked by interval arithmetic. For the second we prove that the derivative of a symmetric function has noise stability at most $e^{-v}I_0(v)$ times its squared norm, where $v$ is the variance of the noise, and evaluate the resulting entropy integral through a Frullani identity and two inequalities for modified Bessel functions. The AND and OR functions show that the optimal constant for symmetric functions is at least $4$. We also prove that the entropy cost of restricting one coordinate of a symmetric function is asymptotically at most $4.637$ times its influence, so the restriction step that would give constant $4.8723$ can fail in only finitely many dimensions.
+We prove that every symmetric Boolean function $f$ satisfies $\HH[f]\le K\,\I[f]$ with $K=12-\frac92\log_23=4.8677\ldots$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. The proof is an induction on one coordinate. We show that restricting a coordinate of a symmetric function costs at most $K$ times the influence of that coordinate in Fourier entropy, in every dimension; this is sharp for the restriction step, with equality for OR on three variables. The main tool is an estimate for the derivative of a symmetric function: its noise stability is at most $e^{-v}I_0(v)$ times its squared norm, where $v$ is the variance of the noise. Together with a bound for the zero-level coefficient that is kept on the same probability law as the other levels, it reduces the restriction step in each dimension below $10^4$ to finitely many linear inequalities, which we verify in outward-rounded interval arithmetic, and it gives an explicit analytic bound from $10^4$ on. Dimensions up to $15$ are checked exhaustively in exact arithmetic. Without any computer verification, the same estimate gives $\HH[f]\le6.191\,\I[f]$. The AND and OR functions show that the optimal constant is at least $4$.
 \end{abstract}
 \maketitle
 
@@ -53,17 +52,38 @@ For $f:\bits^n\to\bits$ write $f=\sum_{S\subseteq[n]}\wh f(S)\chi_S$ with $\chi_
 \]
 where $x^{\oplus i}$ is $x$ with its $i$-th coordinate flipped. The Fourier entropy--influence conjecture of Friedgut and Kalai~\cite{FK96} asserts that $\HH[f]\le C\,\I[f]$ for an absolute constant $C$. It remains open. It is known for several classes of functions, among them symmetric functions~\cite{OWZ11,KMS12,CKLS16,ACKSW21,Shm26}.
 
-A function is \emph{symmetric} if $f(x)$ depends only on the Hamming weight $|x|=\#\{i:x_i=-1\}$. O'Donnell, Wright and Zhou~\cite{OWZ11} proved the conjecture for symmetric functions with constant $12.04$. Our main result lowers this constant by about half.
+A function is \emph{symmetric} if $f(x)$ depends only on the Hamming weight $|x|=\#\{i:x_i=-1\}$. O'Donnell, Wright and Zhou~\cite{OWZ11} proved the conjecture for symmetric functions with constant $12.04$.
 
 \begin{mainthm}\label{thm:main}
 Every symmetric Boolean function $f$ satisfies
 \[
- \HH[f]\le C_{\rm sym}\,\I[f],\qquad
- C_{\rm sym}=\frac{673}{250}+2+\frac{1}{\ln2}=6.1346950408\ldots<6.1347.
+ \HH[f]\le K\,\I[f],\qquad K=12-\frac92\log_23=4.8676687467\ldots
 \]
 \end{mainthm}
 
-The proof has two parts. For symmetric $f$ the coefficient $\wh f(S)$ depends only on $k=|S|$, and the entropy splits as $\HH=L+B$, where $L$ is the entropy of the level weights $W_k=\sum_{|S|=k}\wh f(S)^2$ and $B=\sum_kW_k\log_2\binom nk$ measures the spread inside the levels. The bound $L\le\log_2(4+e)\I=2.7481\I$ holds for every Boolean function; it is Lemma~2.1 of~\cite{Shm26}. In Section~\ref{sec:level} we lower it to $L\le2.692\,\I$ by keeping the exact binary entropy and the exact isoperimetric bound in that argument; what remains is an inequality in one variable, which we verify by outward-rounded interval arithmetic. The main new part is the within-level bound $B<(2+1/\ln2)\I$ for nonconstant $f$. It rests on the following noise-stability estimate, which is of independent interest. Write $T_\lambda$ for the noise operator, $\Stab_\lambda[g]=\langle g,T_\lambda g\rangle=\sum_S\lambda^{|S|}\wh g(S)^2$, and $I_0$ for the modified Bessel function of order zero.
+The proof is by induction on the number of variables. For a coordinate $i$ let $f_{i\to\pm1}$ be the two restrictions, $\I_i[f]$ the influence of $i$, and
+\[
+ \Delta_i[f]=\HH[f]-\tfrac12\bigl(\HH[f_{i\to1}]+\HH[f_{i\to-1}]\bigr).
+\]
+Restrictions of a symmetric function are symmetric, so if $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$, then $\HH\le K\I$ for every symmetric $f$ (Lemma~\ref{lem:induction}). For $\mathrm{OR}_3$ one has $\Delta_1/\I_1=12-\frac92\log_23$, so no smaller constant can come out of this induction. We prove that this value is the worst case in every dimension.
+
+\begin{mainthm}\label{thm:restriction}
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For every $n\ge1$ and every symmetric Boolean $f$ on $n$ variables, $\Delta_1[f]\le K\,\I_1[f]$, with equality for $\mathrm{OR}_3$.
+\item In high dimension the step is cheaper:
+\[
+ \limsup_{n\to\infty}\ \sup_{f}\ \frac{\Delta_1[f]}{\I_1[f]}\le C_*<4.637,
+\]
+where the supremum is over nonconstant symmetric $f$ on $n$ variables and
+\[
+ C_*=\frac{1}{\ln2}\Bigl[\frac{14}{5}+\frac{89}{50}\,e^{-10}I_0(10)+\frac{48}{23\sqrt{40\pi}}+\frac{e^{-z}}{z}\Bigr]=4.6364236659\ldots,\qquad z=40\Bigl(\frac{23}{48}\Bigr)^2.
+\]
+\end{enumerate}
+\end{mainthm}
+
+Part~(i) is computer-assisted. For $n\le15$ we check every symmetric function in exact arithmetic. For $16\le n\le9999$ the proof reduces, in each dimension or in each of five blocks of dimensions, to a finite list of one-variable inequalities with rational multipliers, which we verify in outward-rounded interval arithmetic. For $n\ge10^4$ the bound is an explicit expression in $n$, decreasing in $n$ and below $4.86617$ at $n=10^4$. The certified bounds are listed in Section~\ref{sec:computations}; away from small $n$ they are well below $K$.
+
+Both parts rest on a noise-stability estimate for derivatives, which is of independent interest. Write $T_\lambda$ for the noise operator, $\Stab_\lambda[g]=\langle g,T_\lambda g\rangle=\sum_S\lambda^{|S|}\wh g(S)^2$, and $I_0$ for the modified Bessel function of order zero.
 
 \begin{mainthm}\label{thm:stab}
 Let $f$ be a symmetric Boolean function on $n\ge2$ variables, $N=n-1$, and let $g=D_nf$ be its derivative in the last coordinate, a function on $\bits^N$. For $0\le\lambda\le1$,
@@ -72,7 +92,20 @@ Let $f$ be a symmetric Boolean function on $n\ge2$ variables, $N=n-1$, and let $
 \]
 \end{mainthm}
 
-Since $e^{-v}I_0(v)\sim(2\pi v)^{-1/2}$, this improves the derivative estimate used in~\cite{OWZ11} by a factor that tends to $2$ when $\lambda\to1$ and $v\to\infty$ together. The proof uses three facts: the derivative of a symmetric function is an alternating sum of indicators of Hamming slices; an alternating sum of selected values of a unimodal sequence is at most its largest value; and every atom of a sum of independent Bernoulli variables is bounded by Fourier inversion. The within-level term is then bounded by an integral of the envelope $e^{-v}I_0(v)$ against a harmonic-number kernel, which we show is less than $\ln4$ for every $N$. A Frullani identity evaluates the main part exactly, and two inequalities for $e^{-x}I_0(x)$ and $e^{-x}I_1(x)$ control the rest.
+Since $e^{-v}I_0(v)\sim(2\pi v)^{-1/2}$, this improves the derivative estimate used in~\cite{OWZ11} by a factor that tends to $2$ when $\lambda\to1$ and $v\to\infty$ together. The proof uses three facts: the derivative of a symmetric function is an alternating sum of indicators of Hamming slices; an alternating sum of selected values of a unimodal sequence is at most its largest value; and every atom of a sum of independent Bernoulli variables is bounded by Fourier inversion.
+
+The restriction step loses most at the zero-level coefficient $\wh f(\emptyset)$, which appears in $\Delta_1$ but carries no influence. The asymptotic argument in part~(ii) bounds its contribution separately by $O(n^{-1/2})$; that is too crude in moderate dimensions. We instead bound it by a concave function of the mass $\mu_0$ that the derivative puts on level zero, and use a tangent of that function, so that the zero level enters the same linear program as the other levels (Lemma~\ref{lem:zero}). This is what makes the finite range tractable.
+
+The noise-stability estimate also gives a bound that needs no computer at all.
+
+\begin{mainthm}\label{thm:analytic}
+Every symmetric Boolean function $f$ satisfies
+\[
+ \HH[f]\le\Bigl(\log_2(4+e)+2+\frac1{\ln2}\Bigr)\I[f]<6.191\,\I[f].
+\]
+\end{mainthm}
+
+Here the entropy splits as $\HH=L+B$, where $L$ is the entropy of the level weights $W_k=\sum_{|S|=k}\wh f(S)^2$ and $B=\sum_kW_k\log_2\binom nk$ measures the spread inside the levels. The bound $L\le\log_2(4+e)\I$ holds for every Boolean function; it is Lemma~2.1 of~\cite{Shm26}. We prove $B<(2+1/\ln2)\I$ for nonconstant symmetric $f$ by integrating the envelope $e^{-v}I_0(v)$ against a harmonic-number kernel; a Frullani identity evaluates the main part exactly, and two inequalities for $e^{-x}I_0(x)$ and $e^{-x}I_1(x)$ control the rest.
 
 The constant $4$ is a natural lower bound.
 
@@ -81,30 +114,10 @@ For the OR function on $n$ variables (and for AND),
 \[
  \frac{\HH[\mathrm{OR}_n]}{\I[\mathrm{OR}_n]}=4-\frac{4-2/\ln2}{n}+O(2^{-n}).
 \]
-Hence the optimal constant for symmetric functions lies in $[4,\,6.1347]$.
+Hence the optimal constant for symmetric functions lies in $[4,\,4.8677]$.
 \end{mainthm}
 
 That OR approaches $4$ is classical; we include the exact expression because AND and OR are the maximizers among all symmetric functions in every dimension we computed (Section~\ref{sec:computations}).
-
-The inductive approach to the conjecture asks for a coordinate whose restriction costs little entropy. For a coordinate $i$ let $f_{i\to\pm1}$ be the two restrictions and
-\[
- \Delta_i[f]=\HH[f]-\tfrac12\bigl(\HH[f_{i\to1}]+\HH[f_{i\to-1}]\bigr).
-\]
-If $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$, then $\HH\le K\I$ for every symmetric $f$ by induction on $n$ (Lemma~\ref{lem:induction}). The best $K$ is at least $\Delta_1/\I_1$ for $\mathrm{OR}_3$, which equals $12-\tfrac92\log_23=4.8677\ldots$, so this route cannot reach $4$; in all dimensions $n\le16$ it is the largest value. We prove that the restriction step is much cheaper in high dimension.
-
-\begin{mainthm}\label{thm:restriction}
-\[
- \limsup_{n\to\infty}\ \sup_{f}\ \frac{\Delta_1[f]}{\I_1[f]}\le C_*<4.637,
-\]
-where the supremum is over nonconstant symmetric $f$ on $n$ variables and
-\[
- C_*=\frac{1}{\ln2}\Bigl[\frac{14}{5}+\frac{89}{50}\,e^{-10}I_0(10)+\frac{48}{23\sqrt{40\pi}}+\frac{e^{-z}}{z}\Bigr]=4.6364236659\ldots,\qquad z=40\Bigl(\frac{23}{48}\Bigr)^2.
-\]
-\end{mainthm}
-
-Consequently the restriction step with constant $4.8723$ can fail for at most finitely many $n$. An explicit cutoff, together with a finite computation below it, would give $\HH\le4.8723\,\I$ for every symmetric $f$. We do not have such a cutoff (Question~\ref{q:cutoff}).
-
-The proof of Theorem~\ref{thm:restriction} uses Theorem~\ref{thm:stab} in place of a log-Sobolev inequality, a passage to a limiting degree distribution, and one pointwise majorant of the restriction-entropy integrand that is verified by outward-rounded interval arithmetic. All other steps are analytic. The computations are in the repository listed under Data availability.
 
 \subsection*{Notation}
 Logarithms are natural unless written $\log_2$. Entropies are in bits. For a symmetric function we write $F(w)\in\bits$ for its value on weight $w$, $\wh f_k$ for the common coefficient at level $k$, and $W_k=\binom nk\wh f_k^{\,2}$. We put
@@ -113,72 +126,17 @@ Logarithms are natural unless written $\log_2$. Entropies are in bits. For a sym
 \]
 so that $\Phi(x)=\frac1\pi\int_0^\pi e^{-x(1-\cos\theta)}\,d\theta$ and $\Phi'=G-\Phi$. Finally $\Ei(x)=\int_x^\infty e^{-u}u^{-1}\,du$ and $H_N=\sum_{i\le N}1/i$.
 
-\section{The entropy of a symmetric function}\label{sec:split}
-
-For symmetric $f$ every set of size $k$ carries the same coefficient, so
-\begin{equation}\label{eq:split}
- \HH[f]=\sum_{k=0}^n\binom nk\wh f_k^{\,2}\log_2\frac{1}{\wh f_k^{\,2}}
- =\underbrace{\sum_kW_k\log_2\frac1{W_k}}_{L}+\underbrace{\sum_kW_k\log_2\binom nk}_{B}.
-\end{equation}
-The level weights satisfy $\sum_kW_k=1$ and $\sum_kkW_k=\I[f]$.
+\section{The derivative of a symmetric function}\label{sec:split}
 
 For $n\ge2$ let $N=n-1$ and $g=D_nf$, where $D_nf(x)=\tfrac12\bigl(f(x,1)-f(x,-1)\bigr)$ for $x\in\bits^N$. Then $\wh g(T)=\wh f(T\cup\{n\})$, so $g$ is symmetric with
 \begin{equation}\label{eq:derivative}
- W_j[g]=\binom Nj\wh f_{j+1}^{\,2}=\frac{(j+1)W_{j+1}}{n},\qquad \|g\|_2^2=\sum_jW_j[g]=\frac{\I[f]}n.
+ W_j[g]=\binom Nj\wh f_{j+1}^{\,2}=\frac{(j+1)W_{j+1}}{n},\qquad \|g\|_2^2=\sum_jW_j[g]=\I_n[f]=\frac{\I[f]}n.
 \end{equation}
 Its values are $g(x)=\tfrac12\bigl(F(w)-F(w+1)\bigr)$ with $w=|x|$. They are nonzero exactly on the weights $w_0<w_1<\dots$ where $F$ changes value, and there they alternate in sign. Up to a global sign,
 \begin{equation}\label{eq:alternating}
  g(x)=\sum_{i}(-1)^i\,\mathbf 1[|x|=w_i].
 \end{equation}
-In particular $|g|=g^2$, so $\E|g|=\|g\|_2^2$.
-
-\section{The level entropy}\label{sec:level}
-
-\begin{lemma}[{\cite[Lemma~2.1]{Shm26}}]\label{lem:level}
-Every Boolean function satisfies $L\le\log_2(4+e)\,\I[f]$.
-\end{lemma}
-
-\begin{proof}
-We may assume $f$ is not constant. Let $\eps=1-W_0>0$ and $Q(k)=W_k/\eps$ for $k\ge1$. Put $a=\log_2(1+e/4)$, so that $(2^a-1)2^{-ak}$, $k\ge1$, is a probability law. Gibbs' inequality against this law gives $\HH(Q)\le a\,\E_Qk-\log_2(2^a-1)$. Since $L=h_2(\eps)+\eps\HH(Q)$, $\eps\E_Qk=\I$ and $h_2(\eps)\le\eps\log_2(1/\eps)+\eps\log_2e$, we get
-\[
- L\le a\I+\eps\bigl[\log_2(1/\eps)+\log_2e-\log_2(e/4)\bigr]=a\I+\eps\bigl[\log_2(1/\eps)+2\bigr].
-\]
-Let $p=\min\{\P[f=1],\P[f=-1]\}$, so $\eps=4p(1-p)$. The edge-isoperimetric inequality~\cite[Chapter~2]{OD14} gives $\I\ge2p\log_2(1/p)$, and
-\[
- 2p\log_2\frac1p-\eps\Bigl(1+\tfrac12\log_2\frac1\eps\Bigr)=2p\bigl[p\log_2\tfrac1p+(1-p)\log_2(1-p)\bigr]\ge0,
-\]
-because the bracket is concave on $[0,\tfrac12]$ (its second derivative is $(2p-1)/(p(1-p)\ln2)$) and vanishes at both ends. Hence $\eps[\log_2(1/\eps)+2]\le2\I$ and $L\le(a+2)\I=\log_2(4+e)\I$.
-\end{proof}
-
-The proof loses in two places: it replaces $h_2(\eps)$ by $\eps\log_2(e/\eps)$, and it bounds $\eps[\log_2(1/\eps)+2]$ by $2\I$ instead of dividing by the isoperimetric bound $2p\log_2(1/p)$ itself. Keeping both steps exact gives a smaller constant. Write $h(x)=-x\ln x-(1-x)\ln(1-x)$.
-
-\begin{lemma}\label{lem:level2}
-Every Boolean function satisfies $L\le\frac{673}{250}\,\I[f]=2.692\,\I[f]$.
-\end{lemma}
-
-\begin{proof}
-Assume $f$ is not constant and let $p$, $\eps=4p(1-p)$ and $Q$ be as in the previous proof, so $0<p\le\tfrac12$. Put $r=\tfrac{147}{100}$. Gibbs' inequality against the law $(r-1)r^{-k}$, $k\ge1$, gives $-\sum_kQ(k)\ln Q(k)\le-\ln(r-1)+\E_Qk\,\ln r$, hence
-\[
- L\le\log_2r\cdot\I+\frac{h(\eps)-\eps\ln(r-1)}{\ln2}.
-\]
-The numerator is positive because $r<2$. With $\I\ge2p\log_2(1/p)$ this gives $L\le F(p)\,\I$, where
-\[
- F(p)=\log_2r+\frac{h\bigl(4p(1-p)\bigr)-4p(1-p)\ln(r-1)}{2p\ln(1/p)}.
-\]
-It remains to show $F(p)<2.692$ on $0<p\le\tfrac12$. Write $q=\log_2(1/p)\ge1$.
-
-If $1\le q\le2$, that is $\tfrac14\le p\le\tfrac12$, then $2p\log_2(1/p)\ge1$ by concavity, since it equals $1$ at both ends. With $h\le\ln2$ and $\eps\le1$ we get $L\le\bigl(\log_2r+1-\log_2(r-1)\bigr)\I<2.646\,\I$.
-
-If $q\ge32$, use $h(x)\le x\bigl(\ln(1/x)+1\bigr)$ and $\ln(1/\eps)=q\ln2-\ln4-\ln(1-p)$:
-\[
- F(p)\le\log_2r+2(1-p)\Bigl[1+\frac{c(p)}{q\ln2}\Bigr],\qquad c(p)=1-\ln4-\ln(1-p)-\ln(r-1).
-\]
-Here $0<c(p)\le c(2^{-32})$, so $F(p)\le\log_2r+2+2c(2^{-32})/(32\ln2)<2.590$.
-
-For $2\le q\le32$ we evaluate $F$ in outward-rounded interval arithmetic ($45$ digits) on a dyadic partition of $[2,32]$ in the variable $q$. The partition has $7058$ intervals, they cover $[2,32]$ without gaps, and the upper end of every enclosure is below $2.692$; the largest is $2.6919998948$.
-\end{proof}
-
-The choice of $r$ is close to optimal for this argument: on a fine grid $\sup_pF(p)$ is $2.6917$ for $r=1.47$ and for $r=1.48$, and larger for $r=1.44$ and $r=1.50$. So the method stops near $2.6917$.
+In particular $|g|=g^2$, so $\E|g|=\|g\|_2^2$. By symmetry the same holds for the derivative in any coordinate.
 
 \section{Noise stability of derivatives}\label{sec:stab}
 
@@ -214,7 +172,200 @@ By Lemmas~\ref{lem:unimodal} and~\ref{lem:atom} the inner sum has absolute value
 For even $N$ the atom bound before the step $1-u\le e^{-u}$ is attained at $r=y=N/2$. The constant $\sup_v\sqrt v\,\Phi(v)=0.46882\ldots$ is the sharp uniform concentration constant for Bernoulli sums of Baillon, Cominetti and Vaisman~\cite{BCV16}; we use the full function $\Phi$ rather than this constant.
 \end{remark}
 
-\section{The within-level entropy}\label{sec:within}
+\section{The restriction step}\label{sec:restriction}
+
+\begin{lemma}\label{lem:induction}
+Suppose $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$ on at most $m$ variables. Then $\HH[f]\le K\,\I[f]$ for every symmetric $f$ on at most $m$ variables.
+\end{lemma}
+
+\begin{proof}
+Restrictions of a symmetric function are symmetric. For $i\ne1$ the influence of $i$ is the average of its influences in the two restrictions of $x_1$, so $\I[f]=\I_1[f]+\frac12(\I[f_{1\to1}]+\I[f_{1\to-1}])$. Induct on $n$, starting from constants.
+\end{proof}
+
+For symmetric $f$ on $n$ variables, the restrictions to $x_1=\pm1$ have coefficients $\wh f_s\pm\wh f_{s+1}$ on the $\binom Ns$ sets of size $s$ in the remaining coordinates, $N=n-1$. With $\varphi(u)=u\log_2(1/u)$ this gives the exact formulas
+\begin{equation}\label{eq:delta}
+ \Delta_1=\sum_{s=0}^{N}\binom Ns\,\mathcal D(\wh f_s,\wh f_{s+1}),\qquad \I_1=\sum_{s=0}^N\binom Ns\wh f_{s+1}^{\,2},
+\end{equation}
+\[
+ \mathcal D(a,b)=\varphi(a^2)+\varphi(b^2)-\tfrac12\bigl[\varphi((a+b)^2)+\varphi((a-b)^2)\bigr].
+\]
+For $\mathrm{OR}_3$ one finds $\Delta_1/\I_1=12-\frac92\log_23$. From here on we work in natural units, $\mathcal D_e=(\ln2)\mathcal D$, and divide by $\ln2$ at the end. Throughout, $f$ is nonconstant, $g=D_1f$ and
+\[
+ \mu_s=\binom Ns\wh f_{s+1}^{\,2}/\I_1\qquad(0\le s\le N),
+\]
+a probability law on $\{0,\dots,N\}$ by~\eqref{eq:derivative}.
+
+\subsection{A tangent bound}
+Let $h(t)=\mathcal D_e(\sqrt t,1)$ for $t\ge0$. For $t>0$, $t\ne1$, direct differentiation gives
+\[
+ h''(t)=\frac{1}{2t^{3/2}}\ln\Bigl|\frac{\sqrt t-1}{\sqrt t+1}\Bigr|<0,
+\]
+$h'$ is continuous at $t=1$ and tends to $0$ from above, so $h$ is increasing and concave and $(x,y)\mapsto\mathcal D_e(\sqrt x,\sqrt y)=y\,h(x/y)$ is concave on the quadrant. Every tangent gives $\mathcal D_e(a,b)\le h'(t)a^2+[h(t)-th'(t)]b^2$. Taking the tangent at $t_s=(n-s)/s$ for the term $s\ge1$ of~\eqref{eq:delta}, and using $\binom Ns/\binom N{s-1}=(n-s)/s$ to move the $a^2$ part to the neighbouring index, one obtains
+\begin{equation}\label{eq:tangent}
+ \frac{(\ln 2)\Delta_1}{\I_1}\le L_0+\mu_0\kappa(\tfrac1n)+\sum_{s=1}^N\mu_s\Bigl[\Psi\bigl(\tfrac sn\bigr)+\kappa\bigl(\tfrac{s+1}n\bigr)-\kappa\bigl(\tfrac sn\bigr)\Bigr],\qquad L_0=\frac{\mathcal D_e(\wh f_0,\wh f_1)}{\I_1},
+\end{equation}
+where $\Psi(x)=h\bigl(\frac{1-x}x\bigr)$ and $\kappa(x)=\frac{1-x}xh'\bigl(\frac{1-x}x\bigr)$, extended continuously by $\kappa(0)=1$, $\kappa(1)=0$. Both $\Psi$ and $\kappa\bigl(\frac{s+1}n\bigr)-\kappa\bigl(\frac sn\bigr)$ are explicit, so the right side of~\eqref{eq:tangent} is a linear function of $\mu$ plus the zero-level term $L_0$.
+
+We also use $h(t)\le3+\ln(t+\frac16)$. With $p(y)=y^2\ln(y^2)$, $p(0)=0$, the second-difference identity (valid since $p''$ is locally integrable) and Jensen's inequality for the triangular density $1-|u|$ on $[-1,1]$, which has mean $0$ and second moment $\tfrac16$, give
+\begin{equation}\label{eq:hbound}
+ h(t)=3+\int_{-1}^1(1-|u|)\ln\bigl((\sqrt t+u)^2\bigr)\,du\le3+\ln\bigl(t+\tfrac16\bigr).
+\end{equation}
+
+\subsection{Three facts about the derivative}
+\begin{enumerate}[label=(\alph*)]
+\item Let $m=|\wh f_1|=|\E g|$. Since $|g|=g^2$, $m\le\I_1$. By~\eqref{eq:alternating} and Lemma~\ref{lem:unimodal} applied to the binomial weights, $m\le b_N:=\max_j\binom Nj2^{-N}$. By Parseval for $f$, $\wh f_0^{\,2}+nm^2\le1$.
+\item Consecutive values of $g$ on adjacent weights have nonpositive product, so $\|D_jg\|_2^2=\frac12\bigl(\|g\|_2^2-\E[g(x)g(x^{\oplus j})]\bigr)\ge\frac12\|g\|_2^2$ for each $j$, and summing over $j$ gives $\E_\mu s\ge N/2$.
+\item By Theorem~\ref{thm:stab}, $\sum_s\mu_s\lambda^s\le\Phi\bigl(N(1-\lambda^2)/4\bigr)$ for $0\le\lambda\le1$. With $\lambda=e^{-t/n}$,
+\begin{equation}\label{eq:noise}
+ \E_\mu e^{-ts/n}\le\Phi\bigl(v_n(t)\bigr),\qquad v_n(t)=\frac{N(1-e^{-2t/n})}4\qquad(t>0).
+\end{equation}
+\end{enumerate}
+
+\subsection{The zero level}
+\begin{lemma}\label{lem:zero}
+Let $C=n-\frac16$ and $J_C(z)=z\bigl[3+\ln(1-Cz^2)-2\ln z\bigr]$ for $0<z<C^{-1/2}$. Then $L_0\le J_C(\mu_0)$. The function $J_C$ is concave, so for every $0<u<C^{-1/2}$
+\[
+ L_0\le d_C(u)+j_C(u)\,\mu_0,\qquad d_C(u)=\frac{2u}{1-Cu^2},\quad j_C(u)=J_C'(u)=1-2\ln u+\ln(1-Cu^2)-\frac{2Cu^2}{1-Cu^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+If $m=0$ then $L_0=0$ and $\mu_0=0$. Otherwise $\mu_0=m^2/\I_1\le m\le n^{-1/2}$ by~(a). Since $\mathcal D_e(a,b)=b^2h(a^2/b^2)$, $h$ increases, and $\wh f_0^{\,2}\le1-nm^2$, the bound~\eqref{eq:hbound} gives
+\[
+ L_0=\mu_0\,h\bigl(\wh f_0^{\,2}/m^2\bigr)\le\mu_0\bigl[3+\ln(m^{-2}-C)\bigr]\le\mu_0\bigl[3+\ln(\mu_0^{-2}-C)\bigr]=J_C(\mu_0),
+\]
+using $m\ge\mu_0$ in the last step. Differentiating twice,
+\[
+ J_C''(z)=-\frac2z-\frac{6Cz}{1-Cz^2}-\frac{4C^2z^3}{(1-Cz^2)^2}<0,
+\]
+and the tangent at $u$ has intercept $J_C(u)-uJ_C'(u)=d_C(u)$.
+\end{proof}
+
+\begin{lemma}\label{lem:shift}
+$\kappa$ is increasing on $[0,\frac12]$, $\kappa(\frac12)=2\ln2$, and $\kappa(x+d)-\kappa(x)\le d\bigl(6+4\ln(1/d)\bigr)$ whenever $0\le x\le x+d\le1$.
+\end{lemma}
+
+\begin{proof}
+For $t\ge1$ expanding the entropy pair gives $h(t)=\ln t+3-\sum_{j\ge1}t^{-j}/[j(j+1)(2j+1)]$. For $0<x<\frac12$, with $r=x/(1-x)$, this gives $\kappa(x)=1+\sum_{j\ge1}r^j/[(j+1)(2j+1)]$, which increases; at $r=1$ the series sums to $2\ln2-1$. Since $j/[(j+1)(2j+1)]\le1/(2j)$ and $(1-x)^{-2}\le4$,
+\[
+ \kappa'(x)\le\frac{2}{r}\ln\frac1{1-r}\le2\Bigl[1+\ln\frac1{1-r}\Bigr]\le2+4\ln\frac1{|1-2x|}.
+\]
+For $x>\frac12$ put $t=(1-x)/x<1$ and use $h(t)=t\,h(1/t)$; then $\kappa=t(2-\ln t)-\sum_{j\ge1}t^{j+1}/[j(2j+1)]$ and $d\kappa/dt=1-\ln t-\sum_{j\ge1}(j+1)t^j/[j(2j+1)]$. Dropping the nonnegative $1-\ln t$, using $(j+1)/(2j+1)\le1$ and $|dt/dx|\le4$, we get $\kappa'(x)\le-4\ln(1-t)\le4\ln\frac1{2x-1}$. The function $\kappa$ is absolutely continuous on $[0,1]$, with integrable logarithmic singularities of $\kappa'$. On an interval of length $d$ the integral of $\ln(1/|1-2x|)$ is at most $d(1-\ln d)$, its value for the interval centred at $\frac12$. Integrating the upper bound for $\kappa'$ gives the claim.
+\end{proof}
+
+\subsection{The finite range}
+\begin{proposition}\label{prop:dual}
+Let $n\ge2$, $C=n-\frac16$, $0<u<C^{-1/2}$, and let $\alpha$, $\beta\ge0$, $w_j\ge0$, $t_j>0$ $(1\le j\le J)$ be real numbers with
+\begin{align*}
+ \kappa(\tfrac1n)+j_C(u)&\le\alpha+\textstyle\sum_jw_j,\\
+ \Psi\bigl(\tfrac sn\bigr)+\kappa\bigl(\tfrac{s+1}n\bigr)-\kappa\bigl(\tfrac sn\bigr)&\le\alpha-\beta\tfrac sn+\textstyle\sum_jw_je^{-t_js/n}\qquad(1\le s\le N).
+\end{align*}
+Then every nonconstant symmetric $f$ on $n$ variables satisfies
+\[
+ \frac{(\ln2)\Delta_1}{\I_1}\le\alpha+d_C(u)-\beta\frac{N}{2n}+\sum_jw_j\,\Phi\bigl(v_n(t_j)\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+Insert Lemma~\ref{lem:zero} into~\eqref{eq:tangent}, bound each coefficient of $\mu_s$ by the hypotheses, and use $\E_\mu s\ge N/2$ from~(b) and~\eqref{eq:noise}.
+\end{proof}
+
+Proposition~\ref{prop:dual} also certifies whole ranges of dimensions. Fix $L\le n\le U$ and use the hypotheses with $C=L-\frac16$, which only enlarges $J_C$, and with $\kappa(\frac1n)\le\kappa(\frac1L)$ by Lemma~\ref{lem:shift}. By Lemma~\ref{lem:shift} the shift $\kappa(\frac{s+1}n)-\kappa(\frac sn)$ is at most $M(L)=(6+4\ln L)/L$. Since $\Psi$ decreases and the right side of the second hypothesis decreases in $x=s/n$, it suffices to prove
+\[
+ \Psi(l)+M(L)\le\alpha-\beta r+\textstyle\sum_jw_je^{-t_jr}
+\]
+on a covering of $[1/U,1]$ by intervals $[l,r]$. On the other side of the conclusion, $N/(2n)\ge(L-1)/(2L)$, and $v_n(t)$ increases in $n$ because $\frac{d}{dn}\bigl[(n-1)(1-e^{-a/n})\bigr]>1-(1+\frac an)e^{-a/n}>0$, so $\Phi(v_n(t_j))\le\Phi(v_L(t_j))$.
+
+\subsection{High dimension}
+For the analytic range we use the pointwise majorant
+\begin{equation}\label{eq:majorant}
+ \Psi(x)\le U(x):=\Ei(40x)+\frac{553}{100}-\frac{273}{50}x+\frac{89}{50}e^{-20x}\qquad(0<x\le1).
+\end{equation}
+It is verified by outward-rounded interval arithmetic on $11{,}900$ cells covering $[10^{-4},1]$, using that $\Psi$ and $U$ are decreasing (Appendix~\ref{app:cert}), with minimum certified slack above $0.02288$; for $0<x\le10^{-4}$ one uses $\Psi(x)\le3-\ln x$, $\Ei(40x)\ge-\gamma-\ln(40x)$ and $e^{-20x}\ge1-20x$. We also use, with $r_0=\frac{23}{48}$,
+\begin{equation}\label{eq:Phibound}
+ \Phi(v)\le\frac{24}{23\sqrt{2\pi v}}+e^{-2r_0^2v},\qquad
+ \bar J:=\frac{48}{23\sqrt{40\pi}}+\frac{e^{-z}}z\ge\int_{40}^\infty\Phi(t/2)\frac{dt}t,\quad z=40r_0^2.
+\end{equation}
+These follow from $\Phi(v)=\frac2\pi\int_0^{\pi/2}e^{-2v\sin^2u}du$, $\sin u\ge2r_0u$ on $[0,\frac12]$ and $\sin u\ge r_0$ on $[\frac12,\frac\pi2]$, and $\Ei(z)\le e^{-z}/z$.
+
+\begin{proposition}\label{prop:large}
+For $n\ge200$ put $N=n-1$, $a=\frac15$, $b=\sqrt{2/(\pi N)}$, $c=\frac Nn\cdot\frac{1-e^{-2a}}{2a}$, $v_T=N(1-e^{-2a})/4$ and $A=-\frac12-\ln a+a$. Then every nonconstant symmetric $f$ on $n$ variables satisfies $(\ln2)\Delta_1/\I_1\le R(n)$, where
+\begin{multline*}
+ R(n)=b\bigl[3+\ln(1+b^{-2})+2\ln2\bigr]+\frac{6+4\ln n}{n}+\frac{14}5+\frac{273}{100n}+\bar J\\
+ +\Phi(20c)\ln\frac1c+e^aA\Bigl[\frac{24}{23\sqrt{2\pi v_T}}+e^{-2r_0^2v_T}\Bigr]+\frac{89}{50}\Phi\bigl(v_n(20)\bigr).
+\end{multline*}
+Every term of $R$ is nonincreasing in $n\ge200$, and $R(10^4)/\ln2<4.866169$.
+\end{proposition}
+
+\begin{proof}
+By~(a) and~\eqref{eq:hbound} with $\wh f_0^{\,2}\le1$, $L_0\le m[3+\ln(1+m^{-2})]$, and $u\mapsto u[3+\ln(1+u^{-2})]$ increases. Also $\mu_0\le m$, $\kappa(\frac1n)\le\kappa(\frac12)=2\ln2$, and $b_N\le b$ (for even $N$ write $b_N=\frac2\pi\int_0^{\pi/2}\cos^Nu\,du$ and use $\cos u\le e^{-u^2/2}$; for odd $N$, $b_N=b_{N+1}$). So the zero-level terms of~\eqref{eq:tangent} are at most the first term of $R$, and by Lemma~\ref{lem:shift} the shifts contribute at most $(6+4\ln n)/n$.
+
+For $s\ge1$ apply~\eqref{eq:majorant} at $x=s/n$. The linear part gives at most $\frac{553}{100}-\frac{273}{50}\E_\mu\frac sn\le\frac{14}5+\frac{273}{100n}$ by~(b), and the last part at most $\frac{89}{50}\Phi(v_n(20))$ by~\eqref{eq:noise}. For the $\Ei$ part let $P(t)=\sum_{s\ge1}\mu_se^{-ts/n}$, so that $\sum_{s\ge1}\mu_s\Ei(40s/n)=\int_{40}^\infty P(t)\frac{dt}t$ by Tonelli. Put $T=an\ge40$. For $40\le t\le T$, since $(1-e^{-2y})/(2y)$ decreases, $v_n(t)\ge ct/2$, and~\eqref{eq:noise} gives $P(t)\le\Phi(ct/2)$; hence
+\[
+ \int_{40}^TP(t)\frac{dt}t\le\int_{40c}^\infty\Phi(y/2)\frac{dy}y\le\bar J+\Phi(20c)\ln\frac1c.
+\]
+For $t\ge T$ and $s\ge1$, $e^{-ts/n}\le e^{-(t-T)/n}e^{-Ts/n}$, so $P(t)\le e^{-(t-T)/n}\Phi(v_T)$ and
+\[
+ \int_T^\infty P(t)\frac{dt}t\le\Phi(v_T)\int_a^\infty e^{a-y}\frac{dy}y=e^a\Ei(a)\Phi(v_T)\le e^aA\,\Phi(v_T),
+\]
+using $\Ei(a)\le-\gamma-\ln a+a$ and $\gamma>H_6-\ln7>\frac12$. Bound $\Phi(v_T)$ by~\eqref{eq:Phibound}. Removing the zero level from $P$ is what keeps this integral finite.
+
+For the monotonicity, the first term equals $\sqrt{2/\pi}\,[3+2\ln2+\ln(1+\pi N/2)]/\sqrt N$, whose derivative in $N$ is negative; $(6+4\ln n)/n$ decreases for $n\ge1$; $c$ increases in $n$ and stays in $(0,1)$; and $v_T$ and $v_n(20)$ increase in $n$ while $\Phi$ decreases. The value at $n=10^4$ is certified in interval arithmetic.
+\end{proof}
+
+\subsection{Proofs of Theorems~\ref{thm:restriction} and~\ref{thm:main}}
+\begin{proof}[Proof of Theorem~\ref{thm:restriction}(i)]
+\emph{Dimensions $n\le15$.} The Fourier coefficients of a symmetric $f$ are integers divided by $2^n$, given by Krawtchouk transforms. For each of the $\sum_{n\le15}2^{n+1}=131{,}068$ symmetric functions we compute $\Delta_1$ and $\I_1$ from~\eqref{eq:delta}, with every logarithm enclosed between rational bounds from the series of $\operatorname{artanh}$ with an explicit remainder. Equality $\Delta_1=K\I_1$ holds for $n=3$ at OR, AND and their negations, where the value is an exact combination of $\log_22$ and $\log_23$; for every other function the upper enclosure of $\Delta_1/\I_1$ is below $K$.
+
+\emph{Dimensions $16\le n\le255$.} For each $n$ we apply Proposition~\ref{prop:dual} with $J=2$ and decimal rational parameters, checking all $n$ hypotheses in outward-rounded interval arithmetic at $45$ digits. These are $32{,}520$ inequalities in total.
+
+\emph{Dimensions $256\le n\le9999$.} We use the block form of Proposition~\ref{prop:dual} on $[256,320]$, $[320,500]$, $[500,1000]$, $[1000,2500]$ and $[2500,9999]$, with $J=4$, verifying the cell inequality on $1{,}244$ rational intervals in total.
+
+\emph{Dimensions $n\ge10^4$.} Proposition~\ref{prop:large}.
+
+The bounds obtained are listed in Section~\ref{sec:computations}; each is below $K$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Theorem~\ref{thm:restriction}(i) and Lemma~\ref{lem:induction}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:restriction}(ii)]
+Take any sequence $n\to\infty$ with nonconstant symmetric $f_n$, and pass to a subsequence along which the law of $s/n$ under $\mu$ converges weakly to a law $\nu$ on $[0,1]$. By~(b), $\E_\nu X\ge\frac12$. Letting $n\to\infty$ in~\eqref{eq:noise},
+\begin{equation}\label{eq:laplace}
+ \E_\nu e^{-tX}\le\Phi(t/2)\qquad(t>0),
+\end{equation}
+and in particular $\nu(\{0\})=0$. In~\eqref{eq:tangent} the zero-level terms are at most $b_N[3+\ln(1+b_N^{-2})+2\ln2]\to0$, as in the proof of Proposition~\ref{prop:large}, and the shifts at most $(6+4\ln n)/n\to0$. The function $\Psi$ is unbounded at $0$ but satisfies $\Psi(x)\le3+\ln(1/x)$, and~\eqref{eq:noise} with $t=n/m$ gives $\mu[s\le m]\le e\,\Phi\bigl(N(1-e^{-2/m})/4\bigr)\le C\sqrt{m/N}$ for an absolute $C$. Summing over dyadic ranges, the contribution of $1\le s\le\delta n$ is $O(\sqrt\delta(1+\ln(1/\delta)))$ uniformly in $n$. This uniform integrability and weak convergence give $\sum_{s\ge1}\mu_s\Psi(s/n)\to\int\Psi\,d\nu$. Hence $\limsup(\ln2)\Delta_1/\I_1\le\sup_\nu\int\Psi\,d\nu$, the supremum over laws on $(0,1]$ with $\E_\nu X\ge\frac12$ and~\eqref{eq:laplace}. Since $\Ei(40x)=\int_{40}^\infty e^{-tx}\frac{dt}t$, the majorant~\eqref{eq:majorant}, Tonelli,~\eqref{eq:laplace} and $\E_\nu X\ge\frac12$ give
+\[
+ \int\Psi\,d\nu\le\int_{40}^\infty\Phi(t/2)\frac{dt}t+\frac{553}{100}-\frac{273}{100}+\frac{89}{50}\Phi(10)\le\bar J+\frac{14}5+\frac{89}{50}\Phi(10).
+\]
+Dividing by $\ln2$ gives $C_*$, and a positive series for $I_0(10)$ certifies $\Phi(10)<0.127833337164$, so $C_*<4.637$.
+\end{proof}
+
+\section{A bound without computation}\label{sec:analytic}
+
+For symmetric $f$ every set of size $k$ carries the same coefficient, so
+\begin{equation}\label{eq:split}
+ \HH[f]=\sum_{k=0}^n\binom nk\wh f_k^{\,2}\log_2\frac{1}{\wh f_k^{\,2}}
+ =\underbrace{\sum_kW_k\log_2\frac1{W_k}}_{L}+\underbrace{\sum_kW_k\log_2\binom nk}_{B}.
+\end{equation}
+The level weights satisfy $\sum_kW_k=1$ and $\sum_kkW_k=\I[f]$.
+
+\begin{lemma}[{\cite[Lemma~2.1]{Shm26}}]\label{lem:level}
+Every Boolean function satisfies $L\le\log_2(4+e)\,\I[f]$.
+\end{lemma}
+
+\begin{proof}
+We may assume $f$ is not constant. Let $\eps=1-W_0>0$ and $Q(k)=W_k/\eps$ for $k\ge1$. Put $a=\log_2(1+e/4)$, so that $(2^a-1)2^{-ak}$, $k\ge1$, is a probability law. Gibbs' inequality against this law gives $\HH(Q)\le a\,\E_Qk-\log_2(2^a-1)$. Since $L=h_2(\eps)+\eps\HH(Q)$, $\eps\E_Qk=\I$ and $h_2(\eps)\le\eps\log_2(1/\eps)+\eps\log_2e$, we get
+\[
+ L\le a\I+\eps\bigl[\log_2(1/\eps)+\log_2e-\log_2(e/4)\bigr]=a\I+\eps\bigl[\log_2(1/\eps)+2\bigr].
+\]
+Let $p=\min\{\P[f=1],\P[f=-1]\}$, so $\eps=4p(1-p)$. The edge-isoperimetric inequality~\cite[Chapter~2]{OD14} gives $\I\ge2p\log_2(1/p)$, and
+\[
+ 2p\log_2\frac1p-\eps\Bigl(1+\tfrac12\log_2\frac1\eps\Bigr)=2p\bigl[p\log_2\tfrac1p+(1-p)\log_2(1-p)\bigr]\ge0,
+\]
+because the bracket is concave on $[0,\tfrac12]$ (its second derivative is $(2p-1)/(p(1-p)\ln2)$) and vanishes at both ends. Hence $\eps[\log_2(1/\eps)+2]\le2\I$ and $L\le(a+2)\I=\log_2(4+e)\I$.
+\end{proof}
 
 \begin{lemma}\label{lem:reduction}
 Let $f$ be symmetric on $n\ge2$ variables with $\I[f]>0$, and $N=n-1$. Then
@@ -309,12 +460,12 @@ For $N=1$, $\Phi\le1$ gives $C_1\le\int_0^1\frac{1-(1-t)}tdt=1$. For $N=2$, $e^{
 Both are below $\ln4$.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:main}]
-For $n=1$ every Boolean function is constant or $\pm x_1$ and $\HH=0$. For $n\ge2$ and $\I>0$, Lemma~\ref{lem:reduction} and Proposition~\ref{prop:CN} give $B<\frac{1+\ln4}{\ln2}\I=(2+\frac1{\ln2})\I$, and Lemma~\ref{lem:level2} gives $L\le\frac{673}{250}\I$. Add them using~\eqref{eq:split}.
+\begin{proof}[Proof of Theorem~\ref{thm:analytic}]
+For $n=1$ every Boolean function is constant or $\pm x_1$ and $\HH=0$. For $n\ge2$ and $\I>0$, Lemma~\ref{lem:reduction} and Proposition~\ref{prop:CN} give $B<\frac{1+\ln4}{\ln2}\I=(2+\frac1{\ln2})\I$, and Lemma~\ref{lem:level} gives $L\le\log_2(4+e)\I$. Add them using~\eqref{eq:split}.
 \end{proof}
 
 \begin{remark}
-The two parts are not tight together. For majority on $n=2m+1$ variables, $B/\I\to2/\ln2$, so the within-level constant cannot go below $2.885$; and $L/\I\le2.52$ for every symmetric function with $n\le16$ (Section~\ref{sec:computations}), below the $2.692$ of Lemma~\ref{lem:level2}. Numerically $C_N$ increases to $\ln4$: $C_1=0.6638$, $C_2=0.8911$, $C_3=0.9991$, $C_{10^6}=1.3855$.
+The two parts are not tight together. For majority on $n=2m+1$ variables, $B/\I\to2/\ln2$, so the within-level constant cannot go below $2.885$; and $L/\I\le2.5176$ for every symmetric function with $n\le30$, attained by AND and OR at $n=6$ (Section~\ref{sec:computations}). Numerically $C_N$ increases to $\ln4$: $C_1=0.6638$, $C_2=0.8911$, $C_3=0.9991$, $C_{10^6}=1.3855$.
 \end{remark}
 
 The majority limit in the remark is proved as follows. Write $n=2m+1$. The derivative of majority is the indicator of the middle slice of the $2m$-cube, and its normalized spectral weights are
@@ -339,83 +490,41 @@ The second term divided by $\I$ is $(2-2^{1-n})\frac{2(n-1)}n=4-\frac4n+O(2^{-n}
 
 At $n=1024$ the ratio is $3.998911513751\ldots$.
 
-\section{The restriction step}\label{sec:restriction}
-
-\begin{lemma}\label{lem:induction}
-Suppose $\Delta_1[f]\le K\,\I_1[f]$ for every symmetric $f$ on at most $m$ variables. Then $\HH[f]\le K\,\I[f]$ for every symmetric $f$ on at most $m$ variables.
-\end{lemma}
-
-\begin{proof}
-Restrictions of a symmetric function are symmetric. For $i\ne1$ the influence of $i$ is the average of its influences in the two restrictions of $x_1$, so $\I[f]=\I_1[f]+\frac12(\I[f_{1\to1}]+\I[f_{1\to-1}])$. Induct on $n$, starting from constants.
-\end{proof}
-
-For symmetric $f$ on $n$ variables, the restrictions to $x_1=\pm1$ have coefficients $\wh f_s\pm\wh f_{s+1}$ on the $\binom Ns$ sets of size $s$ in the remaining coordinates, $N=n-1$. With $\varphi(u)=u\log_2(1/u)$ this gives the exact formulas
-\begin{equation}\label{eq:delta}
- \Delta_1=\sum_{s=0}^{N}\binom Ns\,\mathcal D(\wh f_s,\wh f_{s+1}),\qquad \I_1=\sum_{s=0}^N\binom Ns\wh f_{s+1}^{\,2},
-\end{equation}
-\[
- \mathcal D(a,b)=\varphi(a^2)+\varphi(b^2)-\tfrac12\bigl[\varphi((a+b)^2)+\varphi((a-b)^2)\bigr].
-\]
-For $\mathrm{OR}_3$ one finds $\Delta_1/\I_1=12-\frac92\log_23$.
-
-\begin{proof}[Proof of Theorem~\ref{thm:restriction}]
-We work in natural units, $\mathcal D_e=(\ln2)\mathcal D$, and divide by $\ln2$ at the end.
-
-\emph{Step 1: a tangent bound.} Let $h(t)=\mathcal D_e(\sqrt t,1)$ for $t\ge0$. For $t>0$, $t\ne1$, direct differentiation gives
-\[
- h''(t)=\frac{1}{2t^{3/2}}\ln\Bigl|\frac{\sqrt t-1}{\sqrt t+1}\Bigr|<0,
-\]
-$h'$ is continuous at $t=1$ and tends to $0$ from above, so $h$ is increasing and concave and $(x,y)\mapsto\mathcal D_e(\sqrt x,\sqrt y)=y\,h(x/y)$ is concave on the quadrant. Every tangent gives $\mathcal D_e(a,b)\le h'(t)a^2+[h(t)-th'(t)]b^2$. Let $\mu_s=\binom Ns\wh f_{s+1}^{\,2}/\I_1$, a probability law on $\{0,\dots,N\}$. Taking the tangent at $t_s=(n-s)/s$ for the term $s\ge1$ of~\eqref{eq:delta}, and using $\binom N{s+1}/\binom Ns=(N-s)/(s+1)$ to move the $a^2$ part to the neighbouring index, one obtains
-\[
- \frac{(\ln 2)\Delta_1}{\I_1}\le \frac{\mathcal D_e(\wh f_0,\wh f_1)}{\I_1}+\mu_0\kappa(\tfrac1n)+\sum_{s=1}^N\mu_s\Bigl[\Psi\bigl(\tfrac sn\bigr)+\kappa\bigl(\tfrac{s+1}n\bigr)-\kappa\bigl(\tfrac sn\bigr)\Bigr],
-\]
-where $\Psi(x)=h\bigl(\frac{1-x}x\bigr)$ and $\kappa(x)=\frac{1-x}xh'\bigl(\frac{1-x}x\bigr)$, extended continuously by $\kappa(0)=1$, $\kappa(1)=0$. Since $\kappa$ is uniformly continuous on $[0,1]$, the sum of the $\kappa$-differences tends to $0$ uniformly in $f$ as $n\to\infty$.
-
-We also use $h(t)\le3+\ln(1+t)$. With $p(y)=y^2\ln(y^2)$, $p(0)=0$, the second-difference identity (valid since $p''$ is locally integrable) and Jensen's inequality for the triangular density $1-|u|$ on $[-1,1]$, which has mean $0$ and second moment $\tfrac16$, give
-\[
- h(t)=3+\int_{-1}^1(1-|u|)\ln\bigl((\sqrt t+u)^2\bigr)\,du\le3+\ln\bigl(t+\tfrac16\bigr)\le3+\ln(1+t).
-\]
-
-\emph{Step 2: three facts about $g=D_1f$.} (a) Let $m=|\wh f_1|=|\E g|$. Since $|g|=g^2$, $m\le\I_1$. By~\eqref{eq:alternating} and Lemma~\ref{lem:unimodal} applied to the binomial weights, $m\le b_N:=\max_j\binom Nj2^{-N}=O(N^{-1/2})$. From $h(t)\le3+\ln(1+t)$ and $|\wh f_0|\le1$ one gets $\mathcal D_e(\wh f_0,\wh f_1)/\I_1\le b_N[3+\ln(1+b_N^{-2})]\to0$, and $\mu_0=m^2/\I_1\le b_N\to0$; when $m=0$ these terms vanish. (b) Consecutive values of $g$ on adjacent weights have nonpositive product, so $\|D_jg\|_2^2\ge\frac12\|g\|_2^2$ for each $j$, and summing gives $\E_\mu s\ge N/2$. (c) By Theorem~\ref{thm:stab}, $\sum_s\mu_s\lambda^s\le\Phi\bigl(N(1-\lambda^2)/4\bigr)$ for $0\le\lambda\le1$.
-
-\emph{Step 3: the limit law.} Take any sequence $n\to\infty$ with nonconstant symmetric $f_n$, and pass to a subsequence along which the law of $s/n$ under $\mu$ converges weakly to a law $\nu$ on $[0,1]$. By (b), $\E_\nu X\ge\frac12$. Taking $\lambda=e^{-t/n}$ in (c) and letting $n\to\infty$,
-\begin{equation}\label{eq:laplace}
- \E_\nu e^{-tX}\le\Phi(t/2)\qquad(t>0),
-\end{equation}
-and in particular $\nu(\{0\})=0$. The function $\Psi$ is unbounded at $0$ but satisfies $\Psi(x)\le3+\ln(1/x)$, and (c) with $\lambda=e^{-1/m}$ gives $\mu[s\le m]\le e\,\Phi\bigl(N(1-e^{-2/m})/4\bigr)\le C\sqrt{m/N}$ for an absolute $C$. Summing over dyadic ranges, the contribution of $1\le s\le\delta n$ is $O(\sqrt\delta(1+\ln(1/\delta)))$ uniformly in $n$. This uniform integrability, Step~2(a) and weak convergence give $\sum_{s\ge1}\mu_s\Psi(s/n)\to\int\Psi\,d\nu$. Hence $\limsup(\ln2)\Delta_1/\I_1\le\sup_\nu\int\Psi\,d\nu$, the supremum over laws on $(0,1]$ with $\E_\nu X\ge\frac12$ and~\eqref{eq:laplace}.
-
-\emph{Step 4: a Laplace majorant.} For $0<x\le1$,
-\begin{equation}\label{eq:majorant}
- \Psi(x)\le U(x):=\Ei(40x)+\frac{553}{100}-\frac{273}{50}x+\frac{89}{50}e^{-20x}.
-\end{equation}
-This is verified by outward-rounded interval arithmetic on $11{,}900$ cells covering $[10^{-4},1]$, using that $\Psi$ and $U$ are decreasing (Appendix~\ref{app:cert}), with minimum certified slack above $0.02288$; for $0<x\le10^{-4}$ one uses $\Psi(x)\le3-\ln x$, $\Ei(40x)\ge-\gamma-\ln(40x)$ and $e^{-20x}\ge1-20x$. Since $\Ei(40x)=\int_{40}^\infty e^{-tx}\frac{dt}t$, Tonelli,~\eqref{eq:laplace} and $\E_\nu X\ge\frac12$ give
-\[
- \int\Psi\,d\nu\le\int_{40}^\infty\Phi(t/2)\frac{dt}t+\frac{553}{100}-\frac{273}{100}+\frac{89}{50}\Phi(10).
-\]
-Finally $\Phi(t/2)=\frac2\pi\int_0^{\pi/2}e^{-t\sin^2u}du$. Using $\sin u\ge\frac{23}{24}u$ on $[0,\frac12]$ and $\sin u\ge\frac{23}{48}$ on $[\frac12,\frac\pi2]$,
-\[
- \Phi(t/2)\le\frac{24}{23\sqrt{\pi t}}+e^{-t(23/48)^2},\qquad
- \int_{40}^\infty\Phi(t/2)\frac{dt}t\le\frac{48}{23\sqrt{40\pi}}+\frac{e^{-z}}z,
-\]
-with $z=40(23/48)^2$, by $\Ei(z)\le e^{-z}/z$. Collecting terms and dividing by $\ln2$ gives $C_*$, and a positive series for $I_0(10)$ certifies $\Phi(10)<0.127833337164$, so $C_*<4.637$.
-\end{proof}
-
 \section{Computations}\label{sec:computations}
 
-The repository contains a script that recomputes the principal constants and the finite computations stated above and prints a pass or fail line for each. Over all symmetric functions with $n\le16$ (exact integer Fourier coefficients, floating-point logarithms) it finds:
+The certified upper bounds for $\Delta_1/\I_1$ in the proof of Theorem~\ref{thm:restriction}(i), in bits, rounded up:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+dimensions & bound & method\\
+\midrule
+$n\le15$ & $K=4.86767$, only at $n=3$ & exact enumeration\\
+$16\le n\le255$ & $4.848905$ (largest at $n=25$) & Proposition~\ref{prop:dual}, each $n$\\
+$256\le n\le320$ & $4.821277$ & block\\
+$320\le n\le500$ & $4.802134$ & block\\
+$500\le n\le1000$ & $4.770825$ & block\\
+$1000\le n\le2500$ & $4.735731$ & block\\
+$2500\le n\le9999$ & $4.711617$ & block\\
+$n\ge10^4$ & $4.866169$ & Proposition~\ref{prop:large}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The multipliers were found numerically, rounded to decimal rationals, and then checked from scratch; the optimizer plays no part in the proof. An independent audit recomputes all $32{,}520$ coefficient inequalities and all block cells in decimal arithmetic at $75$ digits, and checks the identities used in Section~\ref{sec:restriction} on exact Walsh transforms of all symmetric functions with $n\le10$.
+
+Over all symmetric functions with $n\le16$ (exact integer Fourier coefficients, floating-point logarithms) the repository's check script finds:
 \begin{center}
 \begin{tabular}{@{}ll@{}}
 \toprule
 quantity & maximum over symmetric $f$, $n\le16$\\
 \midrule
 $\HH/\I$ & $3.93027$, at AND/OR with $n=16$ \\
-$L/\I$ & $2.51755$ \\
+$L/\I$ & $2.51755$, at AND/OR with $n=6$ \\
 $B/\I$ & $1.80986$ \\
 $\Delta_1/\I_1$ & $4.86767$, at $\mathrm{OR}_3$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $C_{\rm sym}$ and $C_*$ at $40$ digits. Two further scripts produce the interval certificates for Lemma~\ref{lem:level2} and for~\eqref{eq:majorant}. These computations support but are not part of the proofs, except for those two certificates.
+In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $K$ and $C_*$ at $40$ digits. These checks support but are not part of the proofs; the proofs use only the exact enumeration for $n\le15$, the interval certificates for Propositions~\ref{prop:dual} and~\ref{prop:large}, and the certificate for~\eqref{eq:majorant}.
 
 \section{Questions}
 
@@ -423,22 +532,22 @@ In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and 
 Is the optimal constant for symmetric functions equal to $4$?
 \end{question}
 
-\begin{question}\label{q:cutoff}
-Find an explicit $n_0$ with $\Delta_1\le4.8723\,\I_1$ for every symmetric $f$ on $n\ge n_0$ variables. Together with a computation for $n<n_0$, Lemma~\ref{lem:induction} would then give $\HH\le4.8723\,\I$ for all symmetric $f$.
-\end{question}
+The restriction step cannot give less than $K$, because of $\mathrm{OR}_3$. A smaller constant needs either a different induction or a direct argument.
 
 \begin{question}
-Can the level bound $L\le2.692\,\I$ be improved for symmetric functions? Every gain there lowers $C_{\rm sym}$ directly. The largest value of $L/\I$ we found is $2.51755$, at AND and OR with $n=6$.
+Does every Boolean function $f$ have a coordinate $i$ with $\Delta_i[f]\le K\,\I_i[f]$?
 \end{question}
 
+A positive answer would prove the conjecture with constant $K$ by the same induction.
+
 \appendix
-\section{The scalar certificate for the restriction step}\label{app:cert}
+\section{The scalar certificate for the majorant}\label{app:cert}
 
 The interval certificate for~\eqref{eq:majorant} uses two elementary lower bounds for $\Ei$. For $0<z\le1$,
 \[
  \Ei(z)\ge-0.578-\ln z+\sum_{k=1}^{8}\frac{(-1)^{k+1}z^k}{k\,k!},
 \]
-since an even truncation of the alternating series is a lower bound and $\gamma<H_{10}-\ln10-\frac1{20}+\frac1{1200}<0.578$ by the Euler--Maclaurin remainder. For $z>1$,
+since an even truncation of the alternating series is a lower bound and $\gamma<H_{10}-\ln\frac{21}2<0.578$. The last bound holds because $H_n-\ln(n+\frac12)$ decreases to $\gamma$: the integral of the convex function $1/x$ over $[n+\frac12,n+\frac32]$ exceeds its value $1/(n+1)$ at the midpoint. For $z>1$,
 \[
  \Ei(z)\ge e^{-z}\,\frac{z^2+8z+11}{z^3+9z^2+18z+6}.
 \]
@@ -448,7 +557,7 @@ Indeed $\Ei(z)=e^{-z}\,\E[(z+Y)^{-1}]$ for $Y$ exponential with mean one, and fo
 \]
 and optimizing over $P$ gives $(M^{-1})_{00}$, which is the displayed rational function. The entries of $M$ follow from $\E Y^k=k!$.
 
-Both $\Psi$ and $U$ decrease: $h$ increases, and $U'(x)=-e^{-40x}/x-5.46-35.6\,e^{-20x}<0$. So an outward interval lower bound for $U(r)-\Psi(l)$ proves~\eqref{eq:majorant} on a whole cell $[l,r]$. For $0<x\le10^{-4}$ the bounds in the proof give
+Both $\Psi$ and $U$ decrease: $h$ increases, and $U'(x)=-e^{-40x}/x-5.46-35.6\,e^{-20x}<0$. So an outward interval lower bound for $U(r)-\Psi(l)$ proves~\eqref{eq:majorant} on a whole cell $[l,r]$. For $0<x\le10^{-4}$ the bounds in the text give
 \[
  U(x)-\Psi(x)\ge5.53+1.78-0.578-\ln40-3-(5.46+20\cdot1.78)\,10^{-4}>0.
 \]
@@ -476,7 +585,7 @@ in the funding declaration above.
 
 \begin{samepage}
 \section*{Declaration of generative AI and AI-assisted technologies}
-The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In November 2026, Claude Opus 5.5 (Anthropic) and a team of Codex agents running OpenAI's GPT-6.1, all connected to the Brain, retrieved the spectral-level entropy lemma and related methods from the author's earlier work through Math Brain, sharpened the level-entropy bound with an interval certificate, derived the split of the entropy into level and within-level parts and the noise-stability estimate, proved the Bessel-function inequalities and the asymptotic restriction estimate, carried out the finite computations, and searched the literature. Separate agents refereed the proof of the main theorem and of the asymptotic restriction estimate. Claude Opus 5.5 coordinated the agents, assembled the proofs, prepared the manuscript, and audited it, including the proofs, the numerical constants and the finite computations. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In November 2026, Claude Opus 5.5 (Anthropic) and a team of Codex agents running OpenAI's GPT-6.1, all connected to the Brain, retrieved the spectral-level entropy lemma and related methods from the author's earlier work through Math Brain, derived the noise-stability estimate and the split of the entropy into level and within-level parts, proved the Bessel-function inequalities and the asymptotic restriction estimate, found the bound for the zero-level coefficient that closes the restriction step in every dimension, wrote and ran the interval certificates and the exhaustive computation for small dimensions, and searched the literature. Separate agents refereed the proofs and recomputed the certificates with independently written code. Claude Opus 5.5 coordinated the agents, assembled the proofs, prepared the manuscript, and audited it, including the proofs, the numerical constants and the finite computations. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 \par
 \end{samepage}
 

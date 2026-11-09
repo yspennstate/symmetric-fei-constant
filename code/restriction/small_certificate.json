@@ -1,0 +1,506 @@
+{
+  "status": "proved by exhaustive integer certificate",
+  "bits": 144,
+  "atanh_terms": 56,
+  "source_sha256": "9a279aacac144178f5c7a7420af71d65c43700f9d77d5cdc377aed85e3889ee6",
+  "rows": [
+    {
+      "n": 1,
+      "tables": 4,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 0,
+      "maximizers": [
+        "01",
+        "10"
+      ],
+      "reference": "10",
+      "influence": "1",
+      "ratio_lower_numerator": "0",
+      "ratio_upper_numerator": "0",
+      "ratio_denominator": "89202980794122492566142873090593446023921664",
+      "ratio_decimal_enclosure": [
+        "0.000000000000000000",
+        "0.000000000000000000"
+      ],
+      "exact_ratio_prime_log_coefficients": {},
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000000",
+      "seconds": 0.0
+    },
+    {
+      "n": 2,
+      "tables": 8,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 2,
+      "maximizers": [
+        "001",
+        "011",
+        "100",
+        "110"
+      ],
+      "reference": "100",
+      "influence": "1/2",
+      "ratio_lower_numerator": "713623846352979940529142984724747568191373312",
+      "ratio_upper_numerator": "713623846352979940529142984724747568191373312",
+      "ratio_denominator": "178405961588244985132285746181186892047843328",
+      "ratio_decimal_enclosure": [
+        "4.000000000000000000",
+        "4.000000000000000000"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "4"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000000",
+      "seconds": 0.0,
+      "all_nonmaximizers_ratio_upper": "0.000000000000000000",
+      "strict_gap_lower": "4.000000000000000000",
+      "largest_upper_competitor": "010"
+    },
+    {
+      "n": 3,
+      "tables": 16,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 10,
+      "maximizers": [
+        "0001",
+        "0111",
+        "1000",
+        "1110"
+      ],
+      "reference": "1000",
+      "influence": "1/4",
+      "ratio_lower_numerator": "1736842246915673904877233260334176860109631000",
+      "ratio_upper_numerator": "1736842246915673904877233260334176860109649648",
+      "ratio_denominator": "356811923176489970264571492362373784095686656",
+      "ratio_decimal_enclosure": [
+        "4.867668746754797183",
+        "4.867668746754797184"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "12",
+        "3": "-9/2"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.001,
+      "all_nonmaximizers_ratio_upper": "1.622556248918265728",
+      "strict_gap_lower": "3.245112497836531455",
+      "largest_upper_competitor": "0100"
+    },
+    {
+      "n": 4,
+      "tables": 32,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 26,
+      "maximizers": [
+        "00001",
+        "01111",
+        "10000",
+        "11110"
+      ],
+      "reference": "10000",
+      "influence": "1/8",
+      "ratio_lower_numerator": "3384170880629978359432564845410945866371742256",
+      "ratio_upper_numerator": "3384170880629978359432564845410945866371895584",
+      "ratio_denominator": "713623846352979940529142984724747568191373312",
+      "ratio_decimal_enclosure": [
+        "4.742233458039552500",
+        "4.742233458039552501"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "32",
+        "3": "9/2",
+        "7": "-49/4"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.001,
+      "all_nonmaximizers_ratio_upper": "4.000000000000000000",
+      "strict_gap_lower": "0.742233458039552500",
+      "largest_upper_competitor": "01100"
+    },
+    {
+      "n": 5,
+      "tables": 64,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 58,
+      "maximizers": [
+        "000001",
+        "011111",
+        "100000",
+        "111110"
+      ],
+      "reference": "100000",
+      "influence": "1/16",
+      "ratio_lower_numerator": "6435174102454364036901204894990256550992978408",
+      "ratio_upper_numerator": "6435174102454364036901204894990256550993772072",
+      "ratio_denominator": "1427247692705959881058285969449495136382746624",
+      "ratio_decimal_enclosure": [
+        "4.508799793716066678",
+        "4.508799793716066679"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "80",
+        "3": "-225/8",
+        "5": "-225/8",
+        "7": "49/4"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.001,
+      "all_nonmaximizers_ratio_upper": "3.690747592212307355",
+      "strict_gap_lower": "0.818052201503759324",
+      "largest_upper_competitor": "110000"
+    },
+    {
+      "n": 6,
+      "tables": 128,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 122,
+      "maximizers": [
+        "0000001",
+        "0111111",
+        "1000000",
+        "1111110"
+      ],
+      "reference": "1000000",
+      "influence": "1/32",
+      "ratio_lower_numerator": "12331083545315453364245040560777849785806244456",
+      "ratio_upper_numerator": "12331083545315453364245040560777849785809820128",
+      "ratio_denominator": "2854495385411919762116571938898990272765493248",
+      "ratio_decimal_enclosure": [
+        "4.319882108877891408",
+        "4.319882108877891409"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "192",
+        "3": "225/8",
+        "5": "225/8",
+        "31": "-961/16"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.004,
+      "all_nonmaximizers_ratio_upper": "4.277261739381449297",
+      "strict_gap_lower": "0.042620369496442111",
+      "largest_upper_competitor": "1100000"
+    },
+    {
+      "n": 7,
+      "tables": 256,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 250,
+      "maximizers": [
+        "01100001",
+        "01111001",
+        "10000110",
+        "10011110"
+      ],
+      "reference": "10000110",
+      "influence": "17/64",
+      "ratio_lower_numerator": "426475959849600020285734724377595753873634333728",
+      "ratio_upper_numerator": "426475959849600020285734724377595753873647956976",
+      "ratio_denominator": "97052843104005271911963445922565669274026770432",
+      "ratio_decimal_enclosure": [
+        "4.394265497122770967",
+        "4.394265497122770968"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "292/17",
+        "3": "3231/544",
+        "5": "-1925/544",
+        "7": "-1225/544",
+        "11": "121/272",
+        "13": "-169/68"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.005,
+      "all_nonmaximizers_ratio_upper": "4.191915381012677516",
+      "strict_gap_lower": "0.202350116110093451",
+      "largest_upper_competitor": "10000000"
+    },
+    {
+      "n": 8,
+      "tables": 512,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 506,
+      "maximizers": [
+        "000000001",
+        "011111111",
+        "100000000",
+        "111111110"
+      ],
+      "reference": "100000000",
+      "influence": "1/128",
+      "ratio_lower_numerator": "46948014019423742921270247785941548608247526992",
+      "ratio_upper_numerator": "46948014019423742921270247785941548608309974184",
+      "ratio_denominator": "11417981541647679048466287755595961091061972992",
+      "ratio_decimal_enclosure": [
+        "4.111761246782404595",
+        "4.111761246782404596"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "1024",
+        "3": "3969/16",
+        "7": "3969/32",
+        "127": "-16129/64"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.013,
+      "all_nonmaximizers_ratio_upper": "4.064267190910723529",
+      "strict_gap_lower": "0.047494055871681066",
+      "largest_upper_competitor": "110000000"
+    },
+    {
+      "n": 9,
+      "tables": 1024,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 1018,
+      "maximizers": [
+        "0000000001",
+        "0111111111",
+        "1000000000",
+        "1111111110"
+      ],
+      "reference": "1000000000",
+      "influence": "1/256",
+      "ratio_lower_numerator": "92799358486401195552193857335077675446848963520",
+      "ratio_upper_numerator": "92799358486401195552193857335077675447102419520",
+      "ratio_denominator": "22835963083295358096932575511191922182123945984",
+      "ratio_decimal_enclosure": [
+        "4.063737454291318000",
+        "4.063737454291318001"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "2304",
+        "3": "-65025/128",
+        "5": "-65025/128",
+        "17": "-65025/128",
+        "127": "16129/64"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.013,
+      "all_nonmaximizers_ratio_upper": "4.021288328133394369",
+      "strict_gap_lower": "0.042449126157923632",
+      "largest_upper_competitor": "1110000000"
+    },
+    {
+      "n": 10,
+      "tables": 2048,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 2042,
+      "maximizers": [
+        "00000000001",
+        "01111111111",
+        "10000000000",
+        "11111111110"
+      ],
+      "reference": "10000000000",
+      "influence": "1/512",
+      "ratio_lower_numerator": "184322121211996432560933324171240869588372571000",
+      "ratio_upper_numerator": "184322121211996432560933324171240869589392744968",
+      "ratio_denominator": "45671926166590716193865151022383844364247891968",
+      "ratio_decimal_enclosure": [
+        "4.035786021804115481",
+        "4.035786021804115482"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "5120",
+        "3": "65025/128",
+        "5": "65025/128",
+        "7": "-261121/256",
+        "17": "65025/128",
+        "73": "-261121/256"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.041,
+      "all_nonmaximizers_ratio_upper": "4.000000000000000000",
+      "strict_gap_lower": "0.035786021804115481",
+      "largest_upper_competitor": "10011001100"
+    },
+    {
+      "n": 11,
+      "tables": 4096,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 4090,
+      "maximizers": [
+        "000111111110",
+        "011111111000",
+        "100000000111",
+        "111000000001"
+      ],
+      "reference": "011111111000",
+      "influence": "23/512",
+      "ratio_lower_numerator": "17565495704853251497894748597309462730495931443456",
+      "ratio_upper_numerator": "17565495704853251497894748597309462730500836498816",
+      "ratio_denominator": "4201817207326345889835593894059313681510806061056",
+      "ratio_decimal_enclosure": [
+        "4.180452132526330083",
+        "4.180452132526330084"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "1459/23",
+        "3": "3447/184",
+        "5": "24125/368",
+        "7": "-1617/736",
+        "11": "-363/368",
+        "19": "3249/184",
+        "239": "-57121/1472"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.068,
+      "all_nonmaximizers_ratio_upper": "4.072783901660109061",
+      "strict_gap_lower": "0.107668230866221023",
+      "largest_upper_competitor": "100111100000"
+    },
+    {
+      "n": 12,
+      "tables": 8192,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 8186,
+      "maximizers": [
+        "0011111100001",
+        "0111100000011",
+        "1000011111100",
+        "1100000011110"
+      ],
+      "reference": "1000011111100",
+      "influence": "171/1024",
+      "ratio_lower_numerator": "254779697449276554556476753087971547146687755943904",
+      "ratio_upper_numerator": "254779697449276554556476753087971547146704063913248",
+      "ratio_denominator": "62479194995896099753207526598621099090291116212224",
+      "ratio_decimal_enclosure": [
+        "4.077832588368201170",
+        "4.077832588368201171"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "37921/1368",
+        "3": "-7863/608",
+        "5": "121475/29184",
+        "7": "-35819/43776",
+        "11": "1573/768",
+        "13": "23491/3648",
+        "23": "-42849/9728",
+        "53": "-36517/9728"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.146,
+      "all_nonmaximizers_ratio_upper": "4.027603485244276618",
+      "strict_gap_lower": "0.050229103123924552",
+      "largest_upper_competitor": "1100011111100"
+    },
+    {
+      "n": 13,
+      "tables": 16384,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 16378,
+      "maximizers": [
+        "00000000000001",
+        "01111111111111",
+        "10000000000000",
+        "11111111111110"
+      ],
+      "reference": "10000000000000",
+      "influence": "1/4096",
+      "ratio_lower_numerator": "1463671712193675489989287111883744760638484077504",
+      "ratio_upper_numerator": "1463671712193675489989287111883744760704275020392",
+      "ratio_denominator": "365375409332725729550921208179070754913983135744",
+      "ratio_decimal_enclosure": [
+        "4.005939301899752134",
+        "4.005939301899752135"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "53248",
+        "3": "-16769025/1024",
+        "5": "-16769025/2048",
+        "7": "-16769025/2048",
+        "13": "-16769025/2048",
+        "23": "4190209/1024",
+        "89": "4190209/1024"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 0.338,
+      "all_nonmaximizers_ratio_upper": "3.994897400725844685",
+      "strict_gap_lower": "0.011041901173907450",
+      "largest_upper_competitor": "10111100001110"
+    },
+    {
+      "n": 14,
+      "tables": 32768,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 32762,
+      "maximizers": [
+        "000111111000011",
+        "001111000000111",
+        "110000111111000",
+        "111000000111100"
+      ],
+      "reference": "110000111111000",
+      "influence": "689/4096",
+      "ratio_lower_numerator": "4275448079784767515303521863455057544426033096808064",
+      "ratio_upper_numerator": "4275448079784767515303521863455057544426273605758592",
+      "ratio_denominator": "1006974628120992110642338849741519000542937522110464",
+      "ratio_decimal_enclosure": [
+        "4.245834959876521319",
+        "4.245834959876521320"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "120009/2756",
+        "3": "482337/88192",
+        "5": "-391825/176384",
+        "7": "637/212",
+        "11": "5445/3392",
+        "13": "-76167/27136",
+        "17": "-758625/352768",
+        "19": "-12635/27136",
+        "23": "-103155/27136",
+        "89": "-102973/27136",
+        "107": "80143/88192"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 1.51,
+      "all_nonmaximizers_ratio_upper": "4.225067110095822709",
+      "strict_gap_lower": "0.020767849780698611",
+      "largest_upper_competitor": "010000111111000"
+    },
+    {
+      "n": 15,
+      "tables": 65536,
+      "constant_tables": 2,
+      "strictly_excluded_tables": 65530,
+      "maximizers": [
+        "0000011110000001",
+        "0111111000011111",
+        "1000000111100000",
+        "1111100001111110"
+      ],
+      "reference": "1000000111100000",
+      "influence": "4005/16384",
+      "ratio_lower_numerator": "23489681298859005541093429845911700033828712649985616",
+      "ratio_upper_numerator": "23489681298859005541093429845911700033829769015014560",
+      "ratio_denominator": "5853314057510266187405757755028713493722009834618880",
+      "ratio_decimal_enclosure": [
+        "4.013056717624758467",
+        "4.013056717624758468"
+      ],
+      "exact_ratio_prime_log_coefficients": {
+        "2": "1186049/64080",
+        "3": "-5136979/3645440",
+        "5": "-695995/1640448",
+        "7": "-173803/227840",
+        "11": "83369/25632",
+        "13": "250289/136704",
+        "19": "189525/364544",
+        "23": "-10436641/5468160",
+        "29": "-1334667/729088",
+        "31": "-4041005/6561792",
+        "37": "-124579/182272",
+        "41": "-576583/410112",
+        "43": "1555009/16404480",
+        "199": "3603691/3280896",
+        "857": "-734449/273408",
+        "1429": "2042041/1093632"
+      },
+      "maximum_interval_width_upper": "0.000000000000000000000000000000000001",
+      "seconds": 2.718,
+      "all_nonmaximizers_ratio_upper": "4.007606560781208995",
+      "strict_gap_lower": "0.005450156843549473",
+      "largest_upper_competitor": "1110000111100000"
+    }
+  ]
+}
