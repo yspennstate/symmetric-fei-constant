@@ -688,7 +688,7 @@ Is the optimal constant for symmetric functions equal to $4$?
 
 A single uniform restriction bound cannot be smaller than $K$, because of $\mathrm{OR}_3$. Lemma~\ref{lem:averaging} shows that this does not obstruct a smaller entropy--influence constant: one can retain the dimension-specific cost throughout the restriction chain.
 
-For general Boolean functions, $K$ does not bound the entropy loss at a suitable coordinate. In the $\{0,1\}$ convention, consider the majority of three disjoint AND pairs,
+For general Boolean functions, $K$ does not bound the entropy loss at a suitable coordinate. If every nonconstant $f$ had a coordinate with $\Delta_i[f]\le C\,\I_i[f]$, induction on the number of variables would give $\HH[f]\le C\,\I[f]$ for all Boolean $f$, so Hod's lower bound $C>6.454784$ for the entropy--influence conjecture~\cite{Hod17} already excludes every $C\le6.454784$. The obstruction is also visible at a single coordinate in small dimension. In the $\{0,1\}$ convention, consider the majority of three disjoint AND pairs,
 \[
  f=\operatorname{Maj}_3(x_1\wedge x_2,\ x_3\wedge x_4,\ x_5\wedge x_6).
 \]
@@ -706,7 +706,7 @@ Both functions are transitive on their coordinates. Exact integer Walsh transfor
 Is there an absolute constant $C$ such that every nonconstant Boolean function has a coordinate $i$ with $\I_i[f]>0$ and $\Delta_i[f]\le C\,\I_i[f]$?
 \end{question}
 
-A positive answer would prove the entropy--influence conjecture with constant $C$ by coordinate restriction and induction. The examples above show that such a $C$ must exceed $6$.
+An inequality of this kind is the key element of the approach of Gonz\'alez, MacManus and Pereyra~\cite{GMP26}, who note that it would imply the conjecture by induction and verify the conjecture for several classes of functions through stopping trees. A positive answer would prove the entropy--influence conjecture with constant $C$, so $C>6.454784$ by~\cite{Hod17}.
 
 \appendix
 \section{The scalar certificate for the majorant}\label{app:cert}
@@ -786,6 +786,16 @@ E.~Friedgut and G.~Kalai,
 \emph{Every monotone graph property has a sharp threshold},
 Proc. Amer. Math. Soc. \textbf{124} (1996), no.~10, 2993--3002.
 \href{https://doi.org/10.1090/S0002-9939-96-03732-X}{doi:10.1090/S0002-9939-96-03732-X}.
+
+\bibitem{GMP26}
+M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra,
+\emph{Further evidence towards the Fourier entropy-influence conjecture},
+preprint (2026), \href{https://arxiv.org/abs/2606.00246}{arXiv:2606.00246}.
+
+\bibitem{Hod17}
+R.~Hod,
+\emph{Improved lower bounds for the Fourier entropy/influence conjecture via lexicographic functions},
+preprint (2017), \href{https://arxiv.org/abs/1711.00762}{arXiv:1711.00762}.
 
 \bibitem{KMS12}
 N.~Keller, E.~Mossel and T.~Schlank,
