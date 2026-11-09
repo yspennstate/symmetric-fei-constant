@@ -1,0 +1,10 @@
+{
+  "rows_audited": 86,
+  "independent_Walsh_nonconstant_tables": 120,
+  "maximum_dimension": 24,
+  "interval_bits_cpp": 56,
+  "interval_bits_python": 144,
+  "atanh_terms_cpp": 30,
+  "atanh_terms_python": 56,
+  "all_checks_passed": true
+}

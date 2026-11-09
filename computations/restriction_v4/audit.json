@@ -6,8 +6,8 @@
   "interval_digits": 90,
   "tail_quadrature_decimal": "4.654016341712387494487122839221599036325535862247411969598243705999267656290825259654",
   "tail_quadrature_digits": 85,
-  "seconds": 41.89378595800372,
-  "peak_rss_bytes": 24002560,
+  "seconds": 51.27527666700189,
+  "peak_rss_bytes": 28573696,
   "nice": 20,
   "block_bounds": [
     {

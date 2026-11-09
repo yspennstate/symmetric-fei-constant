@@ -1,5 +1,0 @@
-cells_checked 0 running_minimum_slack 0.040827949263053886
-cells_checked 3000 running_minimum_slack 0.022888475104977695
-cells_checked 6000 running_minimum_slack 0.022888475104977695
-cells_checked 9000 running_minimum_slack 0.022888475104977695
-{"cells": 11900, "min_cell_slack": 0.02288847510497769, "worst_cell": [0.0485, 0.048600000000000004], "small_endpoint_slack_lower": 0.039014545886063685, "gamma_upper": 0.5772164943075416, "bessel10_upper": 0.12783333716342862, "tail_upper": 0.18618065176513351, "bound_bits_upper": 4.636423665923149, "pointwise_majorant": "E1(40x)+5.53-5.46x+1.78 exp(-20x)", "status": "outward-interval certificate; continuum moment constraints required"}

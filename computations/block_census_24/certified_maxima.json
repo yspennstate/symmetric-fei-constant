@@ -1,0 +1,3185 @@
+[
+  {
+    "strictly_excluded_mod_complement": 1,
+    "overlapping_mod_complement": 2,
+    "n": 2,
+    "k": 2,
+    "tables_covered": 8,
+    "enumerated_up_to_output_complement": 4,
+    "ratio_lo_numerator": "2305843009213693952",
+    "ratio_hi_numerator": "2305843009213693952",
+    "denominator": "1152921504606846976",
+    "ratio_approx": 2,
+    "maximizers_mod_output_complement": [
+      "100",
+      "110"
+    ],
+    "seconds_for_dimension": 8.125e-06,
+    "certified_ratio_lower": "2",
+    "certified_ratio_upper": "2",
+    "decimal_enclosure": [
+      "2.000000000000000000",
+      "2.000000000000000000"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2"
+    },
+    "all_maximizers": [
+      "001",
+      "011",
+      "100",
+      "110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 5,
+    "overlapping_mod_complement": 2,
+    "n": 3,
+    "k": 2,
+    "tables_covered": 16,
+    "enumerated_up_to_output_complement": 8,
+    "ratio_lo_numerator": "10223725993863647416",
+    "ratio_hi_numerator": "10223725993863657856",
+    "denominator": "2305843009213693952",
+    "ratio_approx": 4.433834373377396,
+    "maximizers_mod_output_complement": [
+      "1000",
+      "1110"
+    ],
+    "seconds_for_dimension": 6.25e-06,
+    "certified_ratio_lower": "395511242452704223241939903722958999561547203/89202980794122492566142873090593446023921664",
+    "certified_ratio_upper": "197755621226352111620969951861479499780774767/44601490397061246283071436545296723011960832",
+    "decimal_enclosure": [
+      "4.433834373377398591",
+      "4.433834373377398592"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "8",
+      "3": "-9/4"
+    },
+    "all_maximizers": [
+      "0001",
+      "0111",
+      "1000",
+      "1110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 5,
+    "overlapping_mod_complement": 2,
+    "n": 3,
+    "k": 3,
+    "tables_covered": 16,
+    "enumerated_up_to_output_complement": 8,
+    "ratio_lo_numerator": "10223725993863647416",
+    "ratio_hi_numerator": "10223725993863657856",
+    "denominator": "3458764513820540928",
+    "ratio_approx": 2.955889582251597,
+    "maximizers_mod_output_complement": [
+      "1000",
+      "1110"
+    ],
+    "seconds_for_dimension": 1.05e-05,
+    "certified_ratio_lower": "395511242452704223241939903722958999561547203/133804471191183738849214309635890169035882496",
+    "certified_ratio_upper": "197755621226352111620969951861479499780774767/66902235595591869424607154817945084517941248",
+    "decimal_enclosure": [
+      "2.955889582251599061",
+      "2.955889582251599062"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "16/3",
+      "3": "-3/2"
+    },
+    "all_maximizers": [
+      "0001",
+      "0111",
+      "1000",
+      "1110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 13,
+    "overlapping_mod_complement": 2,
+    "n": 4,
+    "k": 2,
+    "tables_covered": 32,
+    "enumerated_up_to_output_complement": 16,
+    "ratio_lo_numerator": "22158925818152279496",
+    "ratio_hi_numerator": "22158925818152345352",
+    "denominator": "4611686018427387904",
+    "ratio_approx": 4.804951102397167,
+    "maximizers_mod_output_complement": [
+      "10000",
+      "11110"
+    ],
+    "seconds_for_dimension": 3.709e-06,
+    "certified_ratio_lower": "428615960903832885574189460379956224161940097/89202980794122492566142873090593446023921664",
+    "certified_ratio_upper": "428615960903832885574189460379956224161947349/89202980794122492566142873090593446023921664",
+    "decimal_enclosure": [
+      "4.804951102397174841",
+      "4.804951102397174842"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "22",
+      "7": "-49/8"
+    },
+    "all_maximizers": [
+      "00001",
+      "01111",
+      "10000",
+      "11110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 13,
+    "overlapping_mod_complement": 2,
+    "n": 4,
+    "k": 3,
+    "tables_covered": 32,
+    "enumerated_up_to_output_complement": 16,
+    "ratio_lo_numerator": "31382297855007055304",
+    "ratio_hi_numerator": "31382297855007121160",
+    "denominator": "6917529027641081856",
+    "ratio_approx": 4.536634068264778,
+    "maximizers_mod_output_complement": [
+      "10000",
+      "11110"
+    ],
+    "seconds_for_dimension": 6.75e-06,
+    "certified_ratio_lower": "607021922492077870706475206561143116209783425/133804471191183738849214309635890169035882496",
+    "certified_ratio_upper": "607021922492077870706475206561143116209790677/133804471191183738849214309635890169035882496",
+    "decimal_enclosure": [
+      "4.536634068264783227",
+      "4.536634068264783228"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "16",
+      "7": "-49/12"
+    },
+    "all_maximizers": [
+      "00001",
+      "01111",
+      "10000",
+      "11110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 13,
+    "overlapping_mod_complement": 2,
+    "n": 4,
+    "k": 4,
+    "tables_covered": 32,
+    "enumerated_up_to_output_complement": 16,
+    "ratio_lo_numerator": "31382297855007055304",
+    "ratio_hi_numerator": "31382297855007121160",
+    "denominator": "9223372036854775808",
+    "ratio_approx": 3.4024755511985836,
+    "maximizers_mod_output_complement": [
+      "10000",
+      "11110"
+    ],
+    "seconds_for_dimension": 9.667e-06,
+    "certified_ratio_lower": "607021922492077870706475206561143116209783425/178405961588244985132285746181186892047843328",
+    "certified_ratio_upper": "607021922492077870706475206561143116209790677/178405961588244985132285746181186892047843328",
+    "decimal_enclosure": [
+      "3.402475551198587420",
+      "3.402475551198587421"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "12",
+      "7": "-49/16"
+    },
+    "all_maximizers": [
+      "00001",
+      "01111",
+      "10000",
+      "11110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 29,
+    "overlapping_mod_complement": 2,
+    "n": 5,
+    "k": 2,
+    "tables_covered": 64,
+    "enumerated_up_to_output_complement": 32,
+    "ratio_lo_numerator": "42662860703128074688",
+    "ratio_hi_numerator": "42662860703128426048",
+    "denominator": "9223372036854775808",
+    "ratio_approx": 4.6255166258777916,
+    "maximizers_mod_output_complement": [
+      "100000",
+      "111110"
+    ],
+    "seconds_for_dimension": 6.375e-06,
+    "certified_ratio_lower": "1650439482964290094470791823226518535467086873/356811923176489970264571492362373784095686656",
+    "certified_ratio_upper": "1650439482964290094470791823226518535467166397/356811923176489970264571492362373784095686656",
+    "decimal_enclosure": [
+      "4.625516625877809589",
+      "4.625516625877809590"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "56",
+      "3": "-189/16",
+      "5": "-225/16"
+    },
+    "all_maximizers": [
+      "000001",
+      "011111",
+      "100000",
+      "111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 29,
+    "overlapping_mod_complement": 2,
+    "n": 5,
+    "k": 3,
+    "tables_covered": 64,
+    "enumerated_up_to_output_complement": 32,
+    "ratio_lo_numerator": "65111020604873154496",
+    "ratio_hi_numerator": "65111020604873464096",
+    "denominator": "13835058055282163712",
+    "ratio_approx": 4.706233999503461,
+    "maximizers_mod_output_complement": [
+      "100000",
+      "111110"
+    ],
+    "seconds_for_dimension": 9.208e-06,
+    "certified_ratio_lower": "2518860606422127046909408453393606965521911697/535217884764734955396857238543560676143529984",
+    "certified_ratio_upper": "2518860606422127046909408453393606965521981897/535217884764734955396857238543560676143529984",
+    "decimal_enclosure": [
+      "4.706233999503472120",
+      "4.706233999503472121"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "124/3",
+      "3": "-75/8",
+      "5": "-75/8"
+    },
+    "all_maximizers": [
+      "000001",
+      "011111",
+      "100000",
+      "111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 29,
+    "overlapping_mod_complement": 2,
+    "n": 5,
+    "k": 4,
+    "tables_covered": 64,
+    "enumerated_up_to_output_complement": 32,
+    "ratio_lo_numerator": "83557764678582706112",
+    "ratio_hi_numerator": "83557764678583015712",
+    "denominator": "18446744073709551616",
+    "ratio_approx": 4.529675499627595,
+    "maximizers_mod_output_complement": [
+      "100000",
+      "111110"
+    ],
+    "seconds_for_dimension": 1.2125e-05,
+    "certified_ratio_lower": "3232484452775106987438551438118354533713285009/713623846352979940529142984724747568191373312",
+    "certified_ratio_upper": "3232484452775106987438551438118354533713355209/713623846352979940529142984724747568191373312",
+    "decimal_enclosure": [
+      "4.529675499627604090",
+      "4.529675499627604091"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "32",
+      "3": "-225/32",
+      "5": "-225/32"
+    },
+    "all_maximizers": [
+      "000001",
+      "011111",
+      "100000",
+      "111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 29,
+    "overlapping_mod_complement": 2,
+    "n": 5,
+    "k": 5,
+    "tables_covered": 64,
+    "enumerated_up_to_output_complement": 32,
+    "ratio_lo_numerator": "83557764678582706112",
+    "ratio_hi_numerator": "83557764678583015712",
+    "denominator": "23058430092136939520",
+    "ratio_approx": 3.6237403997020765,
+    "maximizers_mod_output_complement": [
+      "100000",
+      "111110"
+    ],
+    "seconds_for_dimension": 1.475e-05,
+    "certified_ratio_lower": "3232484452775106987438551438118354533713285009/892029807941224925661428730905934460239216640",
+    "certified_ratio_upper": "3232484452775106987438551438118354533713355209/892029807941224925661428730905934460239216640",
+    "decimal_enclosure": [
+      "3.623740399702083272",
+      "3.623740399702083273"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "128/5",
+      "3": "-45/8",
+      "5": "-45/8"
+    },
+    "all_maximizers": [
+      "000001",
+      "011111",
+      "100000",
+      "111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 61,
+    "overlapping_mod_complement": 2,
+    "n": 6,
+    "k": 2,
+    "tables_covered": 128,
+    "enumerated_up_to_output_complement": 64,
+    "ratio_lo_numerator": "81430217782670115936",
+    "ratio_hi_numerator": "81430217782671755512",
+    "denominator": "18446744073709551616",
+    "ratio_approx": 4.414340951296935,
+    "maximizers_mod_output_complement": [
+      "1000000",
+      "1111110"
+    ],
+    "seconds_for_dimension": 1.1667e-05,
+    "certified_ratio_lower": "3150178968778022679755931293844795360974165559/713623846352979940529142984724747568191373312",
+    "certified_ratio_upper": "1575089484389011339877965646922397680487265067/356811923176489970264571492362373784095686656",
+    "decimal_enclosure": [
+      "4.414340951296979043",
+      "4.414340951296979044"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "136",
+      "7": "49/8",
+      "31": "-961/32"
+    },
+    "all_maximizers": [
+      "0000001",
+      "0111111",
+      "1000000",
+      "1111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 61,
+    "overlapping_mod_complement": 2,
+    "n": 6,
+    "k": 3,
+    "tables_covered": 128,
+    "enumerated_up_to_output_complement": 64,
+    "ratio_lo_numerator": "125169601251789337728",
+    "ratio_hi_numerator": "125169601251790797400",
+    "denominator": "27670116110564327424",
+    "ratio_approx": 4.523638453544478,
+    "maximizers_mod_output_complement": [
+      "1000000",
+      "1111110"
+    ],
+    "seconds_for_dimension": 1.8e-05,
+    "certified_ratio_lower": "1614088136364337286490737905516756098053364901/356811923176489970264571492362373784095686656",
+    "certified_ratio_upper": "2421132204546505929736106858275134147080209955/535217884764734955396857238543560676143529984",
+    "decimal_enclosure": [
+      "4.523638453544503529",
+      "4.523638453544503530"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "304/3",
+      "3": "3/2",
+      "31": "-961/48"
+    },
+    "all_maximizers": [
+      "0000001",
+      "0111111",
+      "1000000",
+      "1111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 61,
+    "overlapping_mod_complement": 2,
+    "n": 6,
+    "k": 4,
+    "tables_covered": 128,
+    "enumerated_up_to_output_complement": 64,
+    "ratio_lo_numerator": "170065921055279497344",
+    "ratio_hi_numerator": "170065921055280873496",
+    "denominator": "36893488147419103232",
+    "ratio_approx": 4.6096460268470585,
+    "maximizers_mod_output_complement": [
+      "1000000",
+      "1111110"
+    ],
+    "seconds_for_dimension": 2.0708e-05,
+    "certified_ratio_lower": "6579106656008685764349446976884445154269744351/1427247692705959881058285969449495136382746624",
+    "certified_ratio_upper": "3289553328004342882174723488442222577135025455/713623846352979940529142984724747568191373312",
+    "decimal_enclosure": [
+      "4.609646026847076942",
+      "4.609646026847076943"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "79",
+      "31": "-961/64"
+    },
+    "all_maximizers": [
+      "0000001",
+      "0111111",
+      "1000000",
+      "1111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 61,
+    "overlapping_mod_complement": 2,
+    "n": 6,
+    "k": 5,
+    "tables_covered": 128,
+    "enumerated_up_to_output_complement": 64,
+    "ratio_lo_numerator": "206959409202698600576",
+    "ratio_hi_numerator": "206959409202699976728",
+    "denominator": "46116860184273879040",
+    "ratio_approx": 4.487716821477647,
+    "maximizers_mod_output_complement": [
+      "1000000",
+      "1111110"
+    ],
+    "seconds_for_dimension": 2.3375e-05,
+    "certified_ratio_lower": "1601270869742929129081546589266788058130498195/356811923176489970264571492362373784095686656",
+    "certified_ratio_upper": "4003177174357322822703866473166970145326398767/892029807941224925661428730905934460239216640",
+    "decimal_enclosure": [
+      "4.487716821477661554",
+      "4.487716821477661555"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "64",
+      "31": "-961/80"
+    },
+    "all_maximizers": [
+      "0000001",
+      "0111111",
+      "1000000",
+      "1111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 125,
+    "overlapping_mod_complement": 2,
+    "n": 7,
+    "k": 2,
+    "tables_covered": 256,
+    "enumerated_up_to_output_complement": 128,
+    "ratio_lo_numerator": "157014949903251278704",
+    "ratio_hi_numerator": "157014949903258168960",
+    "denominator": "36893488147419103232",
+    "ratio_approx": 4.255898744945192,
+    "maximizers_mod_output_complement": [
+      "10000000",
+      "11111110"
+    ],
+    "seconds_for_dimension": 2.1417e-05,
+    "certified_ratio_lower": "6074221664113347686599981959233063389593382157/1427247692705959881058285969449495136382746624",
+    "certified_ratio_upper": "379638854007084230412498872452066461849684059/89202980794122492566142873090593446023921664",
+    "decimal_enclosure": [
+      "4.255898744945284462",
+      "4.255898744945284463"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "320",
+      "3": "-3519/32",
+      "5": "225/16",
+      "7": "-3969/64"
+    },
+    "all_maximizers": [
+      "00000001",
+      "01111111",
+      "10000000",
+      "11111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 125,
+    "overlapping_mod_complement": 2,
+    "n": 7,
+    "k": 3,
+    "tables_covered": 256,
+    "enumerated_up_to_output_complement": 128,
+    "ratio_lo_numerator": "240187625777526372272",
+    "ratio_hi_numerator": "240187625777532550976",
+    "denominator": "55340232221128654848",
+    "ratio_approx": 4.340199094535491,
+    "maximizers_mod_output_complement": [
+      "10000000",
+      "11111110"
+    ],
+    "seconds_for_dimension": 2.475e-05,
+    "certified_ratio_lower": "9291808715340529705050584406728191665090152161/2140871539058939821587428954174242704574119936",
+    "certified_ratio_upper": "2322952178835132426262646101682047916272887545/535217884764734955396857238543560676143529984",
+    "decimal_enclosure": [
+      "4.340199094535545201",
+      "4.340199094535545202"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "240",
+      "3": "-1323/16",
+      "7": "-3577/96"
+    },
+    "all_maximizers": [
+      "00000001",
+      "01111111",
+      "10000000",
+      "11111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 125,
+    "overlapping_mod_complement": 2,
+    "n": 7,
+    "k": 4,
+    "tables_covered": 256,
+    "enumerated_up_to_output_complement": 128,
+    "ratio_lo_numerator": "327666392715764815856",
+    "ratio_hi_numerator": "327666392715770634752",
+    "denominator": "73786976294838206464",
+    "ratio_approx": 4.440707685411509,
+    "maximizers_mod_output_complement": [
+      "10000000",
+      "11111110"
+    ],
+    "seconds_for_dimension": 2.7542e-05,
+    "certified_ratio_lower": "12675979595970508064483149252139137531462010449/2854495385411919762116571938898990272765493248",
+    "certified_ratio_upper": "3168994898992627016120787313034784382865832433/713623846352979940529142984724747568191373312",
+    "decimal_enclosure": [
+      "4.440707685411547025",
+      "4.440707685411547026"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "188",
+      "3": "-3897/64",
+      "7": "-3969/128"
+    },
+    "all_maximizers": [
+      "00000001",
+      "01111111",
+      "10000000",
+      "11111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 125,
+    "overlapping_mod_complement": 2,
+    "n": 7,
+    "k": 5,
+    "tables_covered": 256,
+    "enumerated_up_to_output_complement": 128,
+    "ratio_lo_numerator": "417459032322745135088",
+    "ratio_hi_numerator": "417459032322750786944",
+    "denominator": "92233720368547758080",
+    "ratio_approx": 4.526099897680167,
+    "maximizers_mod_output_complement": [
+      "10000000",
+      "11111110"
+    ],
+    "seconds_for_dimension": 3.0125e-05,
+    "certified_ratio_lower": "3229932817960371174847523154561498250336261949/713623846352979940529142984724747568191373312",
+    "certified_ratio_upper": "4037416022450463968559403943201872812920647933/892029807941224925661428730905934460239216640",
+    "decimal_enclosure": [
+      "4.526099897680197057",
+      "4.526099897680197058"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "764/5",
+      "3": "-3969/80",
+      "7": "-3969/160"
+    },
+    "all_maximizers": [
+      "00000001",
+      "01111111",
+      "10000000",
+      "11111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 253,
+    "overlapping_mod_complement": 2,
+    "n": 8,
+    "k": 2,
+    "tables_covered": 512,
+    "enumerated_up_to_output_complement": 256,
+    "ratio_lo_numerator": "306351595247545088024",
+    "ratio_hi_numerator": "306351595247573689360",
+    "denominator": "73786976294838206464",
+    "ratio_approx": 4.151838313897354,
+    "maximizers_mod_output_complement": [
+      "100000000",
+      "111111110"
+    ],
+    "seconds_for_dimension": 3.9709e-05,
+    "certified_ratio_lower": "5925701653998468278118112305659947731157960349/1427247692705959881058285969449495136382746624",
+    "certified_ratio_upper": "11851403307996936556236224611319895462322388859/2854495385411919762116571938898990272765493248",
+    "decimal_enclosure": [
+      "4.151838313897541055",
+      "4.151838313897541056"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "736",
+      "31": "961/32",
+      "127": "-16129/128"
+    },
+    "all_maximizers": [
+      "000000001",
+      "011111111",
+      "100000000",
+      "111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 253,
+    "overlapping_mod_complement": 2,
+    "n": 8,
+    "k": 3,
+    "tables_covered": 512,
+    "enumerated_up_to_output_complement": 256,
+    "ratio_lo_numerator": "465727114629680869240",
+    "ratio_hi_numerator": "465727114629706442768",
+    "denominator": "110680464442257309696",
+    "ratio_approx": 4.2078529122242125,
+    "maximizers_mod_output_complement": [
+      "100000000",
+      "111111110"
+    ],
+    "seconds_for_dimension": 4.2792e-05,
+    "certified_ratio_lower": "9008472540327331619179372445854410177610134581/2140871539058939821587428954174242704574119936",
+    "certified_ratio_upper": "18016945080654663238358744891708820355226072687/4281743078117879643174857908348485409148239872",
+    "decimal_enclosure": [
+      "4.207852912224324506",
+      "4.207852912224324507"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1664/3",
+      "3": "75/8",
+      "5": "75/8",
+      "127": "-16129/192"
+    },
+    "all_maximizers": [
+      "000000001",
+      "011111111",
+      "100000000",
+      "111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 253,
+    "overlapping_mod_complement": 2,
+    "n": 8,
+    "k": 4,
+    "tables_covered": 512,
+    "enumerated_up_to_output_complement": 256,
+    "ratio_lo_numerator": "632072466378231056376",
+    "ratio_hi_numerator": "632072466378255206800",
+    "denominator": "147573952589676412928",
+    "ratio_approx": 4.283089632597182,
+    "maximizers_mod_output_complement": [
+      "100000000",
+      "111111110"
+    ],
+    "seconds_for_dimension": 4.7792e-05,
+    "certified_ratio_lower": "12226059591554513637629974893349538453106904585/2854495385411919762116571938898990272765493248",
+    "certified_ratio_upper": "24452119183109027275259949786699076906219283159/5708990770823839524233143877797980545530986496",
+    "decimal_enclosure": [
+      "4.283089632597260049",
+      "4.283089632597260050"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "436",
+      "7": "49/16",
+      "127": "-16129/256"
+    },
+    "all_maximizers": [
+      "000000001",
+      "011111111",
+      "100000000",
+      "111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 253,
+    "overlapping_mod_complement": 2,
+    "n": 8,
+    "k": 5,
+    "tables_covered": 512,
+    "enumerated_up_to_output_complement": 256,
+    "ratio_lo_numerator": "807030000254707943544",
+    "ratio_hi_numerator": "807030000254731374352",
+    "denominator": "184467440737095516160",
+    "ratio_approx": 4.374918397685658,
+    "maximizers_mod_output_complement": [
+      "100000000",
+      "111111110"
+    ],
+    "seconds_for_dimension": 5.05e-05,
+    "certified_ratio_lower": "15610230472184491997062539738760484319478762873/3568119231764899702645714923623737840956866560",
+    "certified_ratio_upper": "31220460944368983994125079477520968638962842263/7136238463529799405291429847247475681913733120",
+    "decimal_enclosure": [
+      "4.374918397685718539",
+      "4.374918397685718540"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1776/5",
+      "3": "9/10",
+      "127": "-16129/320"
+    },
+    "all_maximizers": [
+      "000000001",
+      "011111111",
+      "100000000",
+      "111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 509,
+    "overlapping_mod_complement": 2,
+    "n": 9,
+    "k": 2,
+    "tables_covered": 1024,
+    "enumerated_up_to_output_complement": 512,
+    "ratio_lo_numerator": "603245328854549055712",
+    "ratio_hi_numerator": "603245328854664778936",
+    "denominator": "147573952589676412928",
+    "ratio_approx": 4.087749350536466,
+    "maximizers_mod_output_complement": [
+      "1000000000",
+      "1111111110"
+    ],
+    "seconds_for_dimension": 0.000131542,
+    "certified_ratio_lower": "11668461657828042587170897056685048291464243019/2854495385411919762116571938898990272765493248",
+    "certified_ratio_upper": "2917115414457010646792724264171262072869351517/713623846352979940529142984724747568191373312",
+    "decimal_enclosure": [
+      "4.087749350536861297",
+      "4.087749350536861298"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1664",
+      "3": "-33273/256",
+      "5": "-65025/256",
+      "7": "3969/64",
+      "17": "-65025/256"
+    },
+    "all_maximizers": [
+      "0000000001",
+      "0111111111",
+      "1000000000",
+      "1111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 509,
+    "overlapping_mod_complement": 2,
+    "n": 9,
+    "k": 3,
+    "tables_covered": 1024,
+    "enumerated_up_to_output_complement": 512,
+    "ratio_lo_numerator": "912554089703305215520",
+    "ratio_hi_numerator": "912554089703409340536",
+    "denominator": "221360928884514619392",
+    "ratio_approx": 4.122471360695231,
+    "maximizers_mod_output_complement": [
+      "1000000000",
+      "1111111110"
+    ],
+    "seconds_for_dimension": 0.000140083,
+    "certified_ratio_lower": "17651363213397011278248340694762250177749222843/4281743078117879643174857908348485409148239872",
+    "certified_ratio_upper": "2941893868899501879708056782460375029626841359/713623846352979940529142984724747568191373312",
+    "decimal_enclosure": [
+      "4.122471360695466703",
+      "4.122471360695466704"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "3776/3",
+      "3": "-21675/128",
+      "5": "-21675/128",
+      "17": "-21675/128",
+      "31": "961/48"
+    },
+    "all_maximizers": [
+      "0000000001",
+      "0111111111",
+      "1000000000",
+      "1111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 509,
+    "overlapping_mod_complement": 2,
+    "n": 9,
+    "k": 4,
+    "tables_covered": 1024,
+    "enumerated_up_to_output_complement": 512,
+    "ratio_lo_numerator": "1231305128467576777952",
+    "ratio_hi_numerator": "1231305128467674847352",
+    "denominator": "295147905179352825856",
+    "ratio_approx": 4.171824047740905,
+    "maximizers_mod_output_complement": [
+      "1000000000",
+      "1111111110"
+    ],
+    "seconds_for_dimension": 0.000144167,
+    "certified_ratio_lower": "23816904986054737960370860975151175070653571307/5708990770823839524233143877797980545530986496",
+    "certified_ratio_upper": "11908452493027368980185430487575587535332365991/2854495385411919762116571938898990272765493248",
+    "decimal_enclosure": [
+      "4.171824047741072879",
+      "4.171824047741072880"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "992",
+      "3": "-61425/512",
+      "5": "-61425/512",
+      "17": "-65025/512"
+    },
+    "all_maximizers": [
+      "0000000001",
+      "0111111111",
+      "1000000000",
+      "1111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 509,
+    "overlapping_mod_complement": 2,
+    "n": 9,
+    "k": 5,
+    "tables_covered": 1024,
+    "enumerated_up_to_output_complement": 512,
+    "ratio_lo_numerator": "1563995831964677152224",
+    "ratio_hi_numerator": "1563995831964772375416",
+    "denominator": "368934881474191032320",
+    "ratio_approx": 4.2392191969359425,
+    "maximizers_mod_output_complement": [
+      "1000000000",
+      "1111111110"
+    ],
+    "seconds_for_dimension": 0.0001475,
+    "certified_ratio_lower": "6050415817701820399454413174028286324329422263/1427247692705959881058285969449495136382746624",
+    "certified_ratio_upper": "15126039544254550998636032935070715810828971227/3568119231764899702645714923623737840956866560",
+    "decimal_enclosure": [
+      "4.239219196936071639",
+      "4.239219196936071640"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "4048/5",
+      "3": "-13005/128",
+      "5": "-13005/128",
+      "7": "49/20",
+      "17": "-13005/128"
+    },
+    "all_maximizers": [
+      "0000000001",
+      "0111111111",
+      "1000000000",
+      "1111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1021,
+    "overlapping_mod_complement": 2,
+    "n": 10,
+    "k": 2,
+    "tables_covered": 2048,
+    "enumerated_up_to_output_complement": 1024,
+    "ratio_lo_numerator": "1195278693460049198336",
+    "ratio_hi_numerator": "1195278693460521777424",
+    "denominator": "295147905179352825856",
+    "ratio_approx": 4.049761738046939,
+    "maximizers_mod_output_complement": [
+      "10000000000",
+      "11111111110"
+    ],
+    "seconds_for_dimension": 0.000170084,
+    "certified_ratio_lower": "46240104773099852958165129855174527560301208555/11417981541647679048466287755595961091061972992",
+    "certified_ratio_upper": "46240104773099852958165129855174527560407301701/11417981541647679048466287755595961091061972992",
+    "decimal_enclosure": [
+      "4.049761738047716741",
+      "4.049761738047716742"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "3712",
+      "7": "-261121/512",
+      "73": "-261121/512",
+      "127": "16129/128"
+    },
+    "all_maximizers": [
+      "00000000001",
+      "01111111111",
+      "10000000000",
+      "11111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1021,
+    "overlapping_mod_complement": 2,
+    "n": 10,
+    "k": 3,
+    "tables_covered": 2048,
+    "enumerated_up_to_output_complement": 1024,
+    "ratio_lo_numerator": "1802067552752809617728",
+    "ratio_hi_numerator": "1802067552753235024752",
+    "denominator": "442721857769029238784",
+    "ratio_approx": 4.070428240958818,
+    "maximizers_mod_output_complement": [
+      "10000000000",
+      "11111111110"
+    ],
+    "seconds_for_dimension": 0.000174542,
+    "certified_ratio_lower": "69714111782811724418800253748145301864445939751/17126972312471518572699431633393941636592959488",
+    "certified_ratio_upper": "23238037260937241472933417916048433954847107031/5708990770823839524233143877797980545530986496",
+    "decimal_enclosure": [
+      "4.070428240959279359",
+      "4.070428240959279360"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2816",
+      "3": "1323/16",
+      "7": "-229369/768",
+      "73": "-261121/768"
+    },
+    "all_maximizers": [
+      "00000000001",
+      "01111111111",
+      "10000000000",
+      "11111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1021,
+    "overlapping_mod_complement": 2,
+    "n": 10,
+    "k": 4,
+    "tables_covered": 2048,
+    "enumerated_up_to_output_complement": 1024,
+    "ratio_lo_numerator": "2420685074450321937344",
+    "ratio_hi_numerator": "2420685074450724147952",
+    "denominator": "590295810358705651712",
+    "ratio_approx": 4.100800025972303,
+    "maximizers_mod_output_complement": [
+      "10000000000",
+      "11111111110"
+    ],
+    "seconds_for_dimension": 0.0001775,
+    "certified_ratio_lower": "93645718005087599183110028300454109409585859047/22835963083295358096932575511191922182123945984",
+    "certified_ratio_upper": "93645718005087599183110028300454109409675889437/22835963083295358096932575511191922182123945984",
+    "decimal_enclosure": [
+      "4.100800025972628898",
+      "4.100800025972628899"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2224",
+      "7": "-261121/1024",
+      "31": "961/64",
+      "73": "-261121/1024"
+    },
+    "all_maximizers": [
+      "00000000001",
+      "01111111111",
+      "10000000000",
+      "11111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1021,
+    "overlapping_mod_complement": 2,
+    "n": 10,
+    "k": 5,
+    "tables_covered": 2048,
+    "enumerated_up_to_output_complement": 1024,
+    "ratio_lo_numerator": "3058187151978865062208",
+    "ratio_hi_numerator": "3058187151979255161584",
+    "denominator": "737869762948382064640",
+    "ratio_approx": 4.144616442553429,
+    "maximizers_mod_output_complement": [
+      "10000000000",
+      "11111111110"
+    ],
+    "seconds_for_dimension": 0.000180292,
+    "certified_ratio_lower": "118307885095718505911600109422009808981203252903/28544953854119197621165719388989902727654932480",
+    "certified_ratio_upper": "118307885095718505911600109422009808981290624749/28544953854119197621165719388989902727654932480",
+    "decimal_enclosure": [
+      "4.144616442553681400",
+      "4.144616442553681401"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "9088/5",
+      "3": "45/8",
+      "5": "45/8",
+      "7": "-261121/1280",
+      "73": "-261121/1280"
+    },
+    "all_maximizers": [
+      "00000000001",
+      "01111111111",
+      "10000000000",
+      "11111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2045,
+    "overlapping_mod_complement": 2,
+    "n": 11,
+    "k": 2,
+    "tables_covered": 4096,
+    "enumerated_up_to_output_complement": 2048,
+    "ratio_lo_numerator": "2377603769797301229736",
+    "ratio_hi_numerator": "2377603769799180694696",
+    "denominator": "590295810358705651712",
+    "ratio_approx": 4.027817457068686,
+    "maximizers_mod_output_complement": [
+      "100000000000",
+      "111111111110"
+    ],
+    "seconds_for_dimension": 0.000498417,
+    "certified_ratio_lower": "718586646530532478679642941620672986142376333/178405961588244985132285746181186892047843328",
+    "certified_ratio_upper": "91979090755908157270994296527446142226651178207/22835963083295358096932575511191922182123945984",
+    "decimal_enclosure": [
+      "4.027817457070221204",
+      "4.027817457070221205"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "8192",
+      "3": "-786429/1024",
+      "5": "65025/256",
+      "11": "-1046529/1024",
+      "17": "65025/256",
+      "31": "-1046529/1024"
+    },
+    "all_maximizers": [
+      "000000000001",
+      "011111111111",
+      "100000000000",
+      "111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2045,
+    "overlapping_mod_complement": 2,
+    "n": 11,
+    "k": 3,
+    "tables_covered": 4096,
+    "enumerated_up_to_output_complement": 2048,
+    "ratio_lo_numerator": "3577007366630349077000",
+    "ratio_hi_numerator": "3577007366632040852584",
+    "denominator": "885443715538058477568",
+    "ratio_approx": 4.0397907894763305,
+    "maximizers_mod_output_complement": [
+      "100000000000",
+      "111111111110"
+    ],
+    "seconds_for_dimension": 0.000519709,
+    "certified_ratio_lower": "17297346249888594380886403149373122493716680623/4281743078117879643174857908348485409148239872",
+    "certified_ratio_upper": "138378769999108755047091225194984979950117595367/34253944624943037145398863266787883273185918976",
+    "decimal_enclosure": [
+      "4.039790789477253470",
+      "4.039790789477253471"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "18688/3",
+      "3": "-348843/512",
+      "11": "-348843/512",
+      "31": "-348843/512",
+      "127": "16129/192"
+    },
+    "all_maximizers": [
+      "000000000001",
+      "011111111111",
+      "100000000000",
+      "111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2045,
+    "overlapping_mod_complement": 2,
+    "n": 11,
+    "k": 4,
+    "tables_covered": 4096,
+    "enumerated_up_to_output_complement": 2048,
+    "ratio_lo_numerator": "4790585085215869915784",
+    "ratio_hi_numerator": "4790585085217467347240",
+    "denominator": "1180591620717411303424",
+    "ratio_approx": 4.057783403802892,
+    "maximizers_mod_output_complement": [
+      "100000000000",
+      "111111111110"
+    ],
+    "seconds_for_dimension": 0.000558167,
+    "certified_ratio_lower": "11582924001158281123022592061307908034876431711/2854495385411919762116571938898990272765493248",
+    "certified_ratio_upper": "185326784018532497968361472980926528558385634151/45671926166590716193865151022383844364247891968",
+    "decimal_enclosure": [
+      "4.057783403803541251",
+      "4.057783403803541252"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "4928",
+      "3": "-919521/2048",
+      "7": "3969/128",
+      "11": "-1046529/2048",
+      "31": "-1046529/2048"
+    },
+    "all_maximizers": [
+      "000000000001",
+      "011111111111",
+      "100000000000",
+      "111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2045,
+    "overlapping_mod_complement": 2,
+    "n": 11,
+    "k": 5,
+    "tables_covered": 4096,
+    "enumerated_up_to_output_complement": 2048,
+    "ratio_lo_numerator": "6027820128610894555016",
+    "ratio_hi_numerator": "6027820128612445593640",
+    "denominator": "1475739525896764129280",
+    "ratio_approx": 4.084609799244865,
+    "maximizers_mod_output_complement": [
+      "100000000000",
+      "111111111110"
+    ],
+    "seconds_for_dimension": 0.000572667,
+    "certified_ratio_lower": "14574374778942765468561313880346508978018921623/3568119231764899702645714923623737840956866560",
+    "certified_ratio_upper": "233189996463084247496981022085544143648654770839/57089907708238395242331438777979805455309864960",
+    "decimal_enclosure": [
+      "4.084609799245368504",
+      "4.084609799245368505"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "4032",
+      "3": "-1046529/2560",
+      "11": "-1046529/2560",
+      "31": "-1015777/2560"
+    },
+    "all_maximizers": [
+      "000000000001",
+      "011111111111",
+      "100000000000",
+      "111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4093,
+    "overlapping_mod_complement": 2,
+    "n": 12,
+    "k": 2,
+    "tables_covered": 8192,
+    "enumerated_up_to_output_complement": 4096,
+    "ratio_lo_numerator": "4740518427027714362800",
+    "ratio_hi_numerator": "4740518427035369597480",
+    "denominator": "1180591620717411303424",
+    "ratio_approx": 4.015375294758605,
+    "maximizers_mod_output_complement": [
+      "1000000000000",
+      "1111111111110"
+    ],
+    "seconds_for_dimension": 0.000934917,
+    "certified_ratio_lower": "45847480998377769055400098069638531804606280819/11417981541647679048466287755595961091061972992",
+    "certified_ratio_upper": "183389923993511076221600392278554127220135823403/45671926166590716193865151022383844364247891968",
+    "decimal_enclosure": [
+      "4.015375294761749922",
+      "4.015375294761749923"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "17920",
+      "7": "261121/512",
+      "23": "-4190209/2048",
+      "73": "261121/512",
+      "89": "-4190209/2048"
+    },
+    "all_maximizers": [
+      "0000000000001",
+      "0111111111111",
+      "1000000000000",
+      "1111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4093,
+    "overlapping_mod_complement": 2,
+    "n": 12,
+    "k": 3,
+    "tables_covered": 8192,
+    "enumerated_up_to_output_complement": 4096,
+    "ratio_lo_numerator": "7122826007203336230320",
+    "ratio_hi_numerator": "7122826007210215622696",
+    "denominator": "1770887431076116955136",
+    "ratio_approx": 4.022178870440682,
+    "maximizers_mod_output_complement": [
+      "1000000000000",
+      "1111111111110"
+    ],
+    "seconds_for_dimension": 0.000942083,
+    "certified_ratio_lower": "2870322756244888463563198482960151687634915735/713623846352979940529142984724747568191373312",
+    "certified_ratio_upper": "91850328199836430834022351454724854004830564701/22835963083295358096932575511191922182123945984",
+    "decimal_enclosure": [
+      "4.022178870442538442",
+      "4.022178870442538443"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "40960/3",
+      "3": "21675/128",
+      "5": "21675/128",
+      "17": "21675/128",
+      "23": "-4190209/3072",
+      "89": "-4190209/3072"
+    },
+    "all_maximizers": [
+      "0000000000001",
+      "0111111111111",
+      "1000000000000",
+      "1111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4093,
+    "overlapping_mod_complement": 2,
+    "n": 12,
+    "k": 4,
+    "tables_covered": 8192,
+    "enumerated_up_to_output_complement": 4096,
+    "ratio_lo_numerator": "9521633200869431924848",
+    "ratio_hi_numerator": "9521633200875935938472",
+    "denominator": "2361183241434822606848",
+    "ratio_approx": 4.032568516403416,
+    "maximizers_mod_output_complement": [
+      "1000000000000",
+      "1111111111110"
+    ],
+    "seconds_for_dimension": 0.000945208,
+    "certified_ratio_lower": "23021896442869405503391306981203264841248153705/5708990770823839524233143877797980545530986496",
+    "certified_ratio_upper": "368350343085910488054260911699252237461424528423/91343852333181432387730302044767688728495783936",
+    "decimal_enclosure": [
+      "4.032568516404733331",
+      "4.032568516404733332"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "10816",
+      "23": "-4190209/4096",
+      "89": "-4190209/4096",
+      "127": "16129/256"
+    },
+    "all_maximizers": [
+      "0000000000001",
+      "0111111111111",
+      "1000000000000",
+      "1111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4093,
+    "overlapping_mod_complement": 2,
+    "n": 12,
+    "k": 5,
+    "tables_covered": 8192,
+    "enumerated_up_to_output_complement": 4096,
+    "ratio_lo_numerator": "11948788638040473602416",
+    "ratio_hi_numerator": "11948788638046788927784",
+    "denominator": "2951479051793528258560",
+    "ratio_approx": 4.048407062479248,
+    "maximizers_mod_output_complement": [
+      "1000000000000",
+      "1111111111110"
+    ],
+    "seconds_for_dimension": 0.000948958,
+    "certified_ratio_lower": "3611299774412171671068760994305744802160542063/892029807941224925661428730905934460239216640",
+    "certified_ratio_upper": "462246371124757973896801407271135334677960605991/114179815416476790484662877555959610910619729920",
+    "decimal_enclosure": [
+      "4.048407062480267584",
+      "4.048407062480267585"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "44288/5",
+      "3": "3969/80",
+      "7": "3969/160",
+      "23": "-4190209/5120",
+      "89": "-4190209/5120"
+    },
+    "all_maximizers": [
+      "0000000000001",
+      "0111111111111",
+      "1000000000000",
+      "1111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8189,
+    "overlapping_mod_complement": 2,
+    "n": 13,
+    "k": 2,
+    "tables_covered": 16384,
+    "enumerated_up_to_output_complement": 8192,
+    "ratio_lo_numerator": "9464615308130582463208",
+    "ratio_hi_numerator": "9464615308160757866248",
+    "denominator": "2361183241434822606848",
+    "ratio_approx": 4.008420499537007,
+    "maximizers_mod_output_complement": [
+      "10000000000000",
+      "11111111111110"
+    ],
+    "seconds_for_dimension": 0.001363541,
+    "certified_ratio_lower": "183072285099797696084408905802016325101094592533/45671926166590716193865151022383844364247891968",
+    "certified_ratio_upper": "366144570199595392168817811604032650209041516173/91343852333181432387730302044767688728495783936",
+    "decimal_enclosure": [
+      "4.008420499543462525",
+      "4.008420499543462526"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "38912",
+      "3": "-14675967/2048",
+      "5": "-16769025/4096",
+      "7": "-16769025/4096",
+      "11": "1046529/1024",
+      "13": "-16769025/4096",
+      "31": "1046529/1024"
+    },
+    "all_maximizers": [
+      "00000000000001",
+      "01111111111111",
+      "10000000000000",
+      "11111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8189,
+    "overlapping_mod_complement": 2,
+    "n": 13,
+    "k": 3,
+    "tables_covered": 16384,
+    "enumerated_up_to_output_complement": 8192,
+    "ratio_lo_numerator": "14210415226974571654152",
+    "ratio_hi_numerator": "14210415227001760587560",
+    "denominator": "3541774862152233910272",
+    "ratio_approx": 4.012229963803886,
+    "maximizers_mod_output_complement": [
+      "10000000000000",
+      "11111111111110"
+    ],
+    "seconds_for_dimension": 0.001387208,
+    "certified_ratio_lower": "91623135335205264781976945590429391586566858821/22835963083295358096932575511191922182123945984",
+    "certified_ratio_upper": "549738812011231588691861673542576349525565627669/137015778499772148581595453067151533092743675904",
+    "decimal_enclosure": [
+      "4.012229963807750659",
+      "4.012229963807750660"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "29696",
+      "3": "-5589675/1024",
+      "5": "-5589675/2048",
+      "7": "-14680057/6144",
+      "13": "-5589675/2048",
+      "73": "261121/768"
+    },
+    "all_maximizers": [
+      "00000000000001",
+      "01111111111111",
+      "10000000000000",
+      "11111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8189,
+    "overlapping_mod_complement": 2,
+    "n": 13,
+    "k": 4,
+    "tables_covered": 16384,
+    "enumerated_up_to_output_complement": 8192,
+    "ratio_lo_numerator": "18975030387325815389192",
+    "ratio_hi_numerator": "18975030387351452637992",
+    "denominator": "4722366482869645213696",
+    "ratio_approx": 4.018118978304123,
+    "maximizers_mod_output_complement": [
+      "10000000000000",
+      "11111111111110"
+    ],
+    "seconds_for_dimension": 0.0013905,
+    "certified_ratio_lower": "367030466611614010626397498856908609554227363747/91343852333181432387730302044767688728495783936",
+    "certified_ratio_upper": "734060933223228021252794997713817219114277369069/182687704666362864775460604089535377456991567872",
+    "decimal_enclosure": [
+      "4.018118978306841865",
+      "4.018118978306841866"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "23552",
+      "3": "-16248825/4096",
+      "5": "-15728625/8192",
+      "7": "-16769025/8192",
+      "13": "-16769025/8192",
+      "17": "65025/512"
+    },
+    "all_maximizers": [
+      "00000000000001",
+      "01111111111111",
+      "10000000000000",
+      "11111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8189,
+    "overlapping_mod_complement": 2,
+    "n": 13,
+    "k": 5,
+    "tables_covered": 16384,
+    "enumerated_up_to_output_complement": 8192,
+    "ratio_lo_numerator": "23772644774658006778248",
+    "ratio_hi_numerator": "23772644774682893269544",
+    "denominator": "5902958103587056517120",
+    "ratio_approx": 4.027242673501623,
+    "maximizers_mod_output_complement": [
+      "10000000000000",
+      "11111111111110"
+    ],
+    "seconds_for_dimension": 0.001393208,
+    "certified_ratio_lower": "459829825098015206178591356191986285001245912467/114179815416476790484662877555959610910619729920",
+    "certified_ratio_upper": "919659650196030412357182712383972570008143037709/228359630832953580969325755111919221821239459840",
+    "decimal_enclosure": [
+      "4.027242673503737092",
+      "4.027242673503737093"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "96512/5",
+      "3": "-3353805/1024",
+      "5": "-3353805/2048",
+      "7": "-3353805/2048",
+      "13": "-3353805/2048",
+      "127": "16129/320"
+    },
+    "all_maximizers": [
+      "00000000000001",
+      "01111111111111",
+      "10000000000000",
+      "11111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16381,
+    "overlapping_mod_complement": 2,
+    "n": 14,
+    "k": 2,
+    "tables_covered": 32768,
+    "enumerated_up_to_output_complement": 16384,
+    "ratio_lo_numerator": "18911078163878288545488",
+    "ratio_hi_numerator": "18911078164000513061728",
+    "denominator": "4722366482869645213696",
+    "ratio_approx": 4.004576568226567,
+    "maximizers_mod_output_complement": [
+      "100000000000000",
+      "111111111111110"
+    ],
+    "seconds_for_dimension": 0.004114667,
+    "certified_ratio_lower": "365793450706209178001833813172914505845367374243/91343852333181432387730302044767688728495783936",
+    "certified_ratio_upper": "731586901412418356003667626345829011718154783145/182687704666362864775460604089535377456991567872",
+    "decimal_enclosure": [
+      "4.004576568239739012",
+      "4.004576568239739013"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "83968",
+      "23": "4190209/2048",
+      "89": "4190209/2048",
+      "8191": "-67092481/8192"
+    },
+    "all_maximizers": [
+      "000000000000001",
+      "011111111111111",
+      "100000000000000",
+      "111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16381,
+    "overlapping_mod_complement": 2,
+    "n": 14,
+    "k": 3,
+    "tables_covered": 32768,
+    "enumerated_up_to_output_complement": 16384,
+    "ratio_lo_numerator": "28381552034325705478704",
+    "ratio_hi_numerator": "28381552034435448145120",
+    "denominator": "7083549724304467820544",
+    "ratio_approx": 4.006684944547698,
+    "maximizers_mod_output_complement": [
+      "100000000000000",
+      "111111111111110"
+    ],
+    "seconds_for_dimension": 0.004147625,
+    "certified_ratio_lower": "548979056881595133921990735791479060967746049621/137015778499772148581595453067151533092743675904",
+    "certified_ratio_upper": "1097958113763190267843981471582958121960169060393/274031556999544297163190906134303066185487351808",
+    "decimal_enclosure": [
+      "4.006684944555550314",
+      "4.006684944555550315"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "192512/3",
+      "3": "348843/512",
+      "11": "348843/512",
+      "31": "348843/512",
+      "8191": "-67092481/12288"
+    },
+    "all_maximizers": [
+      "000000000000001",
+      "011111111111111",
+      "100000000000000",
+      "111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16381,
+    "overlapping_mod_complement": 2,
+    "n": 14,
+    "k": 4,
+    "tables_covered": 32768,
+    "enumerated_up_to_output_complement": 16384,
+    "ratio_lo_numerator": "37873151872013683860592",
+    "ratio_hi_numerator": "37873151872117453587744",
+    "denominator": "9444732965739290427392",
+    "ratio_approx": 4.009975931495184,
+    "maximizers_mod_output_complement": [
+      "100000000000000",
+      "111111111111110"
+    ],
+    "seconds_for_dimension": 0.004157,
+    "certified_ratio_lower": "732573298693231330445034597730022760284958017481/182687704666362864775460604089535377456991567872",
+    "certified_ratio_upper": "1465146597386462660890069195460045520593217283385/365375409332725729550921208179070754913983135744",
+    "decimal_enclosure": [
+      "4.009975931500744467",
+      "4.009975931500744468"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "50944",
+      "7": "261121/1024",
+      "73": "261121/1024",
+      "8191": "-67092481/16384"
+    },
+    "all_maximizers": [
+      "000000000000001",
+      "011111111111111",
+      "100000000000000",
+      "111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16381,
+    "overlapping_mod_complement": 2,
+    "n": 14,
+    "k": 5,
+    "tables_covered": 32768,
+    "enumerated_up_to_output_complement": 16384,
+    "ratio_lo_numerator": "47402382192716171330672",
+    "ratio_hi_numerator": "47402382192816837688608",
+    "denominator": "11805916207174113034240",
+    "ratio_approx": 4.015137949557114,
+    "maximizers_mod_output_complement": [
+      "100000000000000",
+      "111111111111110"
+    ],
+    "seconds_for_dimension": 0.004164834,
+    "certified_ratio_lower": "916895419905227763005967921901263629874011592049/228359630832953580969325755111919221821239459840",
+    "certified_ratio_upper": "366758167962091105202387168760505451954128153237/91343852333181432387730302044767688728495783936",
+    "decimal_enclosure": [
+      "4.015137949561418670",
+      "4.015137949561418671"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "208896/5",
+      "3": "13005/128",
+      "5": "13005/128",
+      "17": "13005/128",
+      "8191": "-67092481/20480"
+    },
+    "all_maximizers": [
+      "000000000000001",
+      "011111111111111",
+      "100000000000000",
+      "111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 32765,
+    "overlapping_mod_complement": 2,
+    "n": 15,
+    "k": 2,
+    "tables_covered": 65536,
+    "enumerated_up_to_output_complement": 32768,
+    "ratio_lo_numerator": "37802273731270473761584",
+    "ratio_hi_numerator": "37802273731753563217744",
+    "denominator": "9444732965739290427392",
+    "ratio_approx": 4.002471416438981,
+    "maximizers_mod_output_complement": [
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "seconds_for_dimension": 0.007434208,
+    "certified_ratio_lower": "1462404632133827214561414342269657868383790203351/365375409332725729550921208179070754913983135744",
+    "certified_ratio_upper": "731202316066913607280707171134828934246745883677/182687704666362864775460604089535377456991567872",
+    "decimal_enclosure": [
+      "4.002471416466076381",
+      "4.002471416466076382"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "180224",
+      "3": "-134250489/16384",
+      "5": "16769025/4096",
+      "7": "16769025/4096",
+      "13": "16769025/4096",
+      "43": "-268402689/16384",
+      "127": "-268402689/16384"
+    },
+    "all_maximizers": [
+      "0000000000000001",
+      "0111111111111111",
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 32765,
+    "overlapping_mod_complement": 2,
+    "n": 15,
+    "k": 3,
+    "tables_covered": 65536,
+    "enumerated_up_to_output_complement": 32768,
+    "ratio_lo_numerator": "56719787222994559331984",
+    "ratio_hi_numerator": "56719787223430134931952",
+    "denominator": "14167099448608935641088",
+    "ratio_approx": 4.003627378260824,
+    "maximizers_mod_output_complement": [
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "seconds_for_dimension": 0.007450167,
+    "certified_ratio_lower": "731413496076888319852019299403843416241655375601/182687704666362864775460604089535377456991567872",
+    "certified_ratio_upper": "365706748038444159926009649701921708137282565475/91343852333181432387730302044767688728495783936",
+    "decimal_enclosure": [
+      "4.003627378277301632",
+      "4.003627378277301633"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "413696/3",
+      "3": "-89467563/8192",
+      "23": "4190209/3072",
+      "43": "-89467563/8192",
+      "89": "4190209/3072",
+      "127": "-89467563/8192"
+    },
+    "all_maximizers": [
+      "0000000000000001",
+      "0111111111111111",
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 32765,
+    "overlapping_mod_complement": 2,
+    "n": 15,
+    "k": 4,
+    "tables_covered": 65536,
+    "enumerated_up_to_output_complement": 32768,
+    "ratio_lo_numerator": "75660734963889393198416",
+    "ratio_hi_numerator": "75660734964300005098736",
+    "denominator": "18889465931478580854784",
+    "ratio_approx": 4.005445957993108,
+    "maximizers_mod_output_complement": [
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "seconds_for_dimension": 0.007454333,
+    "certified_ratio_lower": "2926982912932208783236685588685788469214480828315/730750818665451459101842416358141509827966271488",
+    "certified_ratio_upper": "1463491456466104391618342794342894234653861973673/365375409332725729550921208179070754913983135744",
+    "decimal_enclosure": [
+      "4.005445958004769453",
+      "4.005445958004769454"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "109568",
+      "3": "-251658225/32768",
+      "11": "1046529/2048",
+      "31": "1046529/2048",
+      "43": "-268402689/32768",
+      "127": "-268402689/32768"
+    },
+    "all_maximizers": [
+      "0000000000000001",
+      "0111111111111111",
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 32765,
+    "overlapping_mod_complement": 2,
+    "n": 15,
+    "k": 5,
+    "tables_covered": 65536,
+    "enumerated_up_to_output_complement": 32768,
+    "ratio_lo_numerator": "94643934639265349962192",
+    "ratio_hi_numerator": "94643934639664015983984",
+    "denominator": "23611832414348226068480",
+    "ratio_approx": 4.0083265448620145,
+    "maximizers_mod_output_complement": [
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "seconds_for_dimension": 0.007467,
+    "certified_ratio_lower": "732271976035750713865772207287992653296665739951/182687704666362864775460604089535377456991567872",
+    "certified_ratio_upper": "366135988017875356932886103643996326657382039333/91343852333181432387730302044767688728495783936",
+    "decimal_enclosure": [
+      "4.008326544871080948",
+      "4.008326544871080949"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "449536/5",
+      "3": "-268402689/40960",
+      "7": "261121/1280",
+      "43": "-268402689/40960",
+      "73": "261121/1280",
+      "127": "-268402689/40960"
+    },
+    "all_maximizers": [
+      "0000000000000001",
+      "0111111111111111",
+      "1000000000000000",
+      "1111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 65533,
+    "overlapping_mod_complement": 2,
+    "n": 16,
+    "k": 2,
+    "tables_covered": 131072,
+    "enumerated_up_to_output_complement": 65536,
+    "ratio_lo_numerator": "75582935102670485531216",
+    "ratio_hi_numerator": "75582935104598736586408",
+    "denominator": "18889465931478580854784",
+    "ratio_approx": 4.001327267634093,
+    "maximizers_mod_output_complement": [
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "seconds_for_dimension": 0.015691875,
+    "certified_ratio_lower": "91374161769063579324872496467850746335012762143/22835963083295358096932575511191922182123945984",
+    "certified_ratio_upper": "2923973176610034538395919886971223883159257500227/730750818665451459101842416358141509827966271488",
+    "decimal_enclosure": [
+      "4.001327267686131375",
+      "4.001327267686131376"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "385024",
+      "7": "-1073676289/32768",
+      "31": "-1073676289/32768",
+      "151": "-1073676289/32768",
+      "8191": "67092481/8192"
+    },
+    "all_maximizers": [
+      "00000000000000001",
+      "01111111111111111",
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 65533,
+    "overlapping_mod_complement": 2,
+    "n": 16,
+    "k": 3,
+    "tables_covered": 131072,
+    "enumerated_up_to_output_complement": 65536,
+    "ratio_lo_numerator": "113392220775126215181712",
+    "ratio_hi_numerator": "113392220776856898795560",
+    "denominator": "28334198897217871282176",
+    "ratio_approx": 4.001956123286061,
+    "maximizers_mod_output_complement": [
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "seconds_for_dimension": 0.01570375,
+    "certified_ratio_lower": "365554089172169372701775273372566264074062708397/91343852333181432387730302044767688728495783936",
+    "certified_ratio_upper": "1462216356688677490807101093490265056427904138889/365375409332725729550921208179070754913983135744",
+    "decimal_enclosure": [
+      "4.001956123317329547",
+      "4.001956123317329548"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "294912",
+      "3": "5589675/1024",
+      "5": "5589675/2048",
+      "7": "-939524089/49152",
+      "13": "5589675/2048",
+      "31": "-1073676289/49152",
+      "151": "-1073676289/49152"
+    },
+    "all_maximizers": [
+      "00000000000000001",
+      "01111111111111111",
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 65533,
+    "overlapping_mod_complement": 2,
+    "n": 16,
+    "k": 4,
+    "tables_covered": 131072,
+    "enumerated_up_to_output_complement": 65536,
+    "ratio_lo_numerator": "151227247758574386322512",
+    "ratio_hi_numerator": "151227247760210042223976",
+    "denominator": "37778931862957161709568",
+    "ratio_approx": 4.002951917940673,
+    "maximizers_mod_output_complement": [
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "seconds_for_dimension": 0.015709042,
+    "certified_ratio_lower": "1462580195564926990602647598088634982392776086917/365375409332725729550921208179070754913983135744",
+    "certified_ratio_upper": "5850320782259707962410590392354539929944119667659/1461501637330902918203684832716283019655932542976",
+    "decimal_enclosure": [
+      "4.002951917962935193",
+      "4.002951917962935194"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "234496",
+      "7": "-1073676289/65536",
+      "23": "4190209/4096",
+      "31": "-1073676289/65536",
+      "89": "4190209/4096",
+      "151": "-1073676289/65536"
+    },
+    "all_maximizers": [
+      "00000000000000001",
+      "01111111111111111",
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 65533,
+    "overlapping_mod_complement": 2,
+    "n": 16,
+    "k": 5,
+    "tables_covered": 131072,
+    "enumerated_up_to_output_complement": 65536,
+    "ratio_lo_numerator": "189109143240364054055376",
+    "ratio_hi_numerator": "189109143241949782557544",
+    "denominator": "47223664828696452136960",
+    "ratio_approx": 4.00454187379053,
+    "maximizers_mod_output_complement": [
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "seconds_for_dimension": 0.015713334,
+    "certified_ratio_lower": "1828951407915698902442961443325764092637533437673/456719261665907161938651510223838443642478919680",
+    "certified_ratio_upper": "7315805631662795609771845773303056370912176776651/1826877046663628647754606040895353774569915678720",
+    "decimal_enclosure": [
+      "4.004541873807782738",
+      "4.004541873807782739"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "192512",
+      "3": "1046529/2560",
+      "7": "-1073676289/81920",
+      "11": "1046529/2560",
+      "31": "-1040187361/81920",
+      "151": "-1073676289/81920"
+    },
+    "all_maximizers": [
+      "00000000000000001",
+      "01111111111111111",
+      "10000000000000000",
+      "11111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 131069,
+    "overlapping_mod_complement": 2,
+    "n": 17,
+    "k": 2,
+    "tables_covered": 262144,
+    "enumerated_up_to_output_complement": 131072,
+    "ratio_lo_numerator": "151142528271351797920456",
+    "ratio_hi_numerator": "151142528279185437642496",
+    "denominator": "37778931862957161709568",
+    "ratio_approx": 4.000709411785922,
+    "maximizers_mod_output_complement": [
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "seconds_for_dimension": 0.026311666,
+    "certified_ratio_lower": "5847043355962172371457742614580040990938459136133/1461501637330902918203684832716283019655932542976",
+    "certified_ratio_upper": "730880419495271546432217826822505124086742662365/182687704666362864775460604089535377456991567872",
+    "decimal_enclosure": [
+      "4.000709411889851993",
+      "4.000709411889851994"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "819200",
+      "3": "-3221225469/65536",
+      "5": "-4294836225/65536",
+      "17": "-4294836225/65536",
+      "43": "268402689/16384",
+      "127": "268402689/16384",
+      "257": "-4294836225/65536"
+    },
+    "all_maximizers": [
+      "000000000000000001",
+      "011111111111111111",
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 131069,
+    "overlapping_mod_complement": 2,
+    "n": 17,
+    "k": 3,
+    "tables_covered": 262144,
+    "enumerated_up_to_output_complement": 131072,
+    "ratio_lo_numerator": "226733051853068233154440",
+    "ratio_hi_numerator": "226733051860137366606528",
+    "denominator": "56668397794435742564352",
+    "ratio_approx": 4.001049273980552,
+    "maximizers_mod_output_complement": [
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "seconds_for_dimension": 0.026355583,
+    "certified_ratio_lower": "8771310097585485361652633196659529892488002442373/2192252455996354377305527249074424529483898814464",
+    "certified_ratio_upper": "2192827524396371340413158299164882473516981954561/548063113999088594326381812268606132370974703616",
+    "decimal_enclosure": [
+      "4.001049274044043619",
+      "4.001049274044043620"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1884160/3",
+      "3": "-1431612075/32768",
+      "5": "-1431612075/32768",
+      "17": "-1431612075/32768",
+      "257": "-1431612075/32768",
+      "8191": "67092481/12288"
+    },
+    "all_maximizers": [
+      "000000000000000001",
+      "011111111111111111",
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 131069,
+    "overlapping_mod_complement": 2,
+    "n": 17,
+    "k": 4,
+    "tables_covered": 262144,
+    "enumerated_up_to_output_complement": 131072,
+    "ratio_lo_numerator": "302351623197979692455432",
+    "ratio_hi_numerator": "302351623204653691024832",
+    "denominator": "75557863725914323419136",
+    "ratio_approx": 4.001590414132913,
+    "maximizers_mod_output_complement": [
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "seconds_for_dimension": 0.026368875,
+    "certified_ratio_lower": "11696661884497481229703399983658672464824690666749/2923003274661805836407369665432566039311865085952",
+    "certified_ratio_upper": "2924165471124370307425849995914668116579209412781/730750818665451459101842416358141509827966271488",
+    "decimal_enclosure": [
+      "4.001590414177964187",
+      "4.001590414177964188"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "499712",
+      "3": "-3758227425/131072",
+      "5": "-4026531825/131072",
+      "7": "16769025/8192",
+      "13": "16769025/8192",
+      "17": "-4294836225/131072",
+      "257": "-4294836225/131072"
+    },
+    "all_maximizers": [
+      "000000000000000001",
+      "011111111111111111",
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 131069,
+    "overlapping_mod_complement": 2,
+    "n": 17,
+    "k": 5,
+    "tables_covered": 262144,
+    "enumerated_up_to_output_complement": 131072,
+    "ratio_lo_numerator": "378021677164876034737032",
+    "ratio_hi_numerator": "378021677171359977881664",
+    "denominator": "94447329657392904273920",
+    "ratio_approx": 4.002460191687232,
+    "maximizers_mod_output_complement": [
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "seconds_for_dimension": 0.0263765,
+    "certified_ratio_lower": "14624005308884832209681974207426161986189394360557/3653754093327257295509212081790707549139831357440",
+    "certified_ratio_upper": "3656001327221208052420493551856540496909413038277/913438523331814323877303020447676887284957839360",
+    "decimal_enclosure": [
+      "4.002460191722321776",
+      "4.002460191722321777"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2052096/5",
+      "3": "-858967245/32768",
+      "5": "-858967245/32768",
+      "17": "-858967245/32768",
+      "23": "4190209/5120",
+      "89": "4190209/5120",
+      "257": "-858967245/32768"
+    },
+    "all_maximizers": [
+      "000000000000000001",
+      "011111111111111111",
+      "100000000000000000",
+      "111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 262141,
+    "overlapping_mod_complement": 2,
+    "n": 18,
+    "k": 2,
+    "tables_covered": 524288,
+    "enumerated_up_to_output_complement": 262144,
+    "ratio_lo_numerator": "302259985126240829852544",
+    "ratio_hi_numerator": "302259985157129481774976",
+    "denominator": "75557863725914323419136",
+    "ratio_approx": 4.000377594351887,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "seconds_for_dimension": 0.079135958,
+    "certified_ratio_lower": "11693116808748718340561454032049784822131944888627/2923003274661805836407369665432566039311865085952",
+    "certified_ratio_upper": "5846558404374359170280727016024892414577022488523/1461501637330902918203684832716283019655932542976",
+    "decimal_enclosure": [
+      "4.000377594548409356",
+      "4.000377594548409357"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1736704",
+      "7": "1073676289/32768",
+      "31": "1073676289/32768",
+      "151": "1073676289/32768",
+      "131071": "-17179607041/131072"
+    },
+    "all_maximizers": [
+      "0000000000000000001",
+      "0111111111111111111",
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 262141,
+    "overlapping_mod_complement": 2,
+    "n": 18,
+    "k": 3,
+    "tables_covered": 524288,
+    "enumerated_up_to_output_complement": 262144,
+    "ratio_lo_numerator": "453410678379639919292832",
+    "ratio_hi_numerator": "453410678407470552409152",
+    "denominator": "113336795588871485128704",
+    "ratio_approx": 4.000560241921646,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "seconds_for_dimension": 0.079151708,
+    "certified_ratio_lower": "17540476031942230513755352415775702551318860416463/4384504911992708754611054498148849058967797628928",
+    "certified_ratio_upper": "8770238015971115256877676207887851278819366676647/2192252455996354377305527249074424529483898814464",
+    "decimal_enclosure": [
+      "4.000560242038884863",
+      "4.000560242038884864"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "3997696/3",
+      "3": "89467563/8192",
+      "43": "89467563/8192",
+      "127": "89467563/8192",
+      "131071": "-17179607041/196608"
+    },
+    "all_maximizers": [
+      "0000000000000000001",
+      "0111111111111111111",
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 262141,
+    "overlapping_mod_complement": 2,
+    "n": 18,
+    "k": 4,
+    "tables_covered": 524288,
+    "enumerated_up_to_output_complement": 262144,
+    "ratio_lo_numerator": "604591725543072789760800",
+    "ratio_hi_numerator": "604591725569374410337216",
+    "denominator": "151115727451828646838272",
+    "ratio_approx": 4.000852431033688,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "seconds_for_dimension": 0.079155542,
+    "certified_ratio_lower": "23389009515188856494145133579934680354417947028943/5846006549323611672814739330865132078623730171904",
+    "certified_ratio_upper": "11694504757594428247072566789967340180193353195971/2923003274661805836407369665432566039311865085952",
+    "decimal_enclosure": [
+      "4.000852431117270365",
+      "4.000852431117270366"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "1060864",
+      "8191": "67092481/16384",
+      "131071": "-17179607041/262144"
+    },
+    "all_maximizers": [
+      "0000000000000000001",
+      "0111111111111111111",
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 262141,
+    "overlapping_mod_complement": 2,
+    "n": 18,
+    "k": 5,
+    "tables_covered": 524288,
+    "enumerated_up_to_output_complement": 262144,
+    "ratio_lo_numerator": "755828868232895708362784",
+    "ratio_hi_numerator": "755828868258407059173824",
+    "denominator": "188894659314785808547840",
+    "ratio_approx": 4.0013247117449495,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "seconds_for_dimension": 0.079158875,
+    "certified_ratio_lower": "5847942617802569646049333430786593099818264695539/1461501637330902918203684832716283019655932542976",
+    "certified_ratio_upper": "14619856544506424115123333576966482752442263028851/3653754093327257295509212081790707549139831357440",
+    "decimal_enclosure": [
+      "4.001324711809761470",
+      "4.001324711809761471"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "4358144/5",
+      "3": "3353805/1024",
+      "5": "3353805/2048",
+      "7": "3353805/2048",
+      "13": "3353805/2048",
+      "131071": "-17179607041/327680"
+    },
+    "all_maximizers": [
+      "0000000000000000001",
+      "0111111111111111111",
+      "1000000000000000000",
+      "1111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 524285,
+    "overlapping_mod_complement": 2,
+    "n": 19,
+    "k": 2,
+    "tables_covered": 1048576,
+    "enumerated_up_to_output_complement": 524288,
+    "ratio_lo_numerator": "604493169380715884265160",
+    "ratio_hi_numerator": "604493169504821736725320",
+    "denominator": "151115727451828646838272",
+    "ratio_approx": 4.0002002410596935,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "seconds_for_dimension": 0.118757333,
+    "certified_ratio_lower": "23385196810245199256095721584586789566637437826723/5846006549323611672814739330865132078623730171904",
+    "certified_ratio_upper": "11692598405122599628047860792293394797363090529923/2923003274661805836407369665432566039311865085952",
+    "decimal_enclosure": [
+      "4.000200241470972694",
+      "4.000200241470972695"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "3670016",
+      "3": "-188977512447/262144",
+      "5": "4294836225/65536",
+      "7": "-68718952449/262144",
+      "17": "4294836225/65536",
+      "19": "-68718952449/262144",
+      "73": "-68718952449/262144",
+      "257": "4294836225/65536"
+    },
+    "all_maximizers": [
+      "00000000000000000001",
+      "01111111111111111111",
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 524285,
+    "overlapping_mod_complement": 2,
+    "n": 19,
+    "k": 3,
+    "tables_covered": 1048576,
+    "enumerated_up_to_output_complement": 524288,
+    "ratio_lo_numerator": "906761895984475458000008",
+    "ratio_hi_numerator": "906761896095730785093352",
+    "denominator": "226673591177742970257408",
+    "ratio_approx": 4.000297922987643,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "seconds_for_dimension": 0.118771958,
+    "certified_ratio_lower": "11692883929235621465179631758485039359211696365961/2923003274661805836407369665432566039311865085952",
+    "certified_ratio_upper": "5846441964617810732589815879242519683819153953455/1461501637330902918203684832716283019655932542976",
+    "decimal_enclosure": [
+      "4.000297923233937832",
+      "4.000297923233937833"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2818048",
+      "3": "-68718952449/131072",
+      "7": "-60129542137/393216",
+      "19": "-22906317483/131072",
+      "31": "1073676289/49152",
+      "73": "-22906317483/131072",
+      "151": "1073676289/49152"
+    },
+    "all_maximizers": [
+      "00000000000000000001",
+      "01111111111111111111",
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 524285,
+    "overlapping_mod_complement": 2,
+    "n": 19,
+    "k": 4,
+    "tables_covered": 1048576,
+    "enumerated_up_to_output_complement": 524288,
+    "ratio_lo_numerator": "1209063282491273636880584",
+    "ratio_hi_numerator": "1209063282596412926361704",
+    "denominator": "302231454903657293676544",
+    "ratio_approx": 4.000454826506024,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "seconds_for_dimension": 0.118775625,
+    "certified_ratio_lower": "46773370234093888741926692042906953536008920153555/11692013098647223345629478661730264157247460343808",
+    "certified_ratio_upper": "23386685117046944370963346021453476779942150236613/5846006549323611672814739330865132078623730171904",
+    "decimal_enclosure": [
+      "4.000454826680412343",
+      "4.000454826680412344"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "2244608",
+      "3": "-201862414323/524288",
+      "7": "-68718952449/524288",
+      "19": "-68718952449/524288",
+      "43": "268402689/32768",
+      "73": "-68718952449/524288",
+      "127": "268402689/32768"
+    },
+    "all_maximizers": [
+      "00000000000000000001",
+      "01111111111111111111",
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 524285,
+    "overlapping_mod_complement": 2,
+    "n": 19,
+    "k": 5,
+    "tables_covered": 1048576,
+    "enumerated_up_to_output_complement": 524288,
+    "ratio_lo_numerator": "1511425376818139377816520",
+    "ratio_hi_numerator": "1511425376920220642217832",
+    "denominator": "377789318629571617095680",
+    "ratio_approx": 4.0007096608787815,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "seconds_for_dimension": 0.118778667,
+    "certified_ratio_lower": "11694087440117428140541250874244981828441418675703/2923003274661805836407369665432566039311865085952",
+    "certified_ratio_upper": "29235218600293570351353127185612454582690123275261/7307508186654514591018424163581415098279662714880",
+    "decimal_enclosure": [
+      "4.000709661014815249",
+      "4.000709661014815250"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "9224192/5",
+      "3": "-206156857347/655360",
+      "7": "-68718952449/655360",
+      "19": "-68718952449/655360",
+      "73": "-68718952449/655360",
+      "8191": "67092481/20480"
+    },
+    "all_maximizers": [
+      "00000000000000000001",
+      "01111111111111111111",
+      "10000000000000000000",
+      "11111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1048573,
+    "overlapping_mod_complement": 2,
+    "n": 20,
+    "k": 2,
+    "tables_covered": 2097152,
+    "enumerated_up_to_output_complement": 1048576,
+    "ratio_lo_numerator": "1208957808392716937255480",
+    "ratio_hi_numerator": "1208957808894091194463856",
+    "denominator": "302231454903657293676544",
+    "ratio_approx": 4.000105841988214,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.282960833,
+    "certified_ratio_lower": "2923080619380129417796127189666108542350613010273/730750818665451459101842416358141509827966271488",
+    "certified_ratio_upper": "46769289910082070684738035034657736789965466860659/11692013098647223345629478661730264157247460343808",
+    "decimal_enclosure": [
+      "4.000105842807627412",
+      "4.000105842807627413"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "7733248",
+      "131071": "17179607041/131072",
+      "524287": "-274876858369/524288"
+    },
+    "all_maximizers": [
+      "000000000000000000001",
+      "011111111111111111111",
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1048573,
+    "overlapping_mod_complement": 2,
+    "n": 20,
+    "k": 3,
+    "tables_covered": 2097152,
+    "enumerated_up_to_output_complement": 1048576,
+    "ratio_lo_numerator": "1813460295789115645752120",
+    "ratio_hi_numerator": "1813460296241836488271536",
+    "denominator": "453347182355485940514816",
+    "ratio_approx": 4.000157862163828,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.282986958,
+    "certified_ratio_lower": "8769355898769201721012187972640027370826651398273/2192252455996354377305527249074424529483898814464",
+    "certified_ratio_upper": "70154847190153613768097503781120219067733235437447/17538019647970835018444217992595396235871190515712",
+    "decimal_enclosure": [
+      "4.000157862650735142",
+      "4.000157862650735143"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "17825792/3",
+      "3": "1431612075/32768",
+      "5": "1431612075/32768",
+      "17": "1431612075/32768",
+      "257": "1431612075/32768",
+      "524287": "-274876858369/786432"
+    },
+    "all_maximizers": [
+      "000000000000000000001",
+      "011111111111111111111",
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1048573,
+    "overlapping_mod_complement": 2,
+    "n": 20,
+    "k": 4,
+    "tables_covered": 2097152,
+    "enumerated_up_to_output_complement": 1048576,
+    "ratio_lo_numerator": "2417997748996634793221816",
+    "ratio_hi_numerator": "2417997749423654585007600",
+    "denominator": "604462909807314587353088",
+    "ratio_approx": 4.000241718333757,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.282991583,
+    "certified_ratio_lower": "11692719643134618005872981395357109498576064216063/2923003274661805836407369665432566039311865085952",
+    "certified_ratio_upper": "93541757145076944046983851162856876084110720759215/23384026197294446691258957323460528314494920687616",
+    "decimal_enclosure": [
+      "4.000241718678018384",
+      "4.000241718678018385"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "4734976",
+      "7": "1073676289/65536",
+      "31": "1073676289/65536",
+      "151": "1073676289/65536",
+      "524287": "-274876858369/1048576"
+    },
+    "all_maximizers": [
+      "000000000000000000001",
+      "011111111111111111111",
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 1048573,
+    "overlapping_mod_complement": 2,
+    "n": 20,
+    "k": 5,
+    "tables_covered": 2097152,
+    "enumerated_up_to_output_complement": 1048576,
+    "ratio_lo_numerator": "3022600522010231150982968",
+    "ratio_hi_numerator": "3022600522425018867544304",
+    "denominator": "755578637259143234191360",
+    "ratio_approx": 4.000378482079239,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.282995125,
+    "certified_ratio_lower": "14616399254731374092469930587220068363169521979981/3653754093327257295509212081790707549139831357440",
+    "certified_ratio_upper": "116931194037850992739759444697760546998049474264207/29230032746618058364073696654325660393118650859520",
+    "decimal_enclosure": [
+      "4.000378482346381883",
+      "4.000378482346381884"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "19464192/5",
+      "3": "268402689/40960",
+      "43": "268402689/40960",
+      "127": "268402689/40960",
+      "524287": "-274876858369/1310720"
+    },
+    "all_maximizers": [
+      "000000000000000000001",
+      "011111111111111111111",
+      "100000000000000000000",
+      "111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2097149,
+    "overlapping_mod_complement": 2,
+    "n": 21,
+    "k": 2,
+    "tables_covered": 4194304,
+    "enumerated_up_to_output_complement": 2097152,
+    "ratio_lo_numerator": "2417885356690315006506592",
+    "ratio_hi_numerator": "2417885358695818125447832",
+    "denominator": "604462909807314587353088",
+    "ratio_approx": 4.0000557808601815,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.760687333,
+    "certified_ratio_lower": "46768704603529986885505691858816615119505002106035/11692013098647223345629478661730264157247460343808",
+    "certified_ratio_upper": "93537409207059973771011383717633230688434010529737/23384026197294446691258957323460528314494920687616",
+    "decimal_enclosure": [
+      "4.000055782433323562",
+      "4.000055782433323563"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "16252928",
+      "3": "-274882101237/1048576",
+      "5": "-1099509530625/524288",
+      "7": "68718952449/262144",
+      "11": "-1099509530625/1048576",
+      "19": "68718952449/262144",
+      "31": "-1099509530625/1048576",
+      "41": "-1099509530625/1048576",
+      "73": "68718952449/262144"
+    },
+    "all_maximizers": [
+      "0000000000000000000001",
+      "0111111111111111111111",
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2097149,
+    "overlapping_mod_complement": 2,
+    "n": 21,
+    "k": 3,
+    "tables_covered": 4194304,
+    "enumerated_up_to_output_complement": 2097152,
+    "ratio_lo_numerator": "3626853059816202292680192",
+    "ratio_hi_numerator": "3626853061623793318627512",
+    "denominator": "906694364710971881029632",
+    "ratio_approx": 4.000083380878118,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.760719833,
+    "certified_ratio_lower": "70153540943948842314337666281527712008718669639311/17538019647970835018444217992595396235871190515712",
+    "certified_ratio_upper": "140307081887897684628675332563055424421918807812253/35076039295941670036888435985190792471742381031424",
+    "decimal_enclosure": [
+      "4.000083381823880636",
+      "4.000083381823880637"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "37486592/3",
+      "3": "-366503176875/524288",
+      "5": "-366503176875/262144",
+      "11": "-366503176875/524288",
+      "31": "-366503176875/524288",
+      "41": "-366503176875/524288",
+      "131071": "17179607041/196608"
+    },
+    "all_maximizers": [
+      "0000000000000000000001",
+      "0111111111111111111111",
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2097149,
+    "overlapping_mod_complement": 2,
+    "n": 21,
+    "k": 4,
+    "tables_covered": 4194304,
+    "enumerated_up_to_output_complement": 2097152,
+    "ratio_lo_numerator": "4835858034608999709673472",
+    "ratio_hi_numerator": "4835858036319283906242872",
+    "denominator": "1208925819614629174706176",
+    "ratio_approx": 4.0001280112873525,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.760729333,
+    "certified_ratio_lower": "93539098224020385397697135027990194297722072661127/23384026197294446691258957323460528314494920687616",
+    "certified_ratio_upper": "187078196448040770795394270055980388977454344965829/46768052394588893382517914646921056628989841375232",
+    "decimal_enclosure": [
+      "4.000128011952148128",
+      "4.000128011952148129"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "9961472",
+      "3": "-1030792151025/2097152",
+      "5": "-1065150840825/1048576",
+      "11": "-1099509530625/2097152",
+      "17": "4294836225/131072",
+      "31": "-1099509530625/2097152",
+      "41": "-1099509530625/2097152",
+      "257": "4294836225/131072"
+    },
+    "all_maximizers": [
+      "0000000000000000000001",
+      "0111111111111111111111",
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 2097149,
+    "overlapping_mod_complement": 2,
+    "n": 21,
+    "k": 5,
+    "tables_covered": 4194304,
+    "enumerated_up_to_output_complement": 2097152,
+    "ratio_lo_numerator": "6044932941024038004612864",
+    "ratio_hi_numerator": "6044932942682920099715000",
+    "denominator": "1511157274518286468382720",
+    "ratio_approx": 4.000201066398591,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "seconds_for_dimension": 0.760736166,
+    "certified_ratio_lower": "116926008178943715676583482409726851319717375203447/29230032746618058364073696654325660393118650859520",
+    "certified_ratio_upper": "46770403271577486270633392963890740602041863121873/11692013098647223345629478661730264157247460343808",
+    "decimal_enclosure": [
+      "4.000201066913692124",
+      "4.000201066913692125"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "8192000",
+      "3": "-219901906125/524288",
+      "5": "-219901906125/262144",
+      "7": "1073676289/81920",
+      "11": "-219901906125/524288",
+      "31": "-1065151889377/2621440",
+      "41": "-219901906125/524288",
+      "151": "1073676289/81920"
+    },
+    "all_maximizers": [
+      "0000000000000000000001",
+      "0111111111111111111111",
+      "1000000000000000000000",
+      "1111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4194301,
+    "overlapping_mod_complement": 2,
+    "n": 22,
+    "k": 2,
+    "tables_covered": 8388608,
+    "enumerated_up_to_output_complement": 4194304,
+    "ratio_lo_numerator": "4835738722427709938030488",
+    "ratio_hi_numerator": "4835738730440938433901608",
+    "denominator": "1208925819614629174706176",
+    "ratio_approx": 4.000029318564149,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "seconds_for_dimension": 1.281304834,
+    "certified_ratio_lower": "187073580898550063068642525907034929649335725352269/46768052394588893382517914646921056628989841375232",
+    "certified_ratio_upper": "11692098806159378941790157869189683215439655855803/2923003274661805836407369665432566039311865085952",
+    "decimal_enclosure": [
+      "4.000029321729776547",
+      "4.000029321729776548"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "34078720",
+      "7": "-4398042316801/1048576",
+      "127": "-4398042316801/2097152",
+      "337": "-4398042316801/2097152",
+      "524287": "274876858369/524288"
+    },
+    "all_maximizers": [
+      "00000000000000000000001",
+      "01111111111111111111111",
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4194301,
+    "overlapping_mod_complement": 2,
+    "n": 22,
+    "k": 3,
+    "tables_covered": 8388608,
+    "enumerated_up_to_output_complement": 4194304,
+    "ratio_lo_numerator": "7253634551356481997314072",
+    "ratio_hi_numerator": "7253634558551673942788808",
+    "denominator": "1813388729421943762059264",
+    "ratio_approx": 4.000043914284574,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "seconds_for_dimension": 1.281318167,
+    "certified_ratio_lower": "280611395177202924092266768354821489162459218623289/70152078591883340073776871970381584943484762062848",
+    "certified_ratio_upper": "35076424397150365511533346044352686347548479477975/8769009823985417509222108996297698117935595257856",
+    "decimal_enclosure": [
+      "4.000043916156604378",
+      "4.000043916156604379"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "26214400",
+      "3": "68718952449/131072",
+      "7": "-4123166507005/1572864",
+      "19": "22906317483/131072",
+      "73": "22906317483/131072",
+      "127": "-4398042316801/3145728",
+      "337": "-4398042316801/3145728"
+    },
+    "all_maximizers": [
+      "00000000000000000000001",
+      "01111111111111111111111",
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4194301,
+    "overlapping_mod_complement": 2,
+    "n": 22,
+    "k": 4,
+    "tables_covered": 8388608,
+    "enumerated_up_to_output_complement": 4194304,
+    "ratio_lo_numerator": "9671569957608256569661272",
+    "ratio_hi_numerator": "9671569964407624329148168",
+    "denominator": "2417851639229258349412352",
+    "ratio_approx": 4.000067580941929,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "seconds_for_dimension": 1.281322042,
+    "certified_ratio_lower": "374150740538878345807594666045665876719313888756393/93536104789177786765035829293842113257979682750464",
+    "certified_ratio_upper": "11692210641839948306487333313927058695229919699651/2923003274661805836407369665432566039311865085952",
+    "decimal_enclosure": [
+      "4.000067582268701979",
+      "4.000067582268701980"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "20905984",
+      "7": "-4398042316801/2097152",
+      "127": "-4398042316801/4194304",
+      "337": "-4398042316801/4194304",
+      "131071": "17179607041/262144"
+    },
+    "all_maximizers": [
+      "00000000000000000000001",
+      "01111111111111111111111",
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 4194301,
+    "overlapping_mod_complement": 2,
+    "n": 22,
+    "k": 5,
+    "tables_covered": 8388608,
+    "enumerated_up_to_output_complement": 4194304,
+    "ratio_lo_numerator": "12089579907193851403647832",
+    "ratio_hi_numerator": "12089579913798605504378888",
+    "denominator": "3022314549036572936765440",
+    "ratio_approx": 4.000106445256554,
+    "maximizers_mod_output_complement": [
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "seconds_for_dimension": 1.281325334,
+    "certified_ratio_lower": "467692969659164518141032541031515805875327500843657/116920130986472233456294786617302641572474603438080",
+    "certified_ratio_upper": "29230810603697782383814533814469737959901781543499/7307508186654514591018424163581415098279662714880",
+    "decimal_enclosure": [
+      "4.000106446282351704",
+      "4.000106446282351705"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "85983232/5",
+      "3": "858967245/32768",
+      "5": "858967245/32768",
+      "7": "-4398042316801/2621440",
+      "17": "858967245/32768",
+      "127": "-4398042316801/5242880",
+      "257": "858967245/32768",
+      "337": "-4398042316801/5242880"
+    },
+    "all_maximizers": [
+      "00000000000000000000001",
+      "01111111111111111111111",
+      "10000000000000000000000",
+      "11111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8388605,
+    "overlapping_mod_complement": 2,
+    "n": 23,
+    "k": 2,
+    "tables_covered": 16777216,
+    "enumerated_up_to_output_complement": 8388608,
+    "ratio_lo_numerator": "9671443717373418032291032",
+    "ratio_hi_numerator": "9671443749567093931735408",
+    "denominator": "2417851639229258349412352",
+    "ratio_approx": 4.0000153692045375,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "seconds_for_dimension": 2.464435375,
+    "certified_ratio_lower": "374145857379179585632142351971089508960850810084513/93536104789177786765035829293842113257979682750464",
+    "certified_ratio_upper": "93536464344794896408035587992772379037912842397889/23384026197294446691258957323460528314494920687616",
+    "decimal_enclosure": [
+      "4.000015376121035617",
+      "4.000015376121035618"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "71303168",
+      "3": "-13194139533309/4194304",
+      "5": "1099509530625/524288",
+      "11": "1099509530625/1048576",
+      "23": "-17592177655809/4194304",
+      "31": "1099509530625/1048576",
+      "41": "1099509530625/1048576",
+      "89": "-17592177655809/4194304",
+      "683": "-17592177655809/4194304"
+    },
+    "all_maximizers": [
+      "000000000000000000000001",
+      "011111111111111111111111",
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8388605,
+    "overlapping_mod_complement": 2,
+    "n": 23,
+    "k": 3,
+    "tables_covered": 16777216,
+    "enumerated_up_to_output_complement": 8388608,
+    "ratio_lo_numerator": "14507193492715861751090232",
+    "ratio_hi_numerator": "14507193521690167604412336",
+    "denominator": "3626777458843887524118528",
+    "ratio_approx": 4.000023066576667,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "seconds_for_dimension": 2.464535791,
+    "certified_ratio_lower": "561219865650113758668939401946049312328802306448253/140304157183766680147553743940763169886969524125696",
+    "certified_ratio_upper": "140304966412528439667234850486512329700130565347775/35076039295941670036888435985190792471742381031424",
+    "decimal_enclosure": [
+      "4.000023070699486106",
+      "4.000023070699486107"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "164626432/3",
+      "3": "-5864059218603/2097152",
+      "23": "-5864059218603/2097152",
+      "89": "-5864059218603/2097152",
+      "683": "-5864059218603/2097152",
+      "524287": "274876858369/786432"
+    },
+    "all_maximizers": [
+      "000000000000000000000001",
+      "011111111111111111111111",
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8388605,
+    "overlapping_mod_complement": 2,
+    "n": 23,
+    "k": 4,
+    "tables_covered": 16777216,
+    "enumerated_up_to_output_complement": 8388608,
+    "ratio_lo_numerator": "19342985150573405869657400",
+    "ratio_hi_numerator": "19342985177911638622186736",
+    "denominator": "4835703278458516698824704",
+    "ratio_approx": 4.000035576363857,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "seconds_for_dimension": 2.4645495,
+    "certified_ratio_lower": "748295494207419480716187886841622431355049292990293/187072209578355573530071658587684226515959365500928",
+    "certified_ratio_upper": "187073873551854870179046971710405609366807236413251/46768052394588893382517914646921056628989841375232",
+    "decimal_enclosure": [
+      "4.000035579277179589",
+      "4.000035579277179590"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "43778048",
+      "3": "-14293667938257/8388608",
+      "7": "68718952449/524288",
+      "19": "68718952449/524288",
+      "23": "-17592177655809/8388608",
+      "73": "68718952449/524288",
+      "89": "-17592177655809/8388608",
+      "683": "-17592177655809/8388608"
+    },
+    "all_maximizers": [
+      "000000000000000000000001",
+      "011111111111111111111111",
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 8388605,
+    "overlapping_mod_complement": 2,
+    "n": 23,
+    "k": 5,
+    "tables_covered": 16777216,
+    "enumerated_up_to_output_complement": 8388608,
+    "ratio_lo_numerator": "24178855963076955014351800",
+    "ratio_hi_numerator": "24178855989623539394905456",
+    "denominator": "6044629098073145873530880",
+    "ratio_approx": 4.000056177273884,
+    "maximizers_mod_output_complement": [
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "seconds_for_dimension": 2.46455475,
+    "certified_ratio_lower": "935374184930770324146843682223311206468758633256501/233840261972944466912589573234605283144949206876160",
+    "certified_ratio_upper": "233843546232692581036710920555827803100292033695767/58460065493236116728147393308651320786237301719040",
+    "decimal_enclosure": [
+      "4.000056179542742628",
+      "4.000056179542742629"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "180092928/5",
+      "3": "-17592177655809/10485760",
+      "23": "-17592177655809/10485760",
+      "89": "-17592177655809/10485760",
+      "683": "-17592177655809/10485760",
+      "131071": "17179607041/327680"
+    },
+    "all_maximizers": [
+      "000000000000000000000001",
+      "011111111111111111111111",
+      "100000000000000000000000",
+      "111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16777213,
+    "overlapping_mod_complement": 2,
+    "n": 24,
+    "k": 2,
+    "tables_covered": 33554432,
+    "enumerated_up_to_output_complement": 16777216,
+    "ratio_lo_numerator": "19342851957194164743656800",
+    "ratio_hi_numerator": "19342852085265230291759568",
+    "denominator": "4835703278458516698824704",
+    "ratio_approx": 4.0000080326186,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "seconds_for_dimension": 10.711563459,
+    "certified_ratio_lower": "748290343438145504997733424598379482451014023782731/187072209578355573530071658587684226515959365500928",
+    "certified_ratio_upper": "374145171719072752498866712299189755607113617052631/93536104789177786765035829293842113257979682750464",
+    "decimal_enclosure": [
+      "4.000008045688488970",
+      "4.000008045688488971"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "148897792",
+      "7": "4398042316801/1048576",
+      "47": "-70368727400449/8388608",
+      "127": "4398042316801/2097152",
+      "337": "4398042316801/2097152",
+      "178481": "-70368727400449/8388608"
+    },
+    "all_maximizers": [
+      "0000000000000000000000001",
+      "0111111111111111111111111",
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16777213,
+    "overlapping_mod_complement": 2,
+    "n": 24,
+    "k": 3,
+    "tables_covered": 33554432,
+    "enumerated_up_to_output_complement": 16777216,
+    "ratio_lo_numerator": "29014307321834315511229376",
+    "ratio_hi_numerator": "29014307437168638228963120",
+    "denominator": "7253554917687775048237056",
+    "ratio_approx": 4.000012083879451,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "seconds_for_dimension": 10.711796875,
+    "certified_ratio_lower": "1122436650490477411198709428276599600065093282840035/280608314367533360295107487881526339773939048251392",
+    "certified_ratio_upper": "561218325245238705599354714138299812975992037450929/140304157183766680147553743940763169886969524125696",
+    "decimal_enclosure": [
+      "4.000012091660047983",
+      "4.000012091660047984"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "343932928/3",
+      "3": "366503176875/524288",
+      "5": "366503176875/262144",
+      "11": "366503176875/524288",
+      "31": "366503176875/524288",
+      "41": "366503176875/524288",
+      "47": "-70368727400449/12582912",
+      "178481": "-70368727400449/12582912"
+    },
+    "all_maximizers": [
+      "0000000000000000000000001",
+      "0111111111111111111111111",
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16777213,
+    "overlapping_mod_complement": 2,
+    "n": 24,
+    "k": 4,
+    "tables_covered": 33554432,
+    "enumerated_up_to_output_complement": 16777216,
+    "ratio_lo_numerator": "38685806872519202948827776",
+    "ratio_hi_numerator": "38685806981414785574316976",
+    "denominator": "9671406556917033397649408",
+    "ratio_approx": 4.000018678239821,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "seconds_for_dimension": 10.711966875,
+    "certified_ratio_lower": "1496584667032345757272303528226519206800996275567515/374144419156711147060143317175368453031918731001856",
+    "certified_ratio_upper": "748292333516172878636151764113259615624862929250473/187072209578355573530071658587684226515959365500928",
+    "decimal_enclosure": [
+      "4.000018683709132758",
+      "4.000018683709132759"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "91488256",
+      "47": "-70368727400449/16777216",
+      "178481": "-70368727400449/16777216",
+      "524287": "274876858369/1048576"
+    },
+    "all_maximizers": [
+      "0000000000000000000000001",
+      "0111111111111111111111111",
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  },
+  {
+    "strictly_excluded_mod_complement": 16777213,
+    "overlapping_mod_complement": 2,
+    "n": 24,
+    "k": 5,
+    "tables_covered": 33554432,
+    "enumerated_up_to_output_complement": 16777216,
+    "ratio_lo_numerator": "48357390188234291185962112",
+    "ratio_hi_numerator": "48357390293857727609865776",
+    "denominator": "12089258196146291747061760",
+    "ratio_approx": 4.000029563736941,
+    "maximizers_mod_output_complement": [
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "seconds_for_dimension": 10.711972709,
+    "certified_ratio_lower": "374147184829391440273360099603533088970698049730319/93536104789177786765035829293842113257979682750464",
+    "certified_ratio_upper": "935367962073478600683400249008832734291569613512377/233840261972944466912589573234605283144949206876160",
+    "decimal_enclosure": [
+      "4.000029567969358215",
+      "4.000029567969358216"
+    ],
+    "exact_ratio_prime_log_coefficients": {
+      "2": "376438784/5",
+      "3": "206156857347/655360",
+      "7": "68718952449/655360",
+      "19": "68718952449/655360",
+      "47": "-70368727400449/20971520",
+      "73": "68718952449/655360",
+      "178481": "-70368727400449/20971520"
+    },
+    "all_maximizers": [
+      "0000000000000000000000001",
+      "0111111111111111111111111",
+      "1000000000000000000000000",
+      "1111111111111111111111110"
+    ],
+    "strict_exclusion_and_symbolic_ties_verified": true
+  }
+]

@@ -39,7 +39,7 @@
 \usepackage{xurl}
 \begin{document}
 \begin{abstract}
-We prove that every symmetric Boolean function $f$ satisfies $\HH[f]\le c\,\I[f]$ with $c=931487/200000=4.657435$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. We bound the entropy lost under a random coordinate restriction and average the bounds over the successive dimensions. The sharp one-step constant is $K=12-\frac92\log_23=4.8677\ldots$, attained by OR on three variables; retaining the dimension in the restriction argument gives a smaller entropy--influence constant. A noise-stability estimate for symmetric derivatives reduces the finite range to scalar inequalities. We certify them by outward-rounded interval arithmetic, use an exhaustive block-restriction census through dimension $20$, and close the infinite range with a decreasing analytic bound. A sharper estimate for the shift of the entropy kernel improves the finite certificates. Without computer verification, the same noise-stability estimate gives $\HH[f]\le6.191\,\I[f]$. AND and OR show that the optimal constant is at least $4$.
+We prove that every symmetric Boolean function $f$ satisfies $\HH[f]\le c\,\I[f]$ with $c=4650431/1000000=4.650431$, improving the constant $12.04$ of O'Donnell, Wright and Zhou. We bound the entropy lost under a random coordinate restriction and average the bounds over the successive dimensions. The sharp one-step constant is $K=12-\frac92\log_23=4.8677\ldots$, attained by OR on three variables; retaining the dimension in the restriction argument gives a smaller entropy--influence constant. A noise-stability estimate for symmetric derivatives reduces the finite range to scalar inequalities. We certify them by outward-rounded interval arithmetic, use an exhaustive block-restriction census through dimension $24$, and close the infinite range with a decreasing analytic bound. A sharper estimate for the shift of the entropy kernel improves the finite certificates. Without computer verification, the same noise-stability estimate gives $\HH[f]\le6.191\,\I[f]$. AND and OR show that the optimal constant is at least $4$.
 \end{abstract}
 \maketitle
 
@@ -57,7 +57,7 @@ A function is \emph{symmetric} if $f(x)$ depends only on the Hamming weight $|x|
 \begin{mainthm}\label{thm:main}
 Every symmetric Boolean function $f$ satisfies
 \[
- \HH[f]\le c\,\I[f],\qquad c=\frac{931487}{200000}=4.657435<4.6575.
+ \HH[f]\le c\,\I[f],\qquad c=\frac{4650431}{1000000}=4.650431<4.6505.
 \]
 \end{mainthm}
 
@@ -65,7 +65,7 @@ For a coordinate $i$ let $f_{i\to\pm1}$ be the two restrictions, $\I_i[f]$ the i
 \[
  \Delta_i[f]=\HH[f]-\tfrac12\bigl(\HH[f_{i\to1}]+\HH[f_{i\to-1}]\bigr).
 \]
-If $U_d$ bounds $\Delta_1/\I_1$ for symmetric functions in dimension $d$, then revealing coordinates one at a time gives $\HH[f]\le n^{-1}(\sum_{d=1}^nU_d)\I[f]$ (Lemma~\ref{lem:averaging}). A single uniform bound cannot be smaller than $K=12-\frac92\log_23$, because $\mathrm{OR}_3$ has $\Delta_1/\I_1=K$. Averaging over dimensions charges this obstruction only at dimension three. We obtain a stronger base by restricting several coordinates together through dimension $20$, then add the dimension-specific one-step bounds. This seeded average proves Theorem~\ref{thm:main}.
+If $U_d$ bounds $\Delta_1/\I_1$ for symmetric functions in dimension $d$, then revealing coordinates one at a time gives $\HH[f]\le n^{-1}(\sum_{d=1}^nU_d)\I[f]$ (Lemma~\ref{lem:averaging}). A single uniform bound cannot be smaller than $K=12-\frac92\log_23$, because $\mathrm{OR}_3$ has $\Delta_1/\I_1=K$. Averaging over dimensions charges this obstruction only at dimension three. We obtain a stronger base by restricting several coordinates together through dimension $24$, then add the dimension-specific one-step bounds. This seeded average proves Theorem~\ref{thm:main}.
 
 \begin{mainthm}\label{thm:restriction}
 \begin{enumerate}[label=\textup{(\roman*)}]
@@ -81,7 +81,7 @@ where the supremum is over nonconstant symmetric $f$ on $n$ variables and
 \end{enumerate}
 \end{mainthm}
 
-Part~(i) is computer-assisted. We check dimensions up to $15$ exhaustively. We verify the scalar inequalities separately in dimensions $16$ through $255$ and on $23$ blocks covering dimensions $256$ through $8{,}388{,}608$. The analytic estimate of Proposition~\ref{prop:large}, with parameter $a=1/30$, bounds every later one-step ratio by $4.654017$. Section~\ref{sec:computations} gives the certificates and the seeded ledger. Its largest upper bound is less than $4.657435$, at dimension $449$; this is a maximum of bounds, not a claimed value of $\HH/\I$.
+Part~(i) is computer-assisted. We check dimensions up to $15$ exhaustively. We verify the scalar inequalities separately in dimensions $16$ through $255$ and on $24$ blocks covering dimensions $256$ through $33{,}554{,}432$. The analytic estimate of Proposition~\ref{prop:large}, with parameter $a=1/45$, bounds every later one-step ratio by $4.647118$. Section~\ref{sec:computations} gives the certificates and the seeded ledger. Its largest upper bound is less than $4.650431$, at dimension $517$; this is a maximum of bounds, not a claimed value of $\HH/\I$.
 
 Both parts rest on a noise-stability estimate for derivatives, which is of independent interest. Write $T_\lambda$ for the noise operator, $\Stab_\lambda[g]=\langle g,T_\lambda g\rangle=\sum_S\lambda^{|S|}\wh g(S)^2$, and $I_0$ for the modified Bessel function of order zero.
 
@@ -114,7 +114,7 @@ For the OR function on $n$ variables (and for AND),
 \[
  \frac{\HH[\mathrm{OR}_n]}{\I[\mathrm{OR}_n]}=4-\frac{4-2/\ln2}{n}+O(2^{-n}).
 \]
-Hence the optimal constant for symmetric functions lies in $[4,\,4.657435]$.
+Hence the optimal constant for symmetric functions lies in $[4,\,4.650431]$.
 \end{mainthm}
 
 That OR approaches $4$ is classical; we include the exact expression because AND and OR are the maximizers among all symmetric functions in every dimension we computed (Section~\ref{sec:computations}).
@@ -380,7 +380,7 @@ Fix $0<a\le\frac15$. For $n\ge40/a$ put $N=n-1$, $b=\sqrt{2/(\pi N)}$, $c=\frac 
  R_a(n)=b\bigl[3+\ln(1+b^{-2})+2\ln2\bigr]+\frac{6+4\ln n}{n}+\frac{14}5+\frac{273}{100n}+\bar J\\
  +\Phi(20c)\ln\frac1c+e^aA\Bigl[\frac{24}{23\sqrt{2\pi v_T}}+e^{-2r_0^2v_T}\Bigr]+\frac{89}{50}\Phi\bigl(v_n(20)\bigr).
 \end{multline*}
-Every term of $R_a$ is nonincreasing for $n\ge40/a$. In particular, $a=1/30$ is valid for $n\ge1200$, and $R_{1/30}(8{,}388{,}608)/\ln2<4.654016341712388$.
+Every term of $R_a$ is nonincreasing for $n\ge40/a$. In particular, $a=1/45$ is valid for $n\ge1800$, and $R_{1/45}(33{,}554{,}432)/\ln2<4.647117187337907$.
 \end{proposition}
 
 \begin{proof}
@@ -400,7 +400,7 @@ For the monotonicity, the first term equals $\sqrt{2/\pi}\,[3+2\ln2+\ln(1+\pi N/
 \[
  \frac{2z}{1+z}-[3+2\ln2+\ln(1+z)]<0.
 \]
-The only lower threshold used in the integral split is $T=an\ge40$. The bound $\Ei(a)\le-\gamma-\ln a+a$ follows by integrating $(1-e^{-x})/x\le1$; hence the whole proof holds for every stated $a$. The value at $a=1/30$ and $n=8{,}388{,}608$ is certified in interval arithmetic.
+The only lower threshold used in the integral split is $T=an\ge40$. The bound $\Ei(a)\le-\gamma-\ln a+a$ follows by integrating $(1-e^{-x})/x\le1$; hence the whole proof holds for every stated $a$. The value at $a=1/45$ and $n=33{,}554{,}432$ is certified in interval arithmetic.
 \end{proof}
 
 \subsection{Proofs of Theorems~\ref{thm:restriction} and~\ref{thm:main}}
@@ -409,26 +409,26 @@ The only lower threshold used in the integral split is $T=an\ge40$. The bound $\
 
 \emph{Dimensions $16\le n\le255$.} For each $n$ we apply Proposition~\ref{prop:dual} with $J=2$ and decimal rational parameters, checking all $n$ hypotheses in outward-rounded interval arithmetic at $65$ digits. These are $32{,}520$ inequalities in total.
 
-\emph{Dimensions $256\le n\le8{,}388{,}608$.} We use the block form of Proposition~\ref{prop:dual} and the cell inequalities~\eqref{eq:cell} on $23$ contiguous blocks, with $65{,}139$ rational covering cells. The full table appears in Section~\ref{sec:computations}.
+\emph{Dimensions $256\le n\le33{,}554{,}432$.} We use the block form of Proposition~\ref{prop:dual} and the cell inequalities~\eqref{eq:cell} on $24$ contiguous blocks, with $75{,}638$ rational covering cells. The full table appears in Section~\ref{sec:computations}.
 
-\emph{Dimensions $n\ge8{,}388{,}608$.} Proposition~\ref{prop:large} with $a=1/30$.
+\emph{Dimensions $n\ge33{,}554{,}432$.} Proposition~\ref{prop:large} with $a=1/45$.
 
 The bounds obtained are listed in Section~\ref{sec:computations}; each is below $K$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-For $n\le20$ we use the certified values $B_{k,n}$ for $2\le k\le\min(5,n)$ described in Section~\ref{sec:computations}. Starting from $C_0=C_1=0$, define $C_n$ as the minimum of the right sides of~\eqref{eq:blockrecurrence} over these $k$. This gives $C_n<4$ for $n\le20$ and $C_{20}<3.944265467369$.
+For $n\le24$ we use the certified values $B_{k,n}$ for $2\le k\le\min(5,n)$ described in Section~\ref{sec:computations}. Starting from $C_0=C_1=0$, define $C_n$ as the minimum of the right sides of~\eqref{eq:blockrecurrence} over these $k$. This gives $C_n<4$ for $n\le24$ and $C_{24}<3.953557670092$.
 
-For $21\le n\le D:=8{,}388{,}608$, use the one-step bounds $U_d$ of Propositions~\ref{prop:dual} and~\ref{prop:large}, and put
+For $25\le n\le D:=33{,}554{,}432$, use the one-step bounds $U_d$ of Propositions~\ref{prop:dual} and~\ref{prop:large}, and put
 \[
- S_{20}=20C_{20},\qquad S_n=S_{n-1}+U_n.
+ S_{24}=24C_{24},\qquad S_n=S_{n-1}+U_n.
 \]
 Lemma~\ref{lem:averaging} gives $\HH[f]/\I[f]\le S_n/n$. The exact rational ledger in Section~\ref{sec:computations} verifies
 \[
- \max_{20\le n\le D}\frac{S_n}{n}
- =4.6574344717526121503843276538\ldots<c,
+ \max_{24\le n\le D}\frac{S_n}{n}
+ =4.6504307887862383763216826662\ldots<c,
 \]
-with its maximum at $n=449$. This decimal denotes the recorded rational upper bound, not an extremal value of $\HH/\I$. For $d>D$, Proposition~\ref{prop:large} gives $U_d\le4.654016341712388<c$. If $S_n\le nc$ and $U_{n+1}\le c$, then $S_{n+1}\le(n+1)c$. This proves every remaining dimension. Constants have $\HH=\I=0$.
+with its maximum at $n=517$. This decimal denotes the recorded rational upper bound, not an extremal value of $\HH/\I$. For $d>D$, Proposition~\ref{prop:large} gives $U_d\le4.647117187337907<c$. If $S_n\le nc$ and $U_{n+1}\le c$, then $S_{n+1}\le(n+1)c$. This proves every remaining dimension. Constants have $\HH=\I=0$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:restriction}(ii)]
@@ -623,13 +623,14 @@ $16{,}385\le n\le 65{,}535$ & $4.599485777517825$ & $4{,}450$ \\
 $65{,}536\le n\le 262{,}143$ & $4.592695956170183$ & $6{,}162$ \\
 $262{,}144\le n\le 1{,}048{,}575$ & $4.589502673515857$ & $8{,}511$ \\
 $1{,}048{,}576\le n\le 8{,}388{,}608$ & $4.588487126623142$ & $10{,}529$ \\
+$8{,}388{,}609\le n\le 33{,}554{,}432$ & $4.588910281347744$ & $10{,}499$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-The blocks are contiguous and have $65{,}139$ rational cells in total. At and above $D=8{,}388{,}608$, the analytic bound is $U_d\le4.654016341712388$. The multipliers and tangent points are exact decimal rationals. Each proposed block intercept is increased by $1/1000$ before certification. The optimizer supplies proposals only; its output is not a proof. We check the zero coefficient, the cell inequalities~\eqref{eq:cell}, exact coverage of $[1/U,1]$, and the objective~\eqref{eq:blockobjective} by outward intervals at $65$ decimal digits. For $\Phi(v)$ we use its positive Bessel series with a geometric remainder when $v\le100$, and the upper bound~\eqref{eq:Phibound} otherwise. A second implementation checks all $32{,}520$ finite coefficient inequalities and all cells at $90$ digits, using different entropy formulas and a different primitive for the shift integral.
+The blocks are contiguous and have $75{,}638$ rational cells in total. At and above $D=33{,}554{,}432$, Proposition~\ref{prop:large} with $a=1/45$ gives $U_d\le4.647117187337907$. The multipliers and tangent points are exact decimal rationals. Each proposed block intercept is increased by $1/1000$ before certification. The optimizer supplies proposals only; its output is not a proof. We check the zero coefficient, the cell inequalities~\eqref{eq:cell}, exact coverage of $[1/U,1]$, and the objective~\eqref{eq:blockobjective} by outward intervals at $65$ decimal digits. For $\Phi(v)$ we use its positive Bessel series with a geometric remainder when $v\le100$, and the upper bound~\eqref{eq:Phibound} otherwise. A second implementation checks all $32{,}520$ finite coefficient inequalities and all cells at $90$ digits, using different entropy formulas and a different primitive for the shift integral.
 
 \subsection*{The finite block base}
-For $2\le k\le5$ and $k\le n\le20$, let $B_{k,n}$ be the largest value of $\Delta_{[k]}/(k\I_1)$ over nonconstant symmetric functions. We enumerate every weight table up to output complementation. If $A_s=2^n\wh f_s$ and $E_n=4^n\HH[f]$, then
+For $2\le k\le5$ and $k\le n\le24$, let $B_{k,n}$ be the largest value of $\Delta_{[k]}/(k\I_1)$ over nonconstant symmetric functions. We enumerate every weight table up to output complementation. If $A_s=2^n\wh f_s$ and $E_n=4^n\HH[f]$, then
 \[
  E_n=2n4^n-2\sum_s\binom ns A_s^2\log_2|A_s|,
 \]
@@ -644,24 +645,24 @@ Integer Krawtchouk transforms give the $A_s$. Parseval and the independent edge 
  z=\frac{u-1}{u+1},\quad 1\le u<2,\quad
  0\le R\le\frac{9}{4\cdot61\cdot3^{61}}.
 \]
-Range reduction and outward integer rounding give fixed-point enclosures with denominator $2^{56}$. A second complete pass strictly excludes every nonmaximizer; exact prime-log expressions prove all surviving ties. A separate integer and $144$-bit logarithm audit checks every surviving maximum. The census covers $2{,}097{,}150$ tables up to complementation through dimension $20$, including constants, and supplies all $70$ pairs $(k,n)$. The recurrence~\eqref{eq:blockrecurrence} gives
+Range reduction and outward integer rounding give fixed-point enclosures with denominator $2^{56}$. A second complete pass strictly excludes every nonmaximizer; exact prime-log expressions prove all surviving ties. A separate integer and $144$-bit logarithm audit checks every surviving maximum. The census covers $33{,}554{,}430$ tables up to complementation through dimension $24$, including constants, and supplies all $86$ pairs $(k,n)$. The recurrence~\eqref{eq:blockrecurrence} gives
 \[
- C_{20}=\frac{92232807018024312555229592687247931457194510016451}
- {23384026197294446691258957323460528314494920687616}
- <3.944265467369.
+ C_{24}=\frac{4437604614237145380845335471603176873541506557866073}
+ {1122433257470133441180429951526105359095756193005568}
+ <3.953557670092.
 \]
-This is a certified upper bound. It is not identified with the exact maximum of $\HH/\I$ in dimension $20$.
+This is a certified upper bound. It is not identified with the exact maximum of $\HH/\I$ in dimension $24$.
 
 \subsection*{The averaged ledger}
-Seed the sum with $20C_{20}$ and add the $U_d$ for $21\le d\le D$. Exact rational addition gives
+Seed the sum with $24C_{24}$ and add the $U_d$ for $25\le d\le D$. Exact rational addition gives
 \[
  \begin{gathered}
- \max_{20\le n\le D}\frac{20C_{20}+\sum_{d=21}^nU_d}{n}\\
- =\frac{373080419884801803846596023166747790405659360503078208212549379}
- {80104276753121998324396300035352914529481654272000000000000000}.
+ \max_{24\le n\le D}\frac{24C_{24}+\sum_{d=25}^nU_d}{n}\\
+ =\frac{3431492689119484453342437079192249020430514445959247022823490053}
+ {737887057128981258507133846205388985509880004608000000000000000}.
  \end{gathered}
 \]
-This equals $4.6574344717526121503843276538\ldots$ and the maximum occurs at $n=449$. The claimed $c=931487/200000$ is an upward rounding. We also sum by segment lengths and recompute the binding value and cutoff interface with $85$-digit decimal arithmetic. On a segment with constant bound $U$, the ratio has the form $U+A/n$, so its maximum lies at an endpoint. This gives a further check of the finite maximum. At $D$ the ledger is below $4.588797$, and every later one-step bound is below $c$ by Proposition~\ref{prop:large}. The seed $20C_{20}$ is essential to the description of this computation: the displayed ledger is not the pure sum $\sum_{d=1}^nU_d$.
+This equals $4.6504307887862383763216826662\ldots$ and the maximum occurs at $n=517$. The claimed $c=4650431/1000000$ is an upward rounding. We also sum by segment lengths and recompute the binding value and cutoff interface with $100$-digit decimal arithmetic. On a segment with constant bound $U$, the ratio has the form $U+A/n$, so its maximum lies at an endpoint. This gives a further check of the finite maximum. At $D$ the ledger is below $4.588882$, and every later one-step bound is below $c$ by Proposition~\ref{prop:large}. The seed $24C_{24}$ is essential to the description of this computation: the displayed ledger is not the pure sum $\sum_{d=1}^nU_d$.
 
 The certificate scripts, rational multipliers, cells and ledger are included with the data. The computation guide gives the command for each statement and distinguishes the exhaustive certificates from numerical checks.
 
@@ -678,7 +679,7 @@ $\Delta_1/\I_1$ & $4.86767$, at $\mathrm{OR}_3$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $K$ and $C_*$ at $40$ digits. These checks support but are not part of the proofs; the computer-assisted parts use the exact enumeration for $n\le15$, the block census through dimension $20$, the interval certificates for Propositions~\ref{prop:dual} and~\ref{prop:large}, the exact rational ledger, and the certificate for~\eqref{eq:majorant}.
+In every dimension $2\le n\le16$ the maximum of $\HH/\I$ is attained by AND and OR. The script also checks the integral $C_N$ by adaptive quadrature for $N\le200$ and for $N$ up to $10^6$, Lemma~\ref{lem:bessel} on dense grids, Theorem~\ref{thm:stab} on random symmetric derivatives with $n=20,40,80$, the closed form of Theorem~\ref{thm:lower}, and the constants $K$ and $C_*$ at $40$ digits. These checks support but are not part of the proofs; the computer-assisted parts use the exact enumeration for $n\le15$, the block census through dimension $24$, the interval certificates for Propositions~\ref{prop:dual} and~\ref{prop:large}, the exact rational ledger, and the certificate for~\eqref{eq:majorant}.
 
 \section{Questions}
 
