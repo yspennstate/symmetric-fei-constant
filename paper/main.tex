@@ -50,7 +50,7 @@ For $f:\bits^n\to\bits$ write $f=\sum_{S\subseteq[n]}\wh f(S)\chi_S$ with $\chi_
  \HH[f]=\sum_{S}\wh f(S)^2\log_2\frac{1}{\wh f(S)^2},\qquad
  \I[f]=\sum_S|S|\,\wh f(S)^2=\sum_{i=1}^n\P_x\bigl[f(x)\ne f(x^{\oplus i})\bigr],
 \]
-where $x^{\oplus i}$ is $x$ with its $i$-th coordinate flipped. The Fourier entropy--influence conjecture of Friedgut and Kalai~\cite{FK96} asserts that $\HH[f]\le C\,\I[f]$ for an absolute constant $C$. It remains open. It is known for several classes of functions, among them symmetric functions~\cite{OWZ11,KMS12,CKLS16,ACKSW21,Shm26}.
+where $x^{\oplus i}$ is $x$ with its $i$-th coordinate flipped. The Fourier entropy--influence conjecture of Friedgut and Kalai~\cite{FK96} asserts that $\HH[f]\le C\,\I[f]$ for an absolute constant $C$. It remains open. It is known for several classes of functions, among them symmetric functions~\cite{OWZ11,KMS12,CKLS16,ACKSW21,Shm26}, read-once formulas~\cite{OT13} and functions computed by read-$k$ decision trees~\cite{WWW14}. For all Boolean functions, Kelman, Kindler, Lifshitz, Minzer and Safra~\cite{KKLMS20} proved a weaker form of the conjecture, which concentrates the Fourier spectrum on $2^{O(\I[f]\log\I[f])}$ characters, and Han~\cite{Han25} proved $\HH[f]\le O(\I[f])+O\bigl(\sum_i\I_i[f]\log(1/\I_i[f])\bigr)$.
 
 A function is \emph{symmetric} if $f(x)$ depends only on the Hamming weight $|x|=\#\{i:x_i=-1\}$. O'Donnell, Wright and Zhou~\cite{OWZ11} proved the conjecture for symmetric functions with constant $12.04$.
 
@@ -793,6 +793,12 @@ M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra,
 \emph{Further evidence towards the Fourier entropy-influence conjecture},
 preprint (2026), \href{https://arxiv.org/abs/2606.00246}{arXiv:2606.00246}.
 
+\bibitem{Han25}
+X.~Han,
+\emph{A new bound for the Fourier-entropy-influence conjecture},
+Combinatorica \textbf{45} (2025), no.~1, Paper No.~4.
+\href{https://doi.org/10.1007/s00493-024-00133-z}{doi:10.1007/s00493-024-00133-z}.
+
 \bibitem{Hod17}
 R.~Hod,
 \emph{Improved lower bounds for the Fourier entropy/influence conjecture via lexicographic functions},
@@ -804,10 +810,22 @@ N.~Keller, E.~Mossel and T.~Schlank,
 Discrete Math. \textbf{312} (2012), no.~22, 3364--3372.
 \href{https://doi.org/10.1016/j.disc.2012.07.031}{doi:10.1016/j.disc.2012.07.031}.
 
+\bibitem{KKLMS20}
+E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra,
+\emph{Towards a proof of the Fourier-entropy conjecture?},
+Geom. Funct. Anal. \textbf{30} (2020), no.~4, 1097--1138.
+\href{https://doi.org/10.1007/s00039-020-00544-2}{doi:10.1007/s00039-020-00544-2}.
+
 \bibitem{OD14}
 R.~O'Donnell,
 \emph{Analysis of Boolean Functions},
 Cambridge University Press, Cambridge, 2014.
+
+\bibitem{OT13}
+R.~O'Donnell and L.-Y.~Tan,
+\emph{A composition theorem for the Fourier entropy-influence conjecture},
+in: ICALP 2013, Lecture Notes in Comput. Sci. \textbf{7965}, Springer, Heidelberg, 2013, 780--791.
+\href{https://doi.org/10.1007/978-3-642-39206-1_66}{doi:10.1007/978-3-642-39206-1\_66}.
 
 \bibitem{OWZ11}
 R.~O'Donnell, J.~Wright and Y.~Zhou,
@@ -820,6 +838,12 @@ Y.~Shmalo,
 \emph{Fourier entropy of threshold functions and their compositions},
 preprint, 2026.
 \href{https://arxiv.org/abs/2610.16069}{arXiv:2610.16069}.
+
+\bibitem{WWW14}
+A.~Wan, J.~Wright and C.~Wu,
+\emph{Decision trees, protocols and the entropy-influence conjecture},
+in: Proceedings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014), ACM, New York, 2014, 67--80.
+\href{https://doi.org/10.1145/2554797.2554806}{doi:10.1145/2554797.2554806}.
 
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
 
